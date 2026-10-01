@@ -1,0 +1,26 @@
+import type { ExtractionField } from "./harness-types";
+
+export const defaultFields: ExtractionField[] = [
+  ["full_name", "Full name", "The person's explicitly stated name. Never use a job title, employer, project, or program name."],
+  ["location", "Location", "The person's explicitly stated current city or geographic location."],
+  ["phone", "Phone", "The person's preferred telephone number."],
+  ["email", "Email", "The person's preferred email address, accounting for explicit corrections or retractions."],
+  ["bachelors_degree", "Bachelor's degree", "Degree and field"],
+  ["bachelors_year", "Bachelor's year", "Graduation year"],
+  ["masters_degree", "Master's degree", "Degree and field"],
+  ["masters_year", "Master's year", "Graduation year"],
+  ["military_service", "Military service", "Only explicitly stated military branch, role, and dates. Do not infer unstated details."],
+  ["security_clearance", "Security clearance", "A currently held security clearance only when explicitly stated."],
+  ["current_employer", "Current employer", "The organization where the person currently works. Never return a former employer."],
+  ["current_title", "Current job title", "The person's current job title or role, such as lead systems engineer. Never use the person's name, employer, or program name."],
+  ["tenure", "Tenure", "Explicitly stated time with the current employer or in the current job."],
+  ["team_size", "Team size", "Explicit number of direct reports, core team members, or extended contributors, preserving which kind was stated."],
+  ["current_program", "Current program", "A named project, product, contract, effort, or program the person currently supports. A person's job title is not a program."],
+  ["key_technologies", "Key technologies", "Only technologies, tools, platforms, methods, or frameworks explicitly named. Exclude project, program, product, employer, and job-title names."],
+  ["area_of_interest", "Area of interest", "Work the subject wants to pursue"],
+  ["reason_for_leaving", "Reason for leaving", "Stated motivation for a move"],
+  ["current_salary", "Current salary", "Compensation explicitly described as already received in the present role. Present-state cues include current, currently, earn, make, receive, and existing compensation. Exclude target, targeting, seek, expect, desired, conditional, future, and move-related compensation. Preserve every stated base, bonus, equity, and total-comp component."],
+  ["target_salary", "Target salary", "Compensation explicitly desired or expected from a prospective new role. Goal-state cues include target, targeting, seek, expect, desired, looking for, and for a move. Exclude current, currently received, earned, and existing compensation. Preserve every stated base, bonus, equity, flexibility, and total-comp component."],
+  ["availability", "Availability", "Notice period or start date"],
+  ["relocation", "Relocation", "Relocation preference or constraint"],
+].map(([id, label, description]) => ({ id, label, description }));

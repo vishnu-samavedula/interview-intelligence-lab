@@ -1,0 +1,13 @@
+models/
+.demo-pids/
+*.doc
+*.docx
+*Conversational Copilot Solution Proposal.md
+web/node_modules/
+web/.next/
+web/dist/
+web/.wrangler/
+__pycache__/
+*.pyc
+*.tsbuildinfo
+.DS_Store
