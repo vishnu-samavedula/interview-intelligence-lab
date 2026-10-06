@@ -2,7 +2,7 @@
 
 A local, offline proof of concept for testing whether small Liquid Foundation Models can add useful intelligence to English interview transcripts within a 15-second transcription cadence.
 
-The demo runs on localhost, uses `llama.cpp` for inference, and compares `LFM2.5-2.6B` with `LFM2.5-1.2B-Instruct`. The current baseline is the 2.6B model with reasoning disabled.
+The demo runs on localhost, uses `llama.cpp` for inference, and compares the reasoning-capable `LFM2.5-2.6B` and `LFM2.5-1.2B-Thinking` checkpoints with reasoning disabled. The current baseline is the 2.6B model.
 
 > This repository is a demonstration and learning exercise. It is not a production interview, hiring, or decision-making system.
 
@@ -106,7 +106,7 @@ The harness does not invent, relabel, or semantically correct names, employers, 
 
 Each analysis performs two sequential calls because the selected `llama.cpp` server uses one inference slot:
 
-1. **Extraction:** receives every transcript segment supplied in the request and the configured field IDs. It returns a flat JSON object. Field descriptions remain UI metadata and are not inserted into the extraction prompt.
+1. **Extraction:** receives every transcript segment supplied in the request and the configured field IDs. It returns a flat JSON object constrained by a dynamically generated JSON schema. Field descriptions remain UI metadata and are not inserted into the extraction prompt.
 2. **Question generation:** receives only the newest transcript segment. It receives no summary, extraction state, previous questions, or earlier transcript. It returns question text only, with no fixed three-question cap.
 
 The extraction safety ceiling is 1,536 generated tokens. The question-generation ceiling is 768 generated tokens. These are output limits, not allocated context-window targets.
@@ -139,7 +139,7 @@ The default server allocates an 8,192-token context to keep KV-cache memory and 
 
 ## Included scenarios
 
-The app contains eight synthetic static presets covering:
+The app contains thirteen synthetic static presets. The original eight cover:
 
 - Clear and quantified answers.
 - Vague impact claims.
@@ -149,6 +149,8 @@ The app contains eight synthetic static presets covering:
 - Compensation, availability, and relocation.
 - Mid-conversation corrections.
 - The original defense-engineering interview example.
+
+Five additional presets marked `-15s` approximate a single realistic transcript update and test vague impact, quantified impact, unclear ownership, logistics-only content, and an in-chunk correction.
 
 The presets are deterministic evaluation fixtures, not representative hiring data.
 
@@ -174,9 +176,9 @@ hf download LiquidAI/LFM2.5-2.6B-GGUF \
 The optional comparison model is:
 
 ```bash
-hf download LiquidAI/LFM2.5-1.2B-Instruct-GGUF \
-  LFM2.5-1.2B-Instruct-Q4_K_M.gguf LICENSE README.md \
-  --local-dir models/LFM2.5-1.2B-Instruct-GGUF
+hf download LiquidAI/LFM2.5-1.2B-Thinking-GGUF \
+  LFM2.5-1.2B-Thinking-Q4_K_M.gguf LICENSE README.md \
+  --local-dir models/LFM2.5-1.2B-Thinking-GGUF
 ```
 
 Model files are intentionally excluded from Git. Model weights and their accompanying license files remain governed by their respective upstream licenses.
@@ -201,14 +203,16 @@ To enable the 1.2B model switcher option, start its server separately:
 
 ```bash
 llama-server \
-  -m models/LFM2.5-1.2B-Instruct-GGUF/LFM2.5-1.2B-Instruct-Q4_K_M.gguf \
+  -m models/LFM2.5-1.2B-Thinking-GGUF/LFM2.5-1.2B-Thinking-Q4_K_M.gguf \
   --host 127.0.0.1 \
   --port 8081 \
   --gpu-layers 99 \
   --ctx-size 8192 \
   --parallel 1 \
   --jinja \
-  --metrics
+  --metrics \
+  --reasoning off \
+  --reasoning-budget 0
 ```
 
 ### Start the adapter
@@ -274,18 +278,29 @@ The app records:
 - GGUF storage size.
 - Per-call extraction and question latency.
 
-On the development M5 Max system, representative 2.6B results were approximately 1.8–2.2 seconds for both sequential calls, with question generation commonly around 0.4–0.8 seconds. These are indicative demo measurements, not formal benchmarks.
+The original eight-preset run on the development M5 Max produced the following aggregate results. Both models used Q4_K_M, an 8,192-token context, deterministic decoding, reasoning disabled, and strict JSON schemas. The five newer `-15s` presets are not included in these aggregate numbers.
 
-The quality panel uses synthetic expectations. It performs field-aware salary comparison, relocation-intent comparison, extraction precision and recall, and simple question-count checks. It is an evaluation aid rather than a production correctness guarantee.
+| Model | Extraction precision | Extraction recall | Avg. two-call latency | Avg. extraction | Avg. questions |
+|---|---:|---:|---:|---:|---:|
+| LFM2.5-1.2B-Thinking | 65.4% | 25.4% | 0.69 s | 0.60 s | 0.09 s |
+| LFM2.5-2.6B | 82.7% | 92.5% | 1.96 s | 1.46 s | 0.49 s |
+
+These are indicative synthetic-demo measurements, not formal benchmarks or evidence for unrelated production domains. The preset scorer uses strict field-aware matching; small wording differences can count as wrong.
+
+The quality panel compares the accumulated record with facts supported by the transcript seen so far. It reports correct, missed, wrong-field/value, and unsupported values. Placeholder cleanup and invalid output are shown separately and do not count as model hallucinations. Salary and relocation comparisons are meaning-aware, so equivalent formatting does not lower extraction quality. These synthetic checks are an evaluation aid rather than a production correctness guarantee.
 
 ## Known model behaviors
 
-- The 2.6B model is materially stronger than the 1.2B model for this extraction task.
+- The 2.6B model is materially stronger than the 1.2B Thinking model for extraction on the current presets.
+- On five realistic 15-second extraction samples, the 2.6B recovered all 11 expected facts and made seven unsupported field assignments: 61.1% precision and 100% recall. The harness separately cleaned up 22 placeholder phrases, which are not counted as hallucinations. These cases are directional fixtures, not a production-domain benchmark.
+- The 1.2B Thinking model remains useful as a fast comparison baseline or a candidate for a narrower trained routing/classification role; it is not the recommended zero-shot extractor based on current results.
+- Strict extraction schema decoding is required for the 1.2B Thinking checkpoint in this setup. The llama.cpp reasoning-off flags alone did not prevent it from spending the output budget on a reasoning trace.
 - Concise prompts work better than large field-definition maps for the tested quantized model.
 - Explicit salary conversion generally works well.
 - Corrections expressed indirectly, such as “correct the timing,” may still resolve to the earlier value.
 - Historical programs may occasionally be classified as current.
-- Question generation is fast and relevant but may ask additional questions even when an answer is already sufficiently clear.
+- In an isolated eight-case 2.6B question test, the prompt passed six cases, caught all four vague answers, and correctly abstained on contact and compensation at about 0.22 seconds average latency. It still asked methodology questions for two already-quantified achievements.
+- The question prompt now treats a stated contribution plus a concrete number, percentage, scale, scope, or timeframe as complete and says that missing methodology alone is not a follow-up trigger. This revision still needs to be re-scored on the same cases.
 
 These behaviors remain visible by design.
 
@@ -293,7 +308,6 @@ These behaviors remain visible by design.
 
 ```bash
 node --check runtime/llama-adapter.mjs
-
 cd web
 npm run lint
 npm run build

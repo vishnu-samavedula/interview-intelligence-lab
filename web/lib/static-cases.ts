@@ -15,6 +15,46 @@ const turn = (question: string, answer: string): TranscriptTurn[] => [{ speaker:
 
 const cases: StaticCase[] = [
   {
+    id: "static-vague-launch-15s", title: "Vague product launch -15s", role: "Product manager",
+    turns: [
+      turn("What impact did your latest launch have?", "I led the launch of our new onboarding flow. It was a big cross-functional effort, and the launch went really well. Customers responded positively, and it made a meaningful difference to the business."),
+    ],
+    expectations: [],
+    questionExpectation: q(1, 1, 1, ["quantify_impact"]),
+  },
+  {
+    id: "static-quantified-reliability-15s", title: "Quantified reliability result -15s", role: "Site reliability engineer",
+    turns: [
+      turn("Tell me about a reliability improvement you owned.", "I built and rolled out a new alert-routing service in Go and Kafka across 120 production services. Over one quarter, it reduced our median incident response time from 47 minutes to 18 minutes."),
+    ],
+    expectations: [e("key_technologies", 1, "Go and Kafka")],
+    questionExpectation: q(1, 0, 0),
+  },
+  {
+    id: "static-unclear-ownership-15s", title: "Unclear migration ownership -15s", role: "Engineering lead",
+    turns: [
+      turn("What was your role in the cloud migration?", "We moved the customer platform to AWS last year. The team completed it ahead of schedule with no major outages, and leadership considered the migration a major success."),
+    ],
+    expectations: [e("key_technologies", 1, "AWS")],
+    questionExpectation: q(1, 1, 1, ["clarify_vague_claim"]),
+  },
+  {
+    id: "static-logistics-only-15s", title: "Contact and compensation -15s", role: "Finance manager",
+    turns: [
+      turn("What are the best contact details and compensation range for you?", "My preferred email is jordan.lee@example.com, and my cell is 415-555-0186. I'm currently at 165 thousand base and targeting around 185 thousand for my next role."),
+    ],
+    expectations: [e("email", 1, "jordan.lee@example.com"), e("phone", 1, "415-555-0186"), e("current_salary", 1, "$165K base"), e("target_salary", 1, "$185K")],
+    questionExpectation: q(1, 0, 0),
+  },
+  {
+    id: "static-title-correction-15s", title: "Current-title correction -15s", role: "Data engineering manager",
+    turns: [
+      turn("Tell me about your current position.", "I'm Maya Patel in Austin. I've been at Northstar Data for three years as an engineering manager—actually, I was promoted in June, so my current title is senior data engineering manager."),
+    ],
+    expectations: [e("full_name", 1, "Maya Patel"), e("location", 1, "Austin"), e("current_employer", 1, "Northstar Data"), e("tenure", 1, "three years"), e("current_title", 1, "senior data engineering manager")],
+    questionExpectation: q(1, 0, 0),
+  },
+  {
     id: "static-clear-systems", title: "Static · Clear systems engineer", role: "Systems engineer",
     turns: [
       turn("Please introduce yourself and tell me where you are based.", "I'm Elena Ramirez, based in Tucson, Arizona."),

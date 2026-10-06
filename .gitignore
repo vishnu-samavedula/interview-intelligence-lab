@@ -1,4 +1,7 @@
 models/
+dist/
+docker/
+scripts/
 .demo-pids/
 *.doc
 *.docx

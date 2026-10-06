@@ -17,7 +17,7 @@ type QuestionBatch = { segmentId: string; timestamp: string; questions: FollowUp
 type ExtractionAudit = { rawCount: number; acceptedCount: number; rejected: RejectedExtraction[] };
 const allScenarios = staticCases;
 const fallbackModels: ModelProfile[] = [
-  { id: "lfm2.5-1.2b-instruct", label: "LFM2.5 1.2B Instruct", description: "Smaller instruction model", available: true },
+  { id: "lfm2.5-1.2b-no-think", label: "LFM2.5 1.2B · no thinking", description: "Smaller reasoning checkpoint with reasoning disabled", available: true },
   { id: "lfm2.5-2.6b-no-think", label: "LFM2.5 2.6B · no thinking", description: "Larger checkpoint with reasoning disabled", available: true },
 ];
 
@@ -151,8 +151,8 @@ export default function Home() {
     const defaultIds = new Set(defaultFields.map((field) => field.id));
     const expected = new Map<string, string>();
     for (const event of scenario.expectations) if (event.fromSegment <= cursor) expected.set(event.fieldId, event.value);
-    let correct = 0, wrong = 0, falsePositive = 0, missed = 0, trueNegative = 0;
-    const misses: string[] = [], wrongValues: string[] = [], falsePositives: string[] = [];
+    let correct = 0, wrong = 0, unsupported = 0, missed = 0, trueNegative = 0;
+    const misses: string[] = [], wrongValues: string[] = [], unsupportedValues: string[] = [];
     for (const field of fields.filter((item) => defaultIds.has(item.id))) {
       const wanted = expected.get(field.id);
       const result = snapshot.find((item) => item.fieldId === field.id);
@@ -160,7 +160,7 @@ export default function Home() {
       if (wanted && actual && valuesMatch(field.id, wanted, actual)) correct += 1;
       else if (wanted && actual) { wrong += 1; wrongValues.push(field.label); }
       else if (wanted) { missed += 1; misses.push(field.label); }
-      else if (actual) { falsePositive += 1; falsePositives.push(field.label); }
+      else if (actual) { unsupported += 1; unsupportedValues.push(field.label); }
       else trueNegative += 1;
     }
     const provided = snapshot.filter((item) => item.status === "provided");
@@ -173,6 +173,8 @@ export default function Home() {
     const rawExtractionCount = extractionAudits.reduce((sum, audit) => sum + audit.rawCount, 0);
     const acceptedExtractionCount = extractionAudits.reduce((sum, audit) => sum + audit.acceptedCount, 0);
     const rejectedExtractionCount = extractionAudits.reduce((sum, audit) => sum + audit.rejected.length, 0);
+    const placeholderCleanupCount = extractionAudits.reduce((sum, audit) => sum + audit.rejected.filter((item) => item.rejectionReason === "Placeholder response treated as empty").length, 0);
+    const invalidExtractionCount = rejectedExtractionCount - placeholderCleanupCount;
     const validQuestions = allQuestions.filter((item) => item.question.trim().endsWith("?")).length;
     const normalizedQuestions = allQuestions.map((item) => normalized(item.question));
     const duplicates = normalizedQuestions.length - new Set(normalizedQuestions).size;
@@ -183,14 +185,14 @@ export default function Home() {
       return countFits;
     }).length;
     return {
-      precision: correct + wrong + falsePositive ? correct / (correct + wrong + falsePositive) : null,
+      precision: correct + wrong + unsupported ? correct / (correct + wrong + unsupported) : null,
       recall: correct + wrong + missed ? correct / (correct + wrong + missed) : null,
       evidence: evidenced.length ? evidenceValid / evidenced.length : null,
       extractionAcceptance: rawExtractionCount ? acceptedExtractionCount / rawExtractionCount : null,
       questionContract: rawQuestionCount ? validQuestions / rawQuestionCount : null,
       questionFit: evaluatedQuestionBatches.length ? matchingQuestionBatches / evaluatedQuestionBatches.length : null,
       intervalCoverage: cursor ? questionHistory.length / cursor : null,
-      correct, wrong, falsePositive, missed, trueNegative, duplicates, rejectedQuestionCount, rejectedExtractionCount, misses, wrongValues, falsePositives,
+      correct, wrong, unsupported, missed, trueNegative, duplicates, rejectedQuestionCount, rejectedExtractionCount, placeholderCleanupCount, invalidExtractionCount, misses, wrongValues, unsupportedValues,
     };
   }, [cursor, extractionAudits, fields, questionHistory, scenario.expectations, scenario.questionExpectations, snapshot, visibleSegments]);
   const latestRejected = questionHistory.at(-1)?.rejected ?? [];
@@ -287,7 +289,7 @@ export default function Home() {
 
           <section className="panel p-5">
             <div className="flex items-center justify-between"><div className="flex items-center gap-2"><ShieldCheck className="size-4 text-primary" /><h2>Quality check</h2></div><Badge variant="outline" className="border-primary/20 text-primary">Synthetic truth</Badge></div>
-            <p className="mt-2 text-xs leading-5 text-zinc-500">Checks the model result against the selected preset&apos;s extraction and follow-up expectations.</p>
+            <p className="mt-2 text-xs leading-5 text-zinc-500">Scores facts in the transcript seen so far. Placeholder cleanup and formatting are reported separately from unsupported model values.</p>
             <div className="quality-grid mt-4">
               <QualityStat label="Extraction precision" value={quality.precision} />
               <QualityStat label="Extraction recall" value={quality.recall} />
@@ -297,10 +299,10 @@ export default function Home() {
               <QualityStat label="Question expectation" value={quality.questionFit} />
             </div>
             <div className="quality-detail mt-4">
-              <span><strong>{quality.correct}</strong> correct</span><span><strong>{quality.wrong}</strong> wrong</span><span><strong>{quality.falsePositive}</strong> false positive</span><span><strong>{quality.missed}</strong> missed</span><span><strong>{quality.rejectedExtractionCount}</strong> rejected extraction</span><span><strong>{quality.rejectedQuestionCount}</strong> rejected question</span>
+              <span><strong>{quality.correct}</strong> correct</span><span><strong>{quality.wrong}</strong> wrong field/value</span><span><strong>{quality.unsupported}</strong> unsupported</span><span><strong>{quality.missed}</strong> missed</span><span><strong>{quality.placeholderCleanupCount}</strong> placeholder cleanup</span><span><strong>{quality.invalidExtractionCount}</strong> invalid extraction</span><span><strong>{quality.rejectedQuestionCount}</strong> rejected question</span>
             </div>
             <div className="mt-3 flex items-center justify-between text-xs text-zinc-500"><span>Preset result recorded</span><strong className="font-mono text-zinc-300">{quality.intervalCoverage === null ? "—" : `${Math.round(quality.intervalCoverage * 100)}%`}</strong></div>
-            {(quality.misses.length > 0 || quality.wrongValues.length > 0 || quality.falsePositives.length > 0) && <div className="quality-alert mt-3">{quality.misses.length > 0 && <p>Missed: {quality.misses.join(", ")}</p>}{quality.wrongValues.length > 0 && <p>Wrong value: {quality.wrongValues.join(", ")}</p>}{quality.falsePositives.length > 0 && <p>Unexpected: {quality.falsePositives.join(", ")}</p>}</div>}
+            {(quality.misses.length > 0 || quality.wrongValues.length > 0 || quality.unsupportedValues.length > 0) && <div className="quality-alert mt-3">{quality.misses.length > 0 && <p>Missed: {quality.misses.join(", ")}</p>}{quality.wrongValues.length > 0 && <p>Wrong field or value: {quality.wrongValues.join(", ")}</p>}{quality.unsupportedValues.length > 0 && <p>Unsupported by transcript: {quality.unsupportedValues.join(", ")}</p>}</div>}
           </section>
 
         </aside>

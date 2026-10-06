@@ -6,11 +6,11 @@ This project will build a proof of concept for an intelligent, local-first meeti
 
 The assistant will run entirely on an air-gapped laptop equipped with an NVIDIA RTX 5090 GPU and 24 GB of VRAM. No transcript, prompt, model output, or meeting metadata may leave the device. The existing speech-to-text pipeline is outside this project's scope and will supply transcript text to the assistant.
 
-The leading language-model candidate is `LFM2.5-2.6B` with reasoning disabled, compared against `LFM2.5-1.2B-Instruct`. The POC measures extraction quality, follow-up quality, latency, and memory use before choosing a deployment configuration.
+The leading language-model candidate is `LFM2.5-2.6B` with reasoning disabled, compared against `LFM2.5-1.2B-Thinking` with reasoning disabled. The POC measures extraction quality, follow-up quality, latency, and memory use before choosing a deployment configuration.
 
 ## Current Localhost Demo Scope
 
-The first demo intentionally uses eight static candidate-interview presets rather than a timed streaming replay. Each preset is submitted once and executes two sequential model calls: checklist extraction followed by follow-up-question generation. One preset reproduces the original project-intent example. This isolates model quality, time to first token, decode throughput, total latency, and process memory from replay-speed effects.
+The demo intentionally uses thirteen static candidate-interview presets rather than a timed streaming replay. The original eight provide the main aggregate comparison set; five additional presets marked `-15s` approximate individual transcript updates and are scored separately. Each preset is submitted once and executes two sequential model calls: checklist extraction followed by follow-up-question generation. One preset reproduces the original project-intent example. This isolates model quality, time to first token, decode throughput, total latency, and process memory from replay-speed effects.
 
 The static harness includes synthetic ground truth, raw model extraction output, configurable extraction fields, and interview examples with clear answers, unresolved vague claims, quantified impact, unclear ownership, logistics, and later corrections. The current baseline deliberately leaves extraction semantics with the model; it does not require evidence spans or use field-specific semantic correction. Evidence-backed extraction remains a future experiment rather than hidden harness behavior. Streaming cadence, queueing, rolling-context behavior, and thermal stability remain project goals, but will be evaluated separately in a later load/soak harness.
 
@@ -29,7 +29,7 @@ The output is advisory. The interviewer remains in control and decides whether t
 
 - Accept incremental, clean English transcript segments about every 15 seconds.
 - Maintain useful conversational context throughout meetings lasting roughly one to two hours.
-- Generate a small set of concise, context-aware follow-up questions.
+- Generate zero or more concise, context-aware follow-up questions when the current answer genuinely needs clarification.
 - Extract checklist information with evidence from the transcript.
 - Show whether each checklist item is covered, partially covered, missing, ambiguous, or conflicting.
 - Avoid repeatedly suggesting questions that have already been answered or dismissed.
@@ -44,7 +44,7 @@ Before a meeting, the user provides an information checklist. A checklist item m
 
 During the meeting, the transcript pipeline sends a new segment to the assistant approximately every 15 seconds. The assistant updates its internal meeting state and returns:
 
-- Up to three recommended follow-up questions, ordered by usefulness.
+- Zero or more recommended follow-up questions, with at most one question per distinct unresolved claim.
 - The reason each question is relevant.
 - Checklist status updates with supporting transcript evidence.
 - Important ambiguities or contradictions that may need clarification.
@@ -63,7 +63,7 @@ Suggestions should be short enough to scan without distracting the interviewer. 
 
 ### Follow-up question generation
 
-- Return no more than three questions per update by default.
+- Return no questions when the answer is already clear; do not impose a fixed three-question cap.
 - Prioritize questions that resolve ambiguity, deepen an important answer, or cover a missing checklist item.
 - Use the recent conversation and accumulated meeting state.
 - Avoid questions already answered in the transcript.
@@ -152,7 +152,9 @@ The full transcript remains stored locally for evidence lookup, final review, an
 
 ## Model and Resource Strategy
 
-`LFM2.5-2.6B` with reasoning disabled is the leading candidate, with `LFM2.5-1.2B-Instruct` retained as the lower-resource comparison baseline. Both use quantized local inference configurations.
+`LFM2.5-2.6B` with reasoning disabled is the leading candidate, with `LFM2.5-1.2B-Thinking` under the same reasoning-off policy as the lower-resource comparison. Both use Q4_K_M GGUF checkpoints through llama.cpp. Strict JSON-schema decoding is applied to both extraction and question generation; it is especially important for preventing the 1.2B Thinking checkpoint from consuming its output budget on a reasoning trace.
+
+On the original eight synthetic static presets, 1.2B achieved 65.4% extraction precision and 25.4% recall at an average 0.69-second two-call latency. The 2.6B achieved 82.7% precision and 92.5% recall at an average 1.96 seconds. These numbers describe only the demo fixtures on the development M5 Max and do not establish performance in another production domain. In a separate eight-case 2.6B question test, six passed at about 0.22 seconds average latency: all four vague cases triggered and contact and compensation correctly abstained, while two already-quantified achievements received unnecessary methodology questions. The prompt has since been tightened, and the revision still needs to be re-scored.
 
 The POC will compare candidate configurations using the same transcript and checklist evaluation set. Selection criteria include:
 
@@ -215,7 +217,7 @@ Measurements should include:
 - Peak and steady-state VRAM and RAM consumption.
 - Long-session stability and recovery from inference errors.
 
-The evaluation should compare the initial 1.2B model with at least one smaller Liquid model or lower-resource configuration. Prompt, context-management, and quantization settings must be recorded so results are reproducible.
+The evaluation compares LFM2.5-1.2B-Thinking and LFM2.5-2.6B under the same reasoning-off, quantization, context, schema, and decoding settings. Prompt, context-management, and quantization settings must be recorded so results are reproducible.
 
 ## POC Acceptance Criteria
 

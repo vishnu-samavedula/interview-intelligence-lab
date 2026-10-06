@@ -8,15 +8,15 @@ const QUESTION_MAX_TOKENS = Number(process.env.QUESTION_MAX_TOKENS || 768);
 const DEFAULT_MODEL_ID = process.env.DEFAULT_MODEL_ID || "lfm2.5-2.6b-no-think";
 const LFM12_URL = process.env.LFM12_URL || "http://127.0.0.1:8081";
 const LFM26_URL = process.env.LFM26_URL || "http://127.0.0.1:8080";
-const LFM12_MODEL_NAME = process.env.LFM12_MODEL_NAME || "LFM2.5-1.2B-Instruct-Q4_K_M";
+const LFM12_MODEL_NAME = process.env.LFM12_MODEL_NAME || "LFM2.5-1.2B-Thinking-Q4_K_M";
 const LFM26_MODEL_NAME = process.env.LFM26_MODEL_NAME || "LFM2.5-2.6B-Q4_K_M";
-const LFM12_MODEL_PATH = process.env.LFM12_MODEL_PATH || "models/LFM2.5-1.2B-Instruct-GGUF/LFM2.5-1.2B-Instruct-Q4_K_M.gguf";
+const LFM12_MODEL_PATH = process.env.LFM12_MODEL_PATH || "models/LFM2.5-1.2B-Thinking-GGUF/LFM2.5-1.2B-Thinking-Q4_K_M.gguf";
 const LFM26_MODEL_PATH = process.env.LFM26_MODEL_PATH || "models/LFM2.5-2.6B-GGUF/LFM2.5-2.6B-Q4_K_M.gguf";
 const MODEL_PROFILES = new Map([
-  ["lfm2.5-1.2b-instruct", {
-    id: "lfm2.5-1.2b-instruct",
-    label: "LFM2.5 1.2B Instruct",
-    description: "Smaller instruction model",
+  ["lfm2.5-1.2b-no-think", {
+    id: "lfm2.5-1.2b-no-think",
+    label: "LFM2.5 1.2B · no thinking",
+    description: "Smaller reasoning checkpoint with reasoning disabled",
     extractionUrl: LFM12_URL,
     questionUrl: LFM12_URL,
     extractionModel: LFM12_MODEL_NAME,
@@ -94,6 +94,16 @@ Rules:
   return [{ role: "user", content: user }];
 }
 
+function extractionSchema(input) {
+  const properties = Object.fromEntries(input.fields.map((field) => [field.id, { type: ["string", "null"] }]));
+  return {
+    type: "object",
+    additionalProperties: false,
+    properties,
+    required: input.fields.map((field) => field.id),
+  };
+}
+
 function questionMessages(input) {
   const transcript = serializeSegments((input.segments || []).slice(-1));
   const user = `This is an interview transcript.
@@ -107,13 +117,15 @@ Default to no questions. Do not ask a question merely because more detail could 
 
 Ask at most one question for each distinct unresolved claim. There is no overall three-question limit.
 
-Only ask about a candidate achievement or outcome that is unclear or vague. Do not ask about methodology, tools, project scope, challenges, process, lessons learned, or next steps unless the candidate's personal contribution itself is unclear.
+Only ask about a candidate achievement or outcome that is unclear or vague.
+
+A quantified achievement is complete for this task when the transcript states the candidate's contribution and a concrete result, such as a number, percentage, scale, scope, or timeframe. Missing methodology does not make that achievement unclear. Do not ask how the result was achieved, measured, calculated, validated, or attributed.
+
+Do not ask about methodology, tools, project scope, challenges, process, lessons learned, or next steps unless the candidate's personal contribution itself is unclear.
 
 Read the whole transcript and do not ask for information that was already answered.
 
 Only follow up on claims about work, achievements, or outcomes. Do not probe contact details, compensation, availability, or relocation.
-
-When the transcript already states the candidate's contribution and a concrete result with a metric, scope, or timeframe, treat that impact as clear. Do not ask how the metric was measured or request a broader impact.
 
 If the candidate's meaning, contribution, and impact are already clear, return no questions.
 
@@ -196,11 +208,15 @@ function validateExtraction(payload, input) {
   const configured = new Set(input.fields.map((field) => field.id));
   const previousById = new Map((input.previousSnapshot || []).map((item) => [item.fieldId, item]));
   const rawPayload = payload && typeof payload === "object" && !Array.isArray(payload) ? payload : {};
-  const placeholders = new Set(["null", "n/a", "na", "not provided", "not mentioned", "not stated", "not explicitly stated", "unknown"]);
+  const isPlaceholder = (value) => {
+    const text = String(value || "").trim().toLowerCase().replace(/[.!]+$/g, "").replace(/\s+/g, " ");
+    return ["null", "n/a", "na", "none", "unknown"].includes(text)
+      || /^(?:not|none) (?:explicitly )?(?:provided|mentioned|stated|specified)(?: in (?:the )?transcript)?$/.test(text);
+  };
   const normalizeSalary = (value) => {
     const text = String(value || "").trim();
     if (!text || /[€£]|\b(?:EUR|GBP)\b/i.test(text)) return text;
-    const normalized = text.replace(/\$?\b(\d{2,3})(?:,?000|[Kk])?\b(?!\s*(?:%|percent))/g, (match, amount) => {
+    const normalized = text.replace(/\$?\b(\d{2,3})(?:,?000|[Kk]|\s+thousand)?\b(?!\s*(?:%|percent))/gi, (match, amount) => {
       const number = Number(amount);
       return number >= 50 ? `$${number.toLocaleString("en-US")},000` : match;
     });
@@ -216,8 +232,11 @@ function validateExtraction(payload, input) {
     }
     if (rawValue === null || rawValue === undefined) continue;
     const valueText = Array.isArray(rawValue) ? rawValue.join(", ") : String(rawValue).trim();
-    if (!valueText || placeholders.has(valueText.toLowerCase())) continue;
     raw.push(item);
+    if (!valueText || isPlaceholder(valueText)) {
+      rejected.push({ update: item, rejectionReason: "Placeholder response treated as empty" });
+      continue;
+    }
     const value = ["current_salary", "target_salary"].includes(fieldId) ? normalizeSalary(valueText) : valueText;
     accepted.push({ fieldId, status: "provided", value });
   }
@@ -265,7 +284,7 @@ function mergeMetrics(extraction, question) {
 async function infer(input) {
   const profile = MODEL_PROFILES.get(input.modelId || DEFAULT_MODEL_ID);
   if (!profile) throw new Error(`Unknown model profile: ${input.modelId}`);
-  const extractionRun = await generateJson({ messages: extractionMessages(input), maxTokens: EXTRACTION_MAX_TOKENS, url: profile.extractionUrl, model: profile.extractionModel, temperature: 0, topK: 1, topP: 1, repeatPenalty: 1, seed: 0 });
+  const extractionRun = await generateJson({ messages: extractionMessages(input), schema: extractionSchema(input), schemaName: "interview_extraction", maxTokens: EXTRACTION_MAX_TOKENS, url: profile.extractionUrl, model: profile.extractionModel, temperature: 0, topK: 1, topP: 1, repeatPenalty: 1, seed: 0 });
   const extraction = validateExtraction(extractionRun.payload, input);
   const questionRun = await generateJson({ messages: questionMessages(input), schema: questionSchema, schemaName: "follow_up_questions", maxTokens: QUESTION_MAX_TOKENS, url: profile.questionUrl, model: profile.questionModel, temperature: 0 });
   const questions = validateQuestions(questionRun.payload);
