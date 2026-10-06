@@ -85,11 +85,14 @@ Rules:
 - Read the entire transcript for corrections before answering. If a value is explicitly corrected, discard the earlier value and return only its replacement.
 - Current fields describe only the candidate's latest role. Do not put a former employer, title, or program into a current field.
 - Set current_program to null unless a program is explicitly connected to the latest role.
-- Set area_of_interest to null unless the candidate explicitly states desired future work. Set reason_for_leaving to null unless the candidate explicitly states why they want to leave their current employer.
+- Set area_of_interest to null unless the candidate explicitly states desired future work.
+- Reason for leaving means the candidate's explicitly stated motivation for leaving their current employer or role now. Compensation, availability, relocation, and historical job changes are not reasons for leaving.
+- Relocation means only the candidate's willingness or unwillingness to relocate and any destination or location constraint. Exclude compensation, availability, and reasons for leaving.
 - Availability means start timing or notice period. A later correction to timing or notice replaces the earlier availability.
-- Current salary is existing compensation. Target salary is desired compensation for the next role.
+- Classify compensation by its stated status, not by field order or the interviewer's question. Current salary is compensation the candidate actually receives now. Target salary is compensation desired, expected, or conditional on a future role. Assign an amount only to the supported field; if its status is unclear, return null rather than guess.
 - Convert colloquial salary figures to complete US-dollar values before returning JSON. In salary discussion, a two- or three-digit number means thousands: 178 means $178,000 and 205 to 215 means $205,000-$215,000.
 - Preserve stated qualifiers such as base salary, bonus, equity, notice period, and relocation constraints.
+- Each value must answer only its field. Do not copy an entire multi-topic answer into one field.
 - Return one valid JSON object using exactly the field names above. Use null when a field is not stated.`;
   return [{ role: "user", content: user }];
 }

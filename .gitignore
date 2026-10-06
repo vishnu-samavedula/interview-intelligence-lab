@@ -6,6 +6,7 @@ scripts/
 *.doc
 *.docx
 *Conversational Copilot Solution Proposal.md
+*Conversational Copilot Solution Proposal*.pdf
 web/node_modules/
 web/.next/
 web/dist/

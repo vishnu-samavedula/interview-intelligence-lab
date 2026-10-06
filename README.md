@@ -283,7 +283,7 @@ The original eight-preset run on the development M5 Max produced the following a
 | Model | Extraction precision | Extraction recall | Avg. two-call latency | Avg. extraction | Avg. questions |
 |---|---:|---:|---:|---:|---:|
 | LFM2.5-1.2B-Thinking | 65.4% | 25.4% | 0.69 s | 0.60 s | 0.09 s |
-| LFM2.5-2.6B | 82.7% | 92.5% | 1.96 s | 1.46 s | 0.49 s |
+| LFM2.5-2.6B | 86.1% | 92.5% | 2.11 s | 1.47 s | 0.63 s |
 
 These are indicative synthetic-demo measurements, not formal benchmarks or evidence for unrelated production domains. The preset scorer uses strict field-aware matching; small wording differences can count as wrong.
 
@@ -292,7 +292,7 @@ The quality panel compares the accumulated record with facts supported by the tr
 ## Known model behaviors
 
 - The 2.6B model is materially stronger than the 1.2B Thinking model for extraction on the current presets.
-- On five realistic 15-second extraction samples, the 2.6B recovered all 11 expected facts and made seven unsupported field assignments: 61.1% precision and 100% recall. The harness separately cleaned up 22 placeholder phrases, which are not counted as hallucinations. These cases are directional fixtures, not a production-domain benchmark.
+- On five realistic 15-second extraction samples, the 2.6B recovered all 11 expected facts and made seven unsupported field assignments: 61.1% precision and 100% recall. The harness separately cleaned up 11 placeholder phrases, which are not counted as hallucinations. These cases are directional fixtures, not a production-domain benchmark.
 - The 1.2B Thinking model remains useful as a fast comparison baseline or a candidate for a narrower trained routing/classification role; it is not the recommended zero-shot extractor based on current results.
 - Strict extraction schema decoding is required for the 1.2B Thinking checkpoint in this setup. The llama.cpp reasoning-off flags alone did not prevent it from spending the output budget on a reasoning trace.
 - Concise prompts work better than large field-definition maps for the tested quantized model.
