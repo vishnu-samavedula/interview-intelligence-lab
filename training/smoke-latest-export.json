@@ -1,0 +1,13 @@
+{
+  "llama_cpp_commit": "c1d0e7a004015f23bc0233470b747b596f29b264",
+  "adapters": {
+    "extraction": {
+      "file": "/artifacts/runs/20261022T164456Z-f8b40980/extraction.gguf",
+      "bytes": 6820768
+    },
+    "questions": {
+      "file": "/artifacts/runs/20261022T164456Z-f8b40980/questions.gguf",
+      "bytes": 6820768
+    }
+  }
+}

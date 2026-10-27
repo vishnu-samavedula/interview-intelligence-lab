@@ -1,0 +1,4579 @@
+{
+  "version": "0.1.0",
+  "status": "draft_pending_human_review",
+  "use_for_training": false,
+  "use_for_locked_evaluation": false,
+  "groups": [
+    {
+      "id": "employer-timeline",
+      "scenario_group_id": "calibration-contrast-employer-timeline",
+      "split": "calibration_only",
+      "review_status": "draft_pending_human_review",
+      "field_contract": "interview-fields-v1",
+      "domain_scope": "us_veteran_civilian_job_interviews_v1",
+      "title": "Same employers, reversed current/former status",
+      "relation": "meaning_changes",
+      "changed_fields": [
+        "current_employer"
+      ],
+      "question_decision_changes": false,
+      "rationale": "Employer popularity and word position must not override explicitly stated chronology.",
+      "variants": [
+        {
+          "id": "employer-timeline-a",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Walk me through your background."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I previously worked at Cobalt Defense; I now work at Juniper Systems.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Walk me through your background."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I previously worked at",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "Cobalt Defense; I now work at Juniper Systems.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": "Juniper Systems",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I now work at Juniper Systems"
+                  }
+                ]
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "Walk me through your background.",
+              "I served in the Army. I previously worked at Cobalt Defense; I now work at Juniper Systems."
+            ]
+          ]
+        },
+        {
+          "id": "employer-timeline-b",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Walk me through your background."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I previously worked at Juniper Systems; I now work at Cobalt Defense.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Walk me through your background."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I previously worked at",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "Juniper Systems; I now work at Cobalt Defense.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": "Cobalt Defense",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I now work at Cobalt Defense"
+                  }
+                ]
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "Walk me through your background.",
+              "I served in the Army. I previously worked at Juniper Systems; I now work at Cobalt Defense."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clearance-status",
+      "scenario_group_id": "calibration-contrast-clearance-status",
+      "split": "calibration_only",
+      "review_status": "draft_pending_human_review",
+      "field_contract": "interview-fields-v1",
+      "domain_scope": "us_veteran_civilian_job_interviews_v1",
+      "title": "Same clearance name, active versus expired",
+      "relation": "meaning_changes",
+      "changed_fields": [
+        "security_clearance"
+      ],
+      "question_decision_changes": false,
+      "rationale": "A clearance keyword or military background does not establish currently held status.",
+      "variants": [
+        {
+          "id": "clearance-status-a",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What is your clearance status?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. My Secret clearance is active today.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What is your clearance status?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. My",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "Secret clearance is active today.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": "active Secret clearance",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "My Secret clearance is active today"
+                  }
+                ]
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "What is your clearance status?",
+              "I served in the Army. My Secret clearance is active today."
+            ]
+          ]
+        },
+        {
+          "id": "clearance-status-b",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What is your clearance status?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. My Secret clearance expired; I do not currently hold a clearance.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What is your clearance status?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. My Secret clearance",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "expired; I do not currently hold a clearance.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "What is your clearance status?",
+              "I served in the Army. My Secret clearance expired; I do not currently hold a clearance."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "activity-versus-impact",
+      "scenario_group_id": "calibration-contrast-activity-versus-impact",
+      "split": "calibration_only",
+      "review_status": "draft_pending_human_review",
+      "field_contract": "interview-fields-v1",
+      "domain_scope": "us_veteran_civilian_job_interviews_v1",
+      "title": "A simulation count versus a measured result",
+      "relation": "meaning_changes",
+      "changed_fields": [],
+      "question_decision_changes": true,
+      "rationale": "Activity volume leaves the analytical finding unresolved. The second answer states contribution, result, operational value and the relevant trade-off; abstain rather than repeating those details.",
+      "variants": [
+        {
+          "id": "activity-versus-impact-a",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What did you personally do?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I built a Monte Carlo simulation and ran 1,000 scenarios to characterize tracking error.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What did you personally do?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I built a Monte Carlo",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "simulation and ran 1,000 scenarios to characterize tracking error.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": "Monte Carlo simulation",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I built a Monte Carlo simulation"
+                  }
+                ]
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": [
+                "What did the simulations reveal about tracking error?"
+              ]
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "What did you personally do?",
+              "I served in the Army. I built a Monte Carlo simulation and ran 1,000 scenarios to characterize tracking error."
+            ]
+          ]
+        },
+        {
+          "id": "activity-versus-impact-b",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What did you personally do?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I built a Monte Carlo simulation and used the results to change the tracking filter, reducing tracking error from eight percent to three percent. That cut unnecessary operator reviews, with no increase in missed tracks.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What did you personally do?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I built a Monte Carlo simulation and used the results to change the tracking filter,",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "reducing tracking error from eight percent to three percent. That cut unnecessary operator reviews, with no increase in missed tracks.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": "Monte Carlo simulation",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I built a Monte Carlo simulation"
+                  }
+                ]
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "What did you personally do?",
+              "I served in the Army. I built a Monte Carlo simulation and used the results to change the tracking filter, reducing tracking error from eight percent to three percent. That cut unnecessary operator reviews, with no increase in missed tracks."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "team-versus-personal",
+      "scenario_group_id": "calibration-contrast-team-versus-personal",
+      "split": "calibration_only",
+      "review_status": "draft_pending_human_review",
+      "field_contract": "interview-fields-v1",
+      "domain_scope": "us_veteran_civilian_job_interviews_v1",
+      "title": "Quantified team result versus stated personal contribution",
+      "relation": "meaning_changes",
+      "changed_fields": [],
+      "question_decision_changes": true,
+      "rationale": "A result can be quantified while ownership remains unclear. Do not credit a team achievement to the candidate without support.",
+      "variants": [
+        {
+          "id": "team-versus-personal-a",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Tell me about the result."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. Our team reduced maintenance delays by 30 percent last quarter. I was in that group.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Tell me about the result."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. Our team reduced maintenance delays",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "by 30 percent last quarter. I was in that group.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": [
+                "What did you personally contribute to reducing maintenance delays?"
+              ]
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "Tell me about the result.",
+              "I served in the Army. Our team reduced maintenance delays by 30 percent last quarter. I was in that group."
+            ]
+          ]
+        },
+        {
+          "id": "team-versus-personal-b",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Tell me about the result."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I redesigned the parts scheduling process, reducing maintenance delays by 30 percent last quarter.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Tell me about the result."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I redesigned the parts scheduling",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "process, reducing maintenance delays by 30 percent last quarter.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "Tell me about the result.",
+              "I served in the Army. I redesigned the parts scheduling process, reducing maintenance delays by 30 percent last quarter."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "replace-versus-withdraw",
+      "scenario_group_id": "calibration-contrast-replace-versus-withdraw",
+      "split": "calibration_only",
+      "review_status": "draft_pending_human_review",
+      "field_contract": "interview-fields-v1",
+      "domain_scope": "us_veteran_civilian_job_interviews_v1",
+      "title": "Corrected email versus retracted email without replacement",
+      "relation": "meaning_changes",
+      "changed_fields": [
+        "email"
+      ],
+      "question_decision_changes": false,
+      "rationale": "Both variants invalidate the old address. Only an explicit replacement supports a new value; an email username is not a full name.",
+      "variants": [
+        {
+          "id": "replace-versus-withdraw-a",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "How should I contact you?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. Use riley@old.example.",
+                      "responseComplete": true
+                    },
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 2,
+                      "text": "Anything to correct?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 2,
+                      "text": "Replace that address with riley.chen@example.com.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "How should I contact you?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "Army. Use riley@old.example.",
+                      "responseComplete": true
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-3",
+                  "date": "2026-10-22",
+                  "timestamp": "11:02:00Z",
+                  "startSeconds": 120,
+                  "endSeconds": 150,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 2,
+                      "text": "Anything to correct?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 2,
+                      "text": "Replace that address",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-4",
+                  "date": "2026-10-22",
+                  "timestamp": "11:03:00Z",
+                  "startSeconds": 180,
+                  "endSeconds": 210,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 2,
+                      "text": "with riley.chen@example.com.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": "riley.chen@example.com",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "Replace that address with riley.chen@example.com"
+                  }
+                ]
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "How should I contact you?",
+              "I served in the Army. Use riley@old.example."
+            ],
+            [
+              "Anything to correct?",
+              "Replace that address with riley.chen@example.com."
+            ]
+          ]
+        },
+        {
+          "id": "replace-versus-withdraw-b",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "How should I contact you?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. Use riley@old.example.",
+                      "responseComplete": true
+                    },
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 2,
+                      "text": "Anything to correct?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 2,
+                      "text": "Remove that address. I do not have a replacement to share.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "How should I contact you?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "Army. Use riley@old.example.",
+                      "responseComplete": true
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-3",
+                  "date": "2026-10-22",
+                  "timestamp": "11:02:00Z",
+                  "startSeconds": 120,
+                  "endSeconds": 150,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 2,
+                      "text": "Anything to correct?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 2,
+                      "text": "Remove that address. I do not",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-4",
+                  "date": "2026-10-22",
+                  "timestamp": "11:03:00Z",
+                  "startSeconds": 180,
+                  "endSeconds": 210,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 2,
+                      "text": "have a replacement to share.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "How should I contact you?",
+              "I served in the Army. Use riley@old.example."
+            ],
+            [
+              "Anything to correct?",
+              "Remove that address. I do not have a replacement to share."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relocation-polarity",
+      "scenario_group_id": "calibration-contrast-relocation-polarity",
+      "split": "calibration_only",
+      "review_status": "draft_pending_human_review",
+      "field_contract": "interview-fields-v1",
+      "domain_scope": "us_veteran_civilian_job_interviews_v1",
+      "title": "Conditional relocation versus refusal with travel permission",
+      "relation": "meaning_changes",
+      "changed_fields": [
+        "relocation"
+      ],
+      "question_decision_changes": false,
+      "rationale": "Shared city and travel keywords cannot erase polarity or destination restrictions.",
+      "variants": [
+        {
+          "id": "relocation-polarity-a",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Would you relocate?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I would relocate only to Denver, and I can travel up to 20 percent.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Would you relocate?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I would relocate only to",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "Denver, and I can travel up to 20 percent.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": "would relocate only to Denver; can travel up to 20 percent",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I would relocate only to Denver, and I can travel up to 20 percent"
+                  }
+                ]
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "Would you relocate?",
+              "I served in the Army. I would relocate only to Denver, and I can travel up to 20 percent."
+            ]
+          ]
+        },
+        {
+          "id": "relocation-polarity-b",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Would you relocate?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I would not relocate, even to Denver, but I can travel up to 20 percent.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Would you relocate?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I would not relocate, even",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "to Denver, but I can travel up to 20 percent.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": "would not relocate, even to Denver; can travel up to 20 percent",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I would not relocate, even to Denver, but I can travel up to 20 percent"
+                  }
+                ]
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ],
+              "relocation": [
+                "No",
+                "cannot relocate",
+                "not willing to relocate",
+                "would not relocate, even to Denver; can travel up to 20 percent"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "Would you relocate?",
+              "I served in the Army. I would not relocate, even to Denver, but I can travel up to 20 percent."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rank-versus-degree",
+      "scenario_group_id": "calibration-contrast-rank-versus-degree",
+      "split": "calibration_only",
+      "review_status": "draft_pending_human_review",
+      "field_contract": "interview-fields-v1",
+      "domain_scope": "us_veteran_civilian_job_interviews_v1",
+      "title": "Military rank versus explicit education evidence",
+      "relation": "meaning_changes",
+      "changed_fields": [
+        "masters_degree"
+      ],
+      "question_decision_changes": false,
+      "rationale": "Rank cannot supply an unstated degree, graduation year, clearance or civilian title.",
+      "variants": [
+        {
+          "id": "rank-versus-degree-a",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What qualifications would you like to discuss?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army as a captain. I have not mentioned any degree.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What qualifications would you like to discuss?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army as a",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "captain. I have not mentioned any degree.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army, captain",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army as a captain"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army",
+                "Army, captain"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army, captain"
+            }
+          },
+          "turns": [
+            [
+              "What qualifications would you like to discuss?",
+              "I served in the Army as a captain. I have not mentioned any degree."
+            ]
+          ]
+        },
+        {
+          "id": "rank-versus-degree-b",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What qualifications would you like to discuss?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army as a captain. I earned a master's in systems engineering.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What qualifications would you like to discuss?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army as a captain.",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I earned a master's in systems engineering.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": "master's in systems engineering",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I earned a master's in systems engineering"
+                  }
+                ]
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army, captain",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army as a captain"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army",
+                "Army, captain"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army, captain"
+            }
+          },
+          "turns": [
+            [
+              "What qualifications would you like to discuss?",
+              "I served in the Army as a captain. I earned a master's in systems engineering."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "resolved-versus-unresolved",
+      "scenario_group_id": "calibration-contrast-resolved-versus-unresolved",
+      "split": "calibration_only",
+      "review_status": "draft_pending_human_review",
+      "field_contract": "interview-fields-v1",
+      "domain_scope": "us_veteran_civilian_job_interviews_v1",
+      "title": "A later answer resolves the earlier vague claim",
+      "relation": "meaning_changes",
+      "changed_fields": [],
+      "question_decision_changes": true,
+      "rationale": "Concrete qualitative comparisons can resolve impact without a percentage. Praise alone does not state the result. These inputs have no prior suggestion history; do not treat an actual interviewer question as a previously suggested model question.",
+      "variants": [
+        {
+          "id": "resolved-versus-unresolved-a",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Describe your work."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I rewrote the test scheduler, and throughput improved a lot.",
+                      "responseComplete": true
+                    },
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 2,
+                      "text": "What changed in throughput?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 2,
+                      "text": "I do not have a percentage, but it used to take a full shift to finish a batch and now it finishes before lunch.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Describe your work."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I rewrote the",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "test scheduler, and throughput improved a lot.",
+                      "responseComplete": true
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-3",
+                  "date": "2026-10-22",
+                  "timestamp": "11:02:00Z",
+                  "startSeconds": 120,
+                  "endSeconds": 150,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 2,
+                      "text": "What changed in throughput?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 2,
+                      "text": "I do not have a percentage, but it used to take a",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-4",
+                  "date": "2026-10-22",
+                  "timestamp": "11:03:00Z",
+                  "startSeconds": 180,
+                  "endSeconds": 210,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 2,
+                      "text": "full shift to finish a batch and now it finishes before lunch.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "Describe your work.",
+              "I served in the Army. I rewrote the test scheduler, and throughput improved a lot."
+            ],
+            [
+              "What changed in throughput?",
+              "I do not have a percentage, but it used to take a full shift to finish a batch and now it finishes before lunch."
+            ]
+          ]
+        },
+        {
+          "id": "resolved-versus-unresolved-b",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Describe your work."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I rewrote the test scheduler, and throughput improved a lot.",
+                      "responseComplete": true
+                    },
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 2,
+                      "text": "What changed in throughput?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 2,
+                      "text": "The engineers were pleased; I have not explained what changed in throughput.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Describe your work."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I rewrote the",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "test scheduler, and throughput improved a lot.",
+                      "responseComplete": true
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-3",
+                  "date": "2026-10-22",
+                  "timestamp": "11:02:00Z",
+                  "startSeconds": 120,
+                  "endSeconds": 150,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 2,
+                      "text": "What changed in throughput?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 2,
+                      "text": "The engineers were pleased; I have",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-4",
+                  "date": "2026-10-22",
+                  "timestamp": "11:03:00Z",
+                  "startSeconds": 180,
+                  "endSeconds": 210,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 2,
+                      "text": "not explained what changed in throughput.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": [
+                "What concrete change in batch throughput followed your scheduler rewrite?"
+              ]
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "Describe your work.",
+              "I served in the Army. I rewrote the test scheduler, and throughput improved a lot."
+            ],
+            [
+              "What changed in throughput?",
+              "The engineers were pleased; I have not explained what changed in throughput."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "salary-status",
+      "scenario_group_id": "calibration-contrast-salary-status",
+      "split": "calibration_only",
+      "review_status": "draft_pending_human_review",
+      "field_contract": "interview-fields-v1",
+      "domain_scope": "us_veteran_civilian_job_interviews_v1",
+      "title": "Same amounts with current and target status exchanged",
+      "relation": "meaning_changes",
+      "changed_fields": [
+        "current_salary",
+        "target_salary"
+      ],
+      "question_decision_changes": false,
+      "rationale": "A lower target is possible. Assign status from speech, not a learned assumption that targets must exceed current pay.",
+      "variants": [
+        {
+          "id": "salary-status-a",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Tell me about compensation."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. My current annual base is $150,000, and I am targeting $175,000 annual base.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Tell me about compensation."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. My current annual base",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "is $150,000, and I am targeting $175,000 annual base.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": "$150,000 annual base",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "My current annual base is $150,000"
+                  }
+                ]
+              },
+              "target_salary": {
+                "value": "$175,000 annual base",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I am targeting $175,000 annual base"
+                  }
+                ]
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "Tell me about compensation.",
+              "I served in the Army. My current annual base is $150,000, and I am targeting $175,000 annual base."
+            ]
+          ]
+        },
+        {
+          "id": "salary-status-b",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Tell me about compensation."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. My current annual base is $175,000, and I am targeting $150,000 annual base.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Tell me about compensation."
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. My current annual base",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "is $175,000, and I am targeting $150,000 annual base.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": "$175,000 annual base",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "My current annual base is $175,000"
+                  }
+                ]
+              },
+              "target_salary": {
+                "value": "$150,000 annual base",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I am targeting $150,000 annual base"
+                  }
+                ]
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "Tell me about compensation.",
+              "I served in the Army. My current annual base is $175,000, and I am targeting $150,000 annual base."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paraphrase-invariance",
+      "scenario_group_id": "calibration-contrast-paraphrase-invariance",
+      "split": "calibration_only",
+      "review_status": "draft_pending_human_review",
+      "field_contract": "interview-fields-v1",
+      "domain_scope": "us_veteran_civilian_job_interviews_v1",
+      "title": "Different wording with the same meaning",
+      "relation": "meaning_preserved",
+      "changed_fields": [],
+      "question_decision_changes": false,
+      "rationale": "Equivalent wording should preserve field meaning and abstention. Evidence text naturally differs.",
+      "variants": [
+        {
+          "id": "paraphrase-invariance-a",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Where do you work and when can you start?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I currently work at Cedar Defense. I need three weeks after accepting an offer.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Where do you work and when can you start?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I currently work at Cedar",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "Defense. I need three weeks after accepting an offer.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": "Cedar Defense",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I currently work at Cedar Defense"
+                  }
+                ]
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": "three weeks after accepting an offer",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I need three weeks after accepting an offer"
+                  }
+                ]
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "Where do you work and when can you start?",
+              "I served in the Army. I currently work at Cedar Defense. I need three weeks after accepting an offer."
+            ]
+          ]
+        },
+        {
+          "id": "paraphrase-invariance-b",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Where do you work and when can you start?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. Cedar Defense is my present employer. Once I accept an offer, allow three weeks before I can join.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "Where do you work and when can you start?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. Cedar Defense is my present employer. Once",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I accept an offer, allow three weeks before I can join.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": "Cedar Defense",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Cedar Defense is my present employer"
+                  }
+                ]
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": "three weeks after accepting an offer",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Once I accept an offer, allow three weeks before I can join"
+                  }
+                ]
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "Where do you work and when can you start?",
+              "I served in the Army. Cedar Defense is my present employer. Once I accept an offer, allow three weeks before I can join."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "metric-versus-practical-value",
+      "scenario_group_id": "calibration-contrast-metric-versus-practical-value",
+      "split": "calibration_only",
+      "review_status": "draft_pending_human_review",
+      "field_contract": "interview-fields-v1",
+      "domain_scope": "us_veteran_civilian_job_interviews_v1",
+      "title": "A measured result versus explained value and trade-offs",
+      "relation": "meaning_changes",
+      "changed_fields": [],
+      "question_decision_changes": true,
+      "rationale": "A technical metric can leave its practical value unresolved. Ask without presuming savings or a trade-off. Once the candidate states the team benefit and relevant trade-off, abstain rather than asking again.",
+      "variants": [
+        {
+          "id": "metric-versus-practical-value-a",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What did you personally improve?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I changed the filter and reduced tracking error from 8% to 3%.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What did you personally improve?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I changed the filter",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "and reduced tracking error from 8% to 3%.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": [
+                "What did that improvement enable for the team, and were there any trade-offs?"
+              ]
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "What did you personally improve?",
+              "I served in the Army. I changed the filter and reduced tracking error from 8% to 3%."
+            ]
+          ]
+        },
+        {
+          "id": "metric-versus-practical-value-b",
+          "inputs": {
+            "single": {
+              "segments": [
+                {
+                  "id": "single-preset",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What did you personally improve?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I changed the filter and reduced tracking error from 8% to 3%. Operators spent less time reviewing false tracks; the trade-off was a small increase in compute cost, which the team accepted.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            },
+            "multi": {
+              "segments": [
+                {
+                  "id": "chunk-1",
+                  "date": "2026-10-22",
+                  "timestamp": "11:00:00Z",
+                  "startSeconds": 0,
+                  "endSeconds": 30,
+                  "turns": [
+                    {
+                      "speaker": "Interviewer",
+                      "turnId": 1,
+                      "text": "What did you personally improve?"
+                    },
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "I served in the Army. I changed the filter and reduced tracking error from 8% to 3%. Operators spent",
+                      "responseComplete": false
+                    }
+                  ]
+                },
+                {
+                  "id": "chunk-2",
+                  "date": "2026-10-22",
+                  "timestamp": "11:01:00Z",
+                  "startSeconds": 60,
+                  "endSeconds": 90,
+                  "turns": [
+                    {
+                      "speaker": "Candidate",
+                      "turnId": 1,
+                      "text": "less time reviewing false tracks; the trade-off was a small increase in compute cost, which the team accepted.",
+                      "responseComplete": true
+                    }
+                  ]
+                }
+              ],
+              "previousSnapshot": [],
+              "previousQuestions": []
+            }
+          },
+          "expected": {
+            "final": {
+              "full_name": {
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "value": null,
+                "evidence": []
+              },
+              "email": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I served in the Army"
+                  }
+                ]
+              },
+              "security_clearance": {
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "value": null,
+                "evidence": []
+              }
+            },
+            "questions": {
+              "questions": []
+            },
+            "acceptable_values": {
+              "military_service": [
+                "Army"
+              ]
+            },
+            "supported_detail_reference": {
+              "military_service": "Army"
+            }
+          },
+          "turns": [
+            [
+              "What did you personally improve?",
+              "I served in the Army. I changed the filter and reduced tracking error from 8% to 3%. Operators spent less time reviewing false tracks; the trade-off was a small increase in compute cost, which the team accepted."
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

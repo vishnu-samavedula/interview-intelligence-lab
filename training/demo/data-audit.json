@@ -1,0 +1,60 @@
+{
+  "scope": "focused_demo_not_production",
+  "roots_by_split": {
+    "challenge": 12,
+    "dev": 12,
+    "train": 63,
+    "locked_test": 20
+  },
+  "train_generators": {
+    "anthropic/claude-haiku-4.5": 32,
+    "google/gemini-3.5-flash-lite": 31
+  },
+  "roles": {
+    "software_cyber": 8,
+    "technical_training": 8,
+    "program_project_management": 8,
+    "systems_engineering": 7,
+    "intelligence_analysis": 8,
+    "quality_test": 8,
+    "maintenance_avionics": 8,
+    "logistics_operations": 8
+  },
+  "distinct_train_families": 32,
+  "cross_split_family_overlap": 0,
+  "exact_test_duplicates_of_train": [],
+  "field_supported_train_roots": {
+    "current_title": 31,
+    "availability": 38,
+    "current_program": 25,
+    "military_service": 30,
+    "full_name": 28,
+    "location": 26,
+    "phone": 26,
+    "email": 28,
+    "bachelors_degree": 27,
+    "bachelors_year": 27,
+    "masters_degree": 23,
+    "masters_year": 23,
+    "security_clearance": 30,
+    "current_employer": 35,
+    "tenure": 29,
+    "team_size": 26,
+    "key_technologies": 30,
+    "area_of_interest": 36,
+    "reason_for_leaving": 35,
+    "current_salary": 33,
+    "target_salary": 27,
+    "relocation": 28
+  },
+  "max_person_repetitions": 1,
+  "training_sha256_recorded_in": "training/demo/training-run.json",
+  "semantic_gold": false,
+  "adjudication_notes": "manifest.json",
+  "limits": [
+    "Synthetic profiles plus model-generated work episodes; not real interview transcripts.",
+    "Question usefulness remains subjective.",
+    "Small experimental dataset; no production certification.",
+    "Synthetic test wording and scenario families are held out; full semantic independence is not established by lexical checks."
+  ]
+}

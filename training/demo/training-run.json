@@ -1,0 +1,8 @@
+{
+  "run_id": "20261026T145032Z-d1fb5b46",
+  "dataset_sha256": "1f0699b2c8fa19ecaa9747dec13d63905495f7f82fd0dbce2017789193264e1e",
+  "training_source_sha256": "3bbbfee9a9bea27c9a88fb17716ce0699738b3cd5ca3ffb9a411552909686afc",
+  "dataset": "training/demo/runs/demo-reviewed-v1/training-frozen.jsonl",
+  "status": "trained_and_exported",
+  "experimental_not_production": true
+}

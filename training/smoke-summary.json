@@ -1,0 +1,29 @@
+{
+  "run_id": "20261022T164456Z-f8b40980",
+  "status": "technical_smoke_passed_not_quality_promoted",
+  "native_passed": true,
+  "local_q4_loading_and_routing_passed": true,
+  "base_model": "LiquidAI/LFM2.5-2.6B",
+  "native_revision": "654f9463ce32b05d0429d76fe1f580b27d4c1ac0",
+  "converter_commit": "c1d0e7a004015f23bc0233470b747b596f29b264",
+  "steps_per_task": 12,
+  "peak_cuda_GiB": 8.345819473266602,
+  "calibration_or_gold_used": false,
+  "main_training_started": false,
+  "cache_reuse_tested": false,
+  "artifacts": {
+    "extraction.gguf": {
+      "bytes": 6820768,
+      "sha256": "9a63398ed1bad10613bc7c58999408ebf82c9ae0094d6c2fb94a9aa05aff5ecf"
+    },
+    "questions.gguf": {
+      "bytes": 6820768,
+      "sha256": "8681568f22e3d1f7e64441b559935c985d28779c95201130f200bbae4725986f"
+    }
+  },
+  "known_quality_failures": [
+    "Q4 extraction sample emitted three invalid set/null operations; value/operation and evidence validators must remain enabled.",
+    "Unconstrained Q4 generations did not reliably honor the JSON contract. Schema-constrained outputs parsed successfully.",
+    "Native question smoke generation abstained on one ask fixture. No semantic or quantization-quality promotion claim."
+  ]
+}

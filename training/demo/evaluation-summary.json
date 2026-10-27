@@ -1,0 +1,57 @@
+{
+  "scope": "unseen_synthetic_demo_not_real_world_proof",
+  "dataset_sha256": "1fc83034148e6c431589fa614af9f0614d5ae50c5d67ca31d997cf0b2c4c14de",
+  "profiles": {
+    "base": {
+      "rows": 96,
+      "failures": 0,
+      "extraction": {
+        "raw_model": {
+          "tp": 229,
+          "fp": 146,
+          "fn": 44,
+          "normalized_value_f1": 0.7067901234567902
+        },
+        "rejected_fields": 29,
+        "tp": 213,
+        "fp": 133,
+        "fn": 60,
+        "presenceTP": 251,
+        "presenceFP": 95,
+        "presenceFN": 22,
+        "normalized_value_precision": 0.615606936416185,
+        "normalized_value_recall": 0.7802197802197802,
+        "normalized_value_f1": 0.6882067851373183,
+        "presence_f1": 0.8109854604200323,
+        "note": "Conservative normalized text matching; inspect supported concise/full variants separately."
+      },
+      "question_batches": 64
+    },
+    "trained": {
+      "rows": 96,
+      "failures": 0,
+      "extraction": {
+        "raw_model": {
+          "tp": 262,
+          "fp": 39,
+          "fn": 11,
+          "normalized_value_f1": 0.9128919860627178
+        },
+        "rejected_fields": 2,
+        "tp": 261,
+        "fp": 38,
+        "fn": 12,
+        "presenceTP": 271,
+        "presenceFP": 28,
+        "presenceFN": 2,
+        "normalized_value_precision": 0.8729096989966555,
+        "normalized_value_recall": 0.9560439560439561,
+        "normalized_value_f1": 0.9125874125874126,
+        "presence_f1": 0.9475524475524476,
+        "note": "Conservative normalized text matching; inspect supported concise/full variants separately."
+      },
+      "question_batches": 64
+    }
+  },
+  "question_quality": "Awaiting blinded usefulness review. Exact reference wording is not a correctness criterion."
+}

@@ -1,0 +1,767 @@
+{
+  "status": "pending_semantic_review",
+  "sources": [
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "payload": {
+        "fields": [
+          {
+            "field_id": "full_name",
+            "phrases": [
+              "My name is {value}.",
+              "I go by {value}.",
+              "You can call me {value}.",
+              "I'm {value}.",
+              "The name's {value}.",
+              "I've always been {value}.",
+              "People know me as {value}.",
+              "My full name is {value}.",
+              "I'm registered as {value}.",
+              "Call me {value}.",
+              "That's {value} for the record.",
+              "I identify as {value}."
+            ]
+          },
+          {
+            "field_id": "location",
+            "phrases": [
+              "I'm based in {value}.",
+              "I currently live in {value}.",
+              "Right now I'm in {value}.",
+              "My home is in {value}.",
+              "I'm located in {value}.",
+              "I reside in {value}.",
+              "I call {value} home.",
+              "I'm working out of {value}.",
+              "I'm situated in {value}.",
+              "My current location is {value}.",
+              "I've set up in {value}.",
+              "I'm staying in {value}."
+            ]
+          },
+          {
+            "field_id": "phone",
+            "phrases": [
+              "You can reach me at {value}.",
+              "My phone number is {value}.",
+              "Feel free to call me at {value}.",
+              "The best number to reach me is {value}.",
+              "I'm available at {value}.",
+              "My contact number is {value}.",
+              "Dial {value} to get me.",
+              "You'll find me at {value}.",
+              "My line is {value}.",
+              "Ring me at {value}.",
+              "I answer at {value}.",
+              "Reach out to me at {value}."
+            ]
+          },
+          {
+            "field_id": "email",
+            "phrases": [
+              "My email is {value}.",
+              "You can email me at {value}.",
+              "I check {value} regularly.",
+              "Send me a message at {value}.",
+              "My email address is {value}.",
+              "I'm reachable via {value}.",
+              "Drop me a line at {value}.",
+              "Contact me at {value}.",
+              "I monitor {value}.",
+              "My inbox is {value}.",
+              "Reach me at {value}.",
+              "I use {value} for email."
+            ]
+          },
+          {
+            "field_id": "bachelors_degree",
+            "phrases": [
+              "I earned my bachelor's in {value}.",
+              "My undergraduate degree is in {value}.",
+              "I completed a bachelor's degree in {value}.",
+              "I hold a bachelor's in {value}.",
+              "My bachelor's is in {value}.",
+              "I studied {value} for my bachelor's.",
+              "I got my bachelor's in {value}.",
+              "My undergrad was in {value}.",
+              "I finished my bachelor's in {value}.",
+              "I have a bachelor's degree in {value}.",
+              "My bachelor's degree is in {value}.",
+              "I pursued a bachelor's in {value}."
+            ]
+          },
+          {
+            "field_id": "bachelors_year",
+            "phrases": [
+              "I finished my bachelor's in {value}.",
+              "My bachelor's graduation was {value}.",
+              "I completed my bachelor's degree in {value}.",
+              "I graduated with my bachelor's in {value}.",
+              "I earned my bachelor's in {value}.",
+              "My bachelor's year was {value}.",
+              "I got my bachelor's diploma in {value}.",
+              "I finished undergrad in {value}.",
+              "My bachelor's conferred in {value}.",
+              "I received my bachelor's in {value}.",
+              "I completed undergrad in {value}.",
+              "My bachelor's was awarded in {value}."
+            ]
+          },
+          {
+            "field_id": "masters_degree",
+            "phrases": [
+              "I earned my master's in {value}.",
+              "My graduate degree is in {value}.",
+              "I completed a master's degree in {value}.",
+              "I hold a master's in {value}.",
+              "My master's is in {value}.",
+              "I studied {value} for my master's.",
+              "I got my master's in {value}.",
+              "My grad degree was in {value}.",
+              "I finished my master's in {value}.",
+              "I have a master's degree in {value}.",
+              "My master's degree is in {value}.",
+              "I pursued a master's in {value}."
+            ]
+          },
+          {
+            "field_id": "masters_year",
+            "phrases": [
+              "I finished my master's in {value}.",
+              "My master's graduation was {value}.",
+              "I completed my master's degree in {value}.",
+              "I graduated with my master's in {value}.",
+              "I earned my master's in {value}.",
+              "My master's year was {value}.",
+              "I got my master's diploma in {value}.",
+              "I finished grad school in {value}.",
+              "My master's conferred in {value}.",
+              "I received my master's in {value}.",
+              "I completed my master's in {value}.",
+              "My master's was awarded in {value}."
+            ]
+          },
+          {
+            "field_id": "military_service",
+            "phrases": [
+              "I served in the {value}.",
+              "My military background is {value}.",
+              "I was in the {value}.",
+              "I spent time in the {value}.",
+              "My service was with the {value}.",
+              "I'm a veteran of the {value}.",
+              "I served as {value}.",
+              "My military experience includes {value}.",
+              "I did a tour in the {value}.",
+              "I was stationed with the {value}.",
+              "My military record shows {value}.",
+              "I completed service in the {value}."
+            ]
+          },
+          {
+            "field_id": "security_clearance",
+            "phrases": [
+              "I currently hold a {value} clearance.",
+              "I have an active {value} clearance.",
+              "My security clearance is {value}.",
+              "I'm cleared at the {value} level.",
+              "I maintain a {value} clearance.",
+              "I possess a {value} clearance.",
+              "My clearance status is {value}.",
+              "I've been granted a {value} clearance.",
+              "I carry a {value} clearance.",
+              "My current clearance is {value}.",
+              "I'm authorized at the {value} level.",
+              "I hold an active {value} clearance."
+            ]
+          },
+          {
+            "field_id": "current_employer",
+            "phrases": [
+              "I currently work for {value}.",
+              "I'm employed by {value}.",
+              "I work at {value} right now.",
+              "My current employer is {value}.",
+              "I'm on the payroll at {value}.",
+              "I'm with {value} at the moment.",
+              "I'm employed at {value}.",
+              "My present employer is {value}.",
+              "I'm working for {value} these days.",
+              "I'm currently on staff at {value}.",
+              "I'm part of the team at {value}.",
+              "I'm based at {value} for work."
+            ]
+          },
+          {
+            "field_id": "current_title",
+            "phrases": [
+              "My current title is {value}.",
+              "I work as a {value}.",
+              "I'm a {value} right now.",
+              "My role is {value}.",
+              "I'm currently a {value}.",
+              "I hold the position of {value}.",
+              "My job title is {value}.",
+              "I'm serving as a {value}.",
+              "I function as a {value}.",
+              "My current role is {value}.",
+              "I'm employed as a {value}.",
+              "I'm working in the capacity of {value}."
+            ]
+          },
+          {
+            "field_id": "tenure",
+            "phrases": [
+              "I've been in this role for {value}.",
+              "I've been with my current employer for {value}.",
+              "I've been here {value}.",
+              "My tenure is {value}.",
+              "I've worked here for {value}.",
+              "I've been in this position {value}.",
+              "I've been at my current job for {value}.",
+              "I've spent {value} in this role.",
+              "I've been employed here for {value}.",
+              "My time with the company is {value}.",
+              "I've been doing this work for {value}.",
+              "I've been in this job {value}."
+            ]
+          },
+          {
+            "field_id": "team_size",
+            "phrases": [
+              "I manage a team of {value}.",
+              "I oversee {value} direct reports.",
+              "My team consists of {value}.",
+              "I lead {value} people.",
+              "I have {value} on my team.",
+              "I'm responsible for {value} team members.",
+              "My direct reports number {value}.",
+              "I supervise {value}.",
+              "I work with a core team of {value}.",
+              "I coordinate {value} contributors.",
+              "My span includes {value}.",
+              "I manage {value} individuals."
+            ]
+          },
+          {
+            "field_id": "current_program",
+            "phrases": [
+              "I'm currently supporting {value}.",
+              "I work on the {value} program.",
+              "My current project is {value}.",
+              "I'm assigned to {value}.",
+              "I'm contributing to {value}.",
+              "I'm part of the {value} effort.",
+              "I'm focused on {value} right now.",
+              "I'm working on {value}.",
+              "My current assignment is {value}.",
+              "I'm engaged with {value}.",
+              "I'm supporting the {value} initiative.",
+              "I'm dedicated to {value}."
+            ]
+          },
+          {
+            "field_id": "key_technologies",
+            "phrases": [
+              "I work with {value}.",
+              "I'm proficient in {value}.",
+              "I use {value} regularly.",
+              "My toolkit includes {value}.",
+              "I'm skilled in {value}.",
+              "I have hands-on experience with {value}.",
+              "I specialize in {value}.",
+              "I'm experienced with {value}.",
+              "I work extensively with {value}.",
+              "I'm well-versed in {value}.",
+              "I leverage {value} in my work.",
+              "I'm competent with {value}."
+            ]
+          },
+          {
+            "field_id": "area_of_interest",
+            "phrases": [
+              "I'm interested in pursuing {value}.",
+              "I'd like to move into {value}.",
+              "I want to work in {value} next.",
+              "I'm looking to transition to {value}.",
+              "My next career move would be {value}.",
+              "I'm drawn to {value}.",
+              "I'd love to focus on {value}.",
+              "I'm keen on {value}.",
+              "I aspire to work in {value}.",
+              "I'm targeting {value} for my next role.",
+              "I want to develop expertise in {value}.",
+              "I'm excited about {value} as a next step."
+            ]
+          },
+          {
+            "field_id": "reason_for_leaving",
+            "phrases": [
+              "I'm leaving because {value}.",
+              "My reason for moving on is {value}.",
+              "I'm motivated to leave due to {value}.",
+              "The main reason I'm departing is {value}.",
+              "I'm seeking a change because {value}.",
+              "I want to leave for {value}.",
+              "I'm driven to move by {value}.",
+              "My impetus for leaving is {value}.",
+              "I'm transitioning because {value}.",
+              "The reason I'm moving is {value}.",
+              "I'm looking to leave on account of {value}.",
+              "I'm motivated by {value} to make a change."
+            ]
+          },
+          {
+            "field_id": "current_salary",
+            "phrases": [
+              "I currently earn {value}.",
+              "My present salary is {value}.",
+              "I'm making {value} right now.",
+              "I receive {value} in my current role.",
+              "My existing compensation is {value}.",
+              "I'm paid {value} at my current job.",
+              "My current take-home is {value}.",
+              "I'm compensated at {value}.",
+              "My salary is currently {value}.",
+              "I'm drawing {value} in my present position.",
+              "My current package is {value}.",
+              "I'm getting {value} as my current compensation."
+            ]
+          },
+          {
+            "field_id": "target_salary",
+            "phrases": [
+              "I'm targeting {value}.",
+              "I'm looking for {value}.",
+              "I expect {value} in my next role.",
+              "My target compensation is {value}.",
+              "I'm seeking {value}.",
+              "I'd like to earn {value}.",
+              "I'm aiming for {value}.",
+              "I want {value} for this move.",
+              "My desired salary is {value}.",
+              "I'm hoping for {value}.",
+              "I'm looking to make {value}.",
+              "I'd expect {value} in a new position."
+            ]
+          },
+          {
+            "field_id": "availability",
+            "phrases": [
+              "I can start in {value}.",
+              "I'm available {value}.",
+              "My notice period is {value}.",
+              "I can begin {value}.",
+              "I'm ready to start {value}.",
+              "I have {value} notice to give.",
+              "I can transition {value}.",
+              "My start date would be {value}.",
+              "I'm free {value}.",
+              "I can join {value}.",
+              "I'm available to begin {value}.",
+              "I can relocate {value}."
+            ]
+          },
+          {
+            "field_id": "relocation",
+            "phrases": [
+              "I'm open to relocating to {value}.",
+              "Relocation is {value} for me.",
+              "I can move to {value}.",
+              "I'm willing to relocate {value}.",
+              "Relocation works if {value}.",
+              "I'd consider moving to {value}.",
+              "I'm flexible on relocation {value}.",
+              "I can relocate {value}.",
+              "Moving to {value} is acceptable.",
+              "I'm open to {value} for relocation.",
+              "Relocation is possible {value}.",
+              "I'm prepared to move {value}."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "model": "google/gemini-3.5-flash-lite",
+      "payload": {
+        "fields": [
+          {
+            "field_id": "full_name",
+            "phrases": [
+              "My full legal name is {value}.",
+              "You can call me {value}.",
+              "I am known by the name {value}.",
+              "People refer to me as {value}.",
+              "My name happens to be {value}.",
+              "I go by the name {value}.",
+              "Please note my name is {value}.",
+              "The name I use is {value}.",
+              "I introduce myself as {value}.",
+              "My given name is {value}.",
+              "For your records, I am {value}.",
+              "My actual name is {value}."
+            ]
+          },
+          {
+            "field_id": "location",
+            "phrases": [
+              "I currently live in {value}.",
+              "My home address is based in {value}.",
+              "I am currently residing in {value}.",
+              "My current location is {value}.",
+              "I live right now in {value}.",
+              "Presently, I am located in {value}.",
+              "My city of residence is {value}.",
+              "I am currently based out of {value}.",
+              "Right now, I am living in {value}.",
+              "My current home is in {value}.",
+              "I am stationed currently in {value}.",
+              "As of now, I reside in {value}."
+            ]
+          },
+          {
+            "field_id": "phone",
+            "phrases": [
+              "My telephone number is {value}.",
+              "You can reach me by phone at {value}.",
+              "My preferred contact number is {value}.",
+              "Call me directly at {value}.",
+              "My mobile number is {value}.",
+              "I can be reached at {value}.",
+              "My direct phone line is {value}.",
+              "Please call my number, {value}.",
+              "The best phone number for me is {value}.",
+              "My cell phone is {value}.",
+              "You can call my primary line at {value}.",
+              "My phone contact is {value}."
+            ]
+          },
+          {
+            "field_id": "email",
+            "phrases": [
+              "My email address is {value}.",
+              "You can email me at {value}.",
+              "My primary inbox is {value}.",
+              "Send electronic mail to {value}.",
+              "My preferred email is {value}.",
+              "I receive emails at {value}.",
+              "My online contact address is {value}.",
+              "Reach out to my email, {value}.",
+              "My digital mailbox is {value}.",
+              "Please message me at {value}.",
+              "The best email for me is {value}.",
+              "My correspondence email is {value}."
+            ]
+          },
+          {
+            "field_id": "bachelors_degree",
+            "phrases": [
+              "I earned my bachelor's degree in {value}.",
+              "My undergraduate major and degree was {value}.",
+              "I hold a bachelor of {value}.",
+              "My bachelor's program was in {value}.",
+              "I graduated with a bachelor's degree in {value}.",
+              "My undergraduate degree is {value}.",
+              "I completed my bachelor studies in {value}.",
+              "The bachelor's diploma I received is in {value}.",
+              "My academic background includes a bachelor's in {value}.",
+              "I pursued a bachelor's degree in {value}.",
+              "My bachelor's qualification is {value}.",
+              "I obtained my bachelor's degree studying {value}."
+            ]
+          },
+          {
+            "field_id": "bachelors_year",
+            "phrases": [
+              "I finished my bachelor's degree in {value}.",
+              "My undergraduate graduation year was {value}.",
+              "I received my bachelor's diploma in {value}.",
+              "The year I graduated with my bachelor's was {value}.",
+              "My bachelor's graduation took place in {value}.",
+              "I completed my undergraduate degree in {value}.",
+              "In the year {value}, I got my bachelor's.",
+              "My bachelor's class year was {value}.",
+              "I earned my bachelor's degree back in {value}.",
+              "My undergraduate studies concluded in {value}.",
+              "The date of my bachelor's graduation is {value}.",
+              "I obtained my bachelor's degree in {value}."
+            ]
+          },
+          {
+            "field_id": "masters_degree",
+            "phrases": [
+              "I earned my master's degree in {value}.",
+              "My graduate major and degree was {value}.",
+              "I hold a master of {value}.",
+              "My master's program was in {value}.",
+              "I graduated with a master's degree in {value}.",
+              "My graduate degree is {value}.",
+              "I completed my master's studies in {value}.",
+              "The master's diploma I received is in {value}.",
+              "My academic background includes a master's in {value}.",
+              "I pursued a master's degree in {value}.",
+              "My master's qualification is {value}.",
+              "I obtained my master's degree studying {value}."
+            ]
+          },
+          {
+            "field_id": "masters_year",
+            "phrases": [
+              "I finished my master's degree in {value}.",
+              "My graduate graduation year was {value}.",
+              "I received my master's diploma in {value}.",
+              "The year I graduated with my master's was {value}.",
+              "My master's graduation took place in {value}.",
+              "I completed my graduate degree in {value}.",
+              "In the year {value}, I got my master's.",
+              "My master's class year was {value}.",
+              "I earned my master's degree back in {value}.",
+              "My graduate studies concluded in {value}.",
+              "The date of my master's graduation is {value}.",
+              "I obtained my master's degree in {value}."
+            ]
+          },
+          {
+            "field_id": "military_service",
+            "phrases": [
+              "My military service background includes {value}.",
+              "I served in the military as {value}.",
+              "My time in the armed forces was {value}.",
+              "I completed military service involving {value}.",
+              "My military history consists of {value}.",
+              "I was active in the military with {value}.",
+              "My service record notes {value}.",
+              "I spent time in the military under {value}.",
+              "My armed forces engagement was {value}.",
+              "I fulfilled my military duty in {value}.",
+              "My military background is {value}.",
+              "I served our country with {value}."
+            ]
+          },
+          {
+            "field_id": "security_clearance",
+            "phrases": [
+              "I currently hold a {value} security clearance.",
+              "My active security clearance is {value}.",
+              "I possess a {value} clearance right now.",
+              "Presently, my security clearance is {value}.",
+              "I maintain an active {value} clearance.",
+              "My current security status is {value}.",
+              "I hold a valid {value} clearance.",
+              "Right now I have a {value} security credential.",
+              "My clearance level at present is {value}.",
+              "I am cleared at the {value} level.",
+              "Currently, I carry a {value} clearance.",
+              "My active clearance credential is {value}."
+            ]
+          },
+          {
+            "field_id": "current_employer",
+            "phrases": [
+              "I am currently employed by {value}.",
+              "My current company is {value}.",
+              "Right now I work for {value}.",
+              "I draw a paycheck currently from {value}.",
+              "My present employer is {value}.",
+              "I am working right now at {value}.",
+              "At present, my organization is {value}.",
+              "I hold a job currently with {value}.",
+              "My current corporate employer is {value}.",
+              "I am on the payroll at {value}.",
+              "Presently, I am working for {value}.",
+              "My current place of employment is {value}."
+            ]
+          },
+          {
+            "field_id": "current_title",
+            "phrases": [
+              "My current job title is {value}.",
+              "Right now, my role is {value}.",
+              "I currently work as a {value}.",
+              "My present job designation is {value}.",
+              "At this time, my title is {value}.",
+              "I hold the current position of {value}.",
+              "My official title right now is {value}.",
+              "Currently, I serve as {value}.",
+              "My present job role is {value}.",
+              "I am currently working under the title {value}.",
+              "My current professional title is {value}.",
+              "Presently, my role is designated as {value}."
+            ]
+          },
+          {
+            "field_id": "tenure",
+            "phrases": [
+              "My current tenure is {value}.",
+              "I have been in my present role for {value}.",
+              "My current job duration is {value}.",
+              "I have worked at my current job for {value}.",
+              "My length of service here is {value}.",
+              "I have accumulated {value} in my current position.",
+              "My tenure at this company is {value}.",
+              "I have spent {value} in my current role.",
+              "My duration with my present employer is {value}.",
+              "I have been employed here for {value}.",
+              "My present tenure length is {value}.",
+              "I have held this current title for {value}."
+            ]
+          },
+          {
+            "field_id": "team_size",
+            "phrases": [
+              "My current team size is {value}.",
+              "I manage or work with {value}.",
+              "The size of my current team is {value}.",
+              "I currently collaborate with a team of {value}.",
+              "My present group consists of {value}.",
+              "I lead a current team of {value}.",
+              "The number of people on my team is {value}.",
+              "My current reporting structure has {value}.",
+              "I work alongside a team numbering {value}.",
+              "My immediate team size right now is {value}.",
+              "Currently, my team counts {value}.",
+              "The total size of my current crew is {value}."
+            ]
+          },
+          {
+            "field_id": "current_program",
+            "phrases": [
+              "I am currently working on {value}.",
+              "My present program initiative is {value}.",
+              "Right now I support {value}.",
+              "The current effort I am assigned to is {value}.",
+              "I am presently engaged in {value}.",
+              "My current project is {value}.",
+              "At this moment, I am contributing to {value}.",
+              "The program I currently support is {value}.",
+              "Right now my main program is {value}.",
+              "I am currently tied to {value}.",
+              "My present program involvement is {value}.",
+              "I am working presently on the {value} program."
+            ]
+          },
+          {
+            "field_id": "key_technologies",
+            "phrases": [
+              "The key technologies I use include {value}.",
+              "My daily tech stack features {value}.",
+              "I currently work with technologies like {value}.",
+              "The technical tools I rely on are {value}.",
+              "My primary technologies involve {value}.",
+              "I use {value} in my technical work.",
+              "The software and methods I use are {value}.",
+              "My technical toolkit contains {value}.",
+              "I utilize {value} for my technical tasks.",
+              "The core technologies in my work are {value}.",
+              "My current technical stack is {value}.",
+              "I work hands-on with {value}."
+            ]
+          },
+          {
+            "field_id": "area_of_interest",
+            "phrases": [
+              "The next work I want to pursue is {value}.",
+              "My desired future area of interest is {value}.",
+              "I am looking to pivot toward {value}.",
+              "The next career path I seek is {value}.",
+              "My future professional interest is {value}.",
+              "I want my next project to be in {value}.",
+              "The domain I hope to work in next is {value}.",
+              "I am eager to focus on {value} next.",
+              "My target functional area of interest is {value}.",
+              "I would love to explore {value} in my next role.",
+              "The upcoming field I want to work in is {value}.",
+              "My future career ambition is {value}."
+            ]
+          },
+          {
+            "field_id": "reason_for_leaving",
+            "phrases": [
+              "My reason for leaving is {value}.",
+              "I am looking to move because of {value}.",
+              "The motivation behind my job search is {value}.",
+              "I decided to make a change due to {value}.",
+              "My primary reason for seeking a new role is {value}.",
+              "I want to transition away because of {value}.",
+              "The cause for my upcoming departure is {value}.",
+              "I am leaving my current position due to {value}.",
+              "My rationale for changing jobs is {value}.",
+              "The driving factor for my move is {value}.",
+              "I am seeking a career change because of {value}.",
+              "My decision to leave stems from {value}."
+            ]
+          },
+          {
+            "field_id": "current_salary",
+            "phrases": [
+              "My current salary is {value}.",
+              "Right now I earn {value}.",
+              "My present compensation package is {value}.",
+              "I currently make {value}.",
+              "My existing pay rate is {value}.",
+              "At present, I receive {value}.",
+              "My current earnings are {value}.",
+              "I am currently paid {value}.",
+              "My present salary sits at {value}.",
+              "Right now, my compensation is {value}.",
+              "I currently pull in {value}.",
+              "My existing salary structure is {value}."
+            ]
+          },
+          {
+            "field_id": "target_salary",
+            "phrases": [
+              "My target salary is {value}.",
+              "I am seeking compensation of {value}.",
+              "For a move, I am targeting {value}.",
+              "My desired salary expectation is {value}.",
+              "I am looking to make {value} in my next role.",
+              "The compensation package I want is {value}.",
+              "I expect to earn {value} for this change.",
+              "My target pay rate is {value}.",
+              "I am seeking {value} in my next position.",
+              "My desired compensation is {value}.",
+              "For my next job, I am looking for {value}.",
+              "The salary target I have set is {value}."
+            ]
+          },
+          {
+            "field_id": "availability",
+            "phrases": [
+              "My availability is {value}.",
+              "I can start work in {value}.",
+              "My notice period is {value}.",
+              "I am available to begin in {value}.",
+              "My start date availability is {value}.",
+              "I require {value} before starting.",
+              "My timeline for joining is {value}.",
+              "I can be available in {value}.",
+              "My transition period will take {value}.",
+              "I am ready to start after {value}.",
+              "My earliest availability is {value}.",
+              "I can come on board in {value}."
+            ]
+          },
+          {
+            "field_id": "relocation",
+            "phrases": [
+              "My relocation preference is {value}.",
+              "Regarding relocation, my stance is {value}.",
+              "As for moving locations, I state {value}.",
+              "My relocation status is {value}.",
+              "When it comes to relocation, I say {value}.",
+              "My position on relocation is {value}.",
+              "Regarding moving for a job, {value}.",
+              "My relocation flexibility is {value}.",
+              "On the topic of relocation, my answer is {value}.",
+              "My geographical relocation plan is {value}.",
+              "Concerning relocation, I note {value}.",
+              "My relocation constraint or preference is {value}."
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

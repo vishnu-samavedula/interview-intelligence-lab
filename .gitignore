@@ -15,3 +15,23 @@ __pycache__/
 *.pyc
 *.tsbuildinfo
 .DS_Store
+
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# Generated pilot transcripts, teacher responses and request traces
+training/pilot/runs/
+training/full/runs/
+
+training/demo/runs/
+
+# Model weights and training checkpoints remain local/remote artifacts, never Git assets
+*.gguf
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+**/pytorch_model*.bin
+**/optimizer*.bin

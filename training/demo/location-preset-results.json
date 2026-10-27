@@ -1,0 +1,63 @@
+{
+  "scope": "six_location_presets_single_chunk_live_and_end_of_call_diagnostic",
+  "modelId": "lfm2.5-2.6b-demo-adapters",
+  "live_matches": 5,
+  "final_matches": 5,
+  "total": 6,
+  "results": [
+    {
+      "id": "static-location-direct",
+      "expected": "Huntsville",
+      "live": "Huntsville",
+      "final": "Huntsville",
+      "raw_live_value": "Huntsville",
+      "raw_final_value": "Huntsville",
+      "note": ""
+    },
+    {
+      "id": "static-location-indirect",
+      "expected": "Huntsville",
+      "live": "Huntsville",
+      "final": "Huntsville",
+      "raw_live_value": "Huntsville",
+      "raw_final_value": "Huntsville",
+      "note": ""
+    },
+    {
+      "id": "static-location-current-former",
+      "expected": "Raleigh",
+      "live": null,
+      "final": null,
+      "raw_live_value": "Raleigh",
+      "raw_final_value": "Raleigh",
+      "note": "Raw Raleigh value was correct; wrong evidence turn ID caused rejection."
+    },
+    {
+      "id": "static-location-correction",
+      "expected": "Reno, Nevada",
+      "live": "Reno, Nevada",
+      "final": "Reno, Nevada",
+      "raw_live_value": "Reno, Nevada",
+      "raw_final_value": "Reno, Nevada",
+      "note": ""
+    },
+    {
+      "id": "static-location-remote",
+      "expected": "Madison, Wisconsin",
+      "live": "Madison, Wisconsin",
+      "final": "Madison, Wisconsin",
+      "raw_live_value": "Madison, Wisconsin",
+      "raw_final_value": "Madison, Wisconsin",
+      "note": ""
+    },
+    {
+      "id": "static-location-destination-only",
+      "expected": null,
+      "live": null,
+      "final": null,
+      "raw_live_value": null,
+      "raw_final_value": null,
+      "note": ""
+    }
+  ]
+}

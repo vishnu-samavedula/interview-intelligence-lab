@@ -1,0 +1,1179 @@
+{
+  "recorded_at": "2026-10-22T15:01:58.653Z",
+  "purpose": "calibration_diagnostic_not_held_out_or_training_evidence",
+  "mode_semantics": "All received chunks supplied at the same final cutoff; fresh question history for each invocation. Multi is reconstruction parity, not incremental replay.",
+  "dataset_hash": "b9788e44ff1b3861874cbe2fcdeba1c457e7282d0978ffb4ad6306913829c842",
+  "model_id": "lfm2.5-2.6b-no-think",
+  "prompt_source_hash": "9bdb300bc2f4d0344d5fff78dbed128456ac221731665a54f27f9061048cd91e",
+  "results": [
+    {
+      "group_id": "activity-versus-impact",
+      "variant_id": "activity-versus-impact-a",
+      "mode": "single",
+      "comparisons": [
+        {
+          "field_id": "full_name",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "location",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "phone",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "email",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "bachelors_degree",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "bachelors_year",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "masters_degree",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "masters_year",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "military_service",
+          "expected": "Army",
+          "actual": "Army",
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "security_clearance",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "current_employer",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "current_title",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "tenure",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "team_size",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "current_program",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "key_technologies",
+          "expected": "Monte Carlo simulation",
+          "actual": null,
+          "normalized_text_equivalent": false
+        },
+        {
+          "field_id": "area_of_interest",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "reason_for_leaving",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "current_salary",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "target_salary",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "availability",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "relocation",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        }
+      ],
+      "question_decision": {
+        "expected_ask": true,
+        "raw_ask": true,
+        "delivered_ask": true,
+        "raw_decision_matches": true,
+        "delivered_decision_matches": true,
+        "wording_and_premise_review": "pending_human_semantic_review"
+      },
+      "raw_result": {
+        "analysisPerformed": true,
+        "completedResponseCount": 1,
+        "checklistSnapshot": [
+          {
+            "fieldId": "full_name",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "location",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "phone",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "email",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "bachelors_degree",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "bachelors_year",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "masters_degree",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "masters_year",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "military_service",
+            "status": "provided",
+            "value": "Army",
+            "evidence": [
+              {
+                "turnId": 1,
+                "quote": "I served in the Army.",
+                "chunkIds": [
+                  "single-preset"
+                ],
+                "timestamp": "2026-10-22T11:00:00Z"
+              }
+            ]
+          },
+          {
+            "fieldId": "security_clearance",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "current_employer",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "current_title",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "tenure",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "team_size",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "current_program",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "key_technologies",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "area_of_interest",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "reason_for_leaving",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "current_salary",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "target_salary",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "availability",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "relocation",
+            "status": "not_provided",
+            "value": null
+          }
+        ],
+        "checklistChanges": [
+          {
+            "fieldId": "military_service",
+            "status": "provided",
+            "value": "Army",
+            "evidence": [
+              {
+                "turnId": 1,
+                "quote": "I served in the Army.",
+                "chunkIds": [
+                  "single-preset"
+                ],
+                "timestamp": "2026-10-22T11:00:00Z"
+              }
+            ]
+          }
+        ],
+        "rawExtractionPayload": {
+          "full_name": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "location": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "phone": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "email": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "bachelors_degree": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "bachelors_year": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "masters_degree": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "masters_year": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "military_service": {
+            "operation": "set",
+            "value": "Army",
+            "evidence": [
+              {
+                "turn_id": 1,
+                "quote": "I served in the Army."
+              }
+            ]
+          },
+          "security_clearance": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "current_employer": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "current_title": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "tenure": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "team_size": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "current_program": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "key_technologies": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "area_of_interest": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "reason_for_leaving": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "current_salary": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "target_salary": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "availability": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "relocation": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          }
+        },
+        "rawExtractionUpdates": [
+          {
+            "fieldId": "full_name",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "location",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "phone",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "email",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "bachelors_degree",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "bachelors_year",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "masters_degree",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "masters_year",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "military_service",
+            "operation": "set",
+            "value": "Army"
+          },
+          {
+            "fieldId": "security_clearance",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "current_employer",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "current_title",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "tenure",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "team_size",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "current_program",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "key_technologies",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "area_of_interest",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "reason_for_leaving",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "current_salary",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "target_salary",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "availability",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "relocation",
+            "operation": "unchanged",
+            "value": null
+          }
+        ],
+        "acceptedExtractionUpdates": [
+          {
+            "fieldId": "military_service",
+            "status": "provided",
+            "value": "Army",
+            "evidence": [
+              {
+                "turnId": 1,
+                "quote": "I served in the Army.",
+                "chunkIds": [
+                  "single-preset"
+                ],
+                "timestamp": "2026-10-22T11:00:00Z"
+              }
+            ]
+          }
+        ],
+        "rejectedExtractionUpdates": [],
+        "followUpQuestions": [
+          {
+            "question": "Can you specify the exact number of scenarios in the Monte Carlo simulation and what tracking error metric was being characterized?"
+          }
+        ],
+        "rawFollowUpQuestions": [
+          {
+            "question": "Can you specify the exact number of scenarios in the Monte Carlo simulation and what tracking error metric was being characterized?"
+          }
+        ],
+        "rejectedFollowUpQuestions": [],
+        "metrics": {
+          "totalMs": 5722,
+          "ttftMs": 816,
+          "decodeTokensPerSecond": 148.83,
+          "inputTokens": 3607,
+          "outputTokens": 700,
+          "processRamMb": 182,
+          "gpuMemoryMb": null,
+          "extractionMs": 5241,
+          "questionMs": 481,
+          "modelStorageMb": 1596.9,
+          "modelId": "lfm2.5-2.6b-no-think",
+          "modelLabel": "LFM2.5 2.6B \u00b7 no thinking"
+        }
+      }
+    },
+    {
+      "group_id": "activity-versus-impact",
+      "variant_id": "activity-versus-impact-b",
+      "mode": "single",
+      "comparisons": [
+        {
+          "field_id": "full_name",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "location",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "phone",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "email",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "bachelors_degree",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "bachelors_year",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "masters_degree",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "masters_year",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "military_service",
+          "expected": "Army",
+          "actual": "Army",
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "security_clearance",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "current_employer",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "current_title",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "tenure",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "team_size",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "current_program",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "key_technologies",
+          "expected": "Monte Carlo simulation",
+          "actual": "Monte Carlo simulation",
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "area_of_interest",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "reason_for_leaving",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "current_salary",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "target_salary",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "availability",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        },
+        {
+          "field_id": "relocation",
+          "expected": null,
+          "actual": null,
+          "normalized_text_equivalent": true
+        }
+      ],
+      "question_decision": {
+        "expected_ask": false,
+        "raw_ask": true,
+        "delivered_ask": true,
+        "raw_decision_matches": false,
+        "delivered_decision_matches": false,
+        "wording_and_premise_review": "pending_human_semantic_review"
+      },
+      "raw_result": {
+        "analysisPerformed": true,
+        "completedResponseCount": 1,
+        "checklistSnapshot": [
+          {
+            "fieldId": "full_name",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "location",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "phone",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "email",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "bachelors_degree",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "bachelors_year",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "masters_degree",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "masters_year",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "military_service",
+            "status": "provided",
+            "value": "Army",
+            "evidence": [
+              {
+                "turnId": 1,
+                "quote": "I served in the Army.",
+                "chunkIds": [
+                  "single-preset"
+                ],
+                "timestamp": "2026-10-22T11:00:00Z"
+              }
+            ]
+          },
+          {
+            "fieldId": "security_clearance",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "current_employer",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "current_title",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "tenure",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "team_size",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "current_program",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "key_technologies",
+            "status": "provided",
+            "value": "Monte Carlo simulation",
+            "evidence": [
+              {
+                "turnId": 1,
+                "quote": "I built a Monte Carlo simulation and used the results to change the tracking filter, reducing tracking error from eight percent to three percent.",
+                "chunkIds": [
+                  "single-preset"
+                ],
+                "timestamp": "2026-10-22T11:00:00Z"
+              }
+            ]
+          },
+          {
+            "fieldId": "area_of_interest",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "reason_for_leaving",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "current_salary",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "target_salary",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "availability",
+            "status": "not_provided",
+            "value": null
+          },
+          {
+            "fieldId": "relocation",
+            "status": "not_provided",
+            "value": null
+          }
+        ],
+        "checklistChanges": [
+          {
+            "fieldId": "military_service",
+            "status": "provided",
+            "value": "Army",
+            "evidence": [
+              {
+                "turnId": 1,
+                "quote": "I served in the Army.",
+                "chunkIds": [
+                  "single-preset"
+                ],
+                "timestamp": "2026-10-22T11:00:00Z"
+              }
+            ]
+          },
+          {
+            "fieldId": "key_technologies",
+            "status": "provided",
+            "value": "Monte Carlo simulation",
+            "evidence": [
+              {
+                "turnId": 1,
+                "quote": "I built a Monte Carlo simulation and used the results to change the tracking filter, reducing tracking error from eight percent to three percent.",
+                "chunkIds": [
+                  "single-preset"
+                ],
+                "timestamp": "2026-10-22T11:00:00Z"
+              }
+            ]
+          }
+        ],
+        "rawExtractionPayload": {
+          "full_name": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "location": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "phone": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "email": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "bachelors_degree": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "bachelors_year": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "masters_degree": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "masters_year": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "military_service": {
+            "operation": "set",
+            "value": "Army",
+            "evidence": [
+              {
+                "turn_id": 1,
+                "quote": "I served in the Army."
+              }
+            ]
+          },
+          "security_clearance": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "current_employer": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "current_title": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "tenure": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "team_size": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "current_program": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "key_technologies": {
+            "operation": "set",
+            "value": "Monte Carlo simulation",
+            "evidence": [
+              {
+                "turn_id": 1,
+                "quote": "I built a Monte Carlo simulation and used the results to change the tracking filter, reducing tracking error from eight percent to three percent."
+              }
+            ]
+          },
+          "area_of_interest": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "reason_for_leaving": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "current_salary": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "target_salary": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "availability": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          },
+          "relocation": {
+            "operation": "unchanged",
+            "value": null,
+            "evidence": []
+          }
+        },
+        "rawExtractionUpdates": [
+          {
+            "fieldId": "full_name",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "location",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "phone",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "email",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "bachelors_degree",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "bachelors_year",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "masters_degree",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "masters_year",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "military_service",
+            "operation": "set",
+            "value": "Army"
+          },
+          {
+            "fieldId": "security_clearance",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "current_employer",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "current_title",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "tenure",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "team_size",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "current_program",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "key_technologies",
+            "operation": "set",
+            "value": "Monte Carlo simulation"
+          },
+          {
+            "fieldId": "area_of_interest",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "reason_for_leaving",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "current_salary",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "target_salary",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "availability",
+            "operation": "unchanged",
+            "value": null
+          },
+          {
+            "fieldId": "relocation",
+            "operation": "unchanged",
+            "value": null
+          }
+        ],
+        "acceptedExtractionUpdates": [
+          {
+            "fieldId": "military_service",
+            "status": "provided",
+            "value": "Army",
+            "evidence": [
+              {
+                "turnId": 1,
+                "quote": "I served in the Army.",
+                "chunkIds": [
+                  "single-preset"
+                ],
+                "timestamp": "2026-10-22T11:00:00Z"
+              }
+            ]
+          },
+          {
+            "fieldId": "key_technologies",
+            "status": "provided",
+            "value": "Monte Carlo simulation",
+            "evidence": [
+              {
+                "turnId": 1,
+                "quote": "I built a Monte Carlo simulation and used the results to change the tracking filter, reducing tracking error from eight percent to three percent.",
+                "chunkIds": [
+                  "single-preset"
+                ],
+                "timestamp": "2026-10-22T11:00:00Z"
+              }
+            ]
+          }
+        ],
+        "rejectedExtractionUpdates": [],
+        "followUpQuestions": [
+          {
+            "question": "Can you specify the exact time frame during which the tracking error reduction occurred, and how the Monte Carlo simulation was validated to ensure its reliability?"
+          }
+        ],
+        "rawFollowUpQuestions": [
+          {
+            "question": "Can you specify the exact time frame during which the tracking error reduction occurred, and how the Monte Carlo simulation was validated to ensure its reliability?"
+          }
+        ],
+        "rejectedFollowUpQuestions": [],
+        "metrics": {
+          "totalMs": 5438,
+          "ttftMs": 337,
+          "decodeTokensPerSecond": 155.85,
+          "inputTokens": 3581,
+          "outputTokens": 754,
+          "processRamMb": 217,
+          "gpuMemoryMb": null,
+          "extractionMs": 4881,
+          "questionMs": 557,
+          "modelStorageMb": 1596.9,
+          "modelId": "lfm2.5-2.6b-no-think",
+          "modelLabel": "LFM2.5 2.6B \u00b7 no thinking"
+        }
+      }
+    }
+  ]
+}

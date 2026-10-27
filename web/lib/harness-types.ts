@@ -1,12 +1,16 @@
 export type Speaker = "Interviewer" | "Candidate";
 
 export type TranscriptTurn = {
+  turnId?: number;
+  responseComplete?: boolean;
   speaker: Speaker;
   text: string;
 };
 
 export type TranscriptSegment = {
   id: string;
+  date: string;
+  timestamp: string;
   startSeconds: number;
   endSeconds: number;
   turns: TranscriptTurn[];
@@ -46,6 +50,7 @@ export type FieldResult = {
   fieldId: string;
   status: FieldStatus;
   value: string | null;
+  evidence?: { turnId: number; quote: string; chunkIds: string[]; timestamp: string | null }[];
   quote?: string;
   segmentId?: string;
   timestamp?: string;
@@ -100,6 +105,8 @@ export type ModelProfile = {
 };
 
 export type AnalysisResponse = {
+  analysisPerformed: true;
+  completedResponseCount: number;
   checklistSnapshot: FieldResult[];
   checklistChanges: FieldResult[];
   rawExtractionPayload?: Record<string, unknown>;
@@ -107,7 +114,25 @@ export type AnalysisResponse = {
   acceptedExtractionUpdates?: FieldResult[];
   rejectedExtractionUpdates?: RejectedExtraction[];
   followUpQuestions: FollowUp[];
+  rankedFollowUpQuestions?: FollowUp[];
   rawFollowUpQuestions?: FollowUp[];
   rejectedFollowUpQuestions?: RejectedFollowUp[];
   metrics: PerformanceMetrics;
+};
+
+export type BufferedResponse = {
+  analysisPerformed: false;
+  completedResponseCount: number;
+};
+
+export type FinalizationResponse = {
+  liveSnapshot: FieldResult[];
+  finalSnapshot: (FieldResult & { evidence: { turnId: number; quote: string; chunkIds: string[]; timestamp: string }[] })[];
+  changes: { fieldId: string; before: string | null; after: string | null }[];
+  missingFieldIds: string[];
+  rejectedExtractions: { fieldId: string; value: string; reason: string }[];
+  summary: { summary: string; keyPoints: string[]; unresolvedQuestions: string[] };
+  rawExtractionPayload: Record<string, unknown>;
+  rawSummaryPayload: Record<string, unknown>;
+  metrics: { totalMs: number; extractionMs: number; summaryMs: number; modelLabel: string };
 };

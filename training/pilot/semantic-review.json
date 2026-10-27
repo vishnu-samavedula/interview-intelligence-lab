@@ -1,0 +1,84 @@
+{
+  "status": "assistant_review_only",
+  "released_for_training": false,
+  "reviewed_roots": [
+    {
+      "root_id": "pilot-001",
+      "assembled_result_sha256": "a70afa0b3eaccf9f37182664ca04302b92b35ede6a52efa5fdc797b971d9432d",
+      "assistant_recommendation": "Reject the primary team_size value \u201ctwo technicians\u201d: these are people freed for other work, not the total team. Keep Army and Army, test lead as acceptable concise/richer variants. Both first-turn role-exploration questions are plausible; prefer one clear information need.",
+      "human_review_status": "pending",
+      "field": "team_size"
+    },
+    {
+      "root_id": "pilot-003",
+      "assembled_result_sha256": "823b5a459b08f8b15da4134c241ce21d9d2b6e006fc9eaf566af52fa00ad00b8",
+      "assistant_recommendation": "Relocation should remain unknown: willingness to work remotely does not establish willingness to move. Both questions imply that the candidate has already designed/explored defensive systems in the current job; the candidate only states an aspiration. Prefer: \u201cWhich aspects of defensive systems design would you most like to focus on?\u201d",
+      "human_review_status": "pending",
+      "field": "relocation"
+    },
+    {
+      "root_id": "pilot-006",
+      "assembled_result_sha256": "c2cb6862c91a116641dfdc65db3f3709db625aa83baee1d0869a4f0d5b72f101",
+      "assistant_recommendation": "Both extractions correctly replace Senior Software Engineer with Lead Software Architect. A role exploration is permitted, but the earlier suggested distributed-architecture question already explores the work. Review whether a second broad architecture question meaningfully adds anything; do not approve solely because the wording differs. The history itself contains an unsupported project premise and needs source-cutoff grounding.",
+      "human_review_status": "pending",
+      "field": "current_title"
+    },
+    {
+      "root_id": "pilot-012",
+      "assembled_result_sha256": "0df93b573bc7241e34bfc698f53f6593781d2e42184250ce9db417f05beef8a0",
+      "assistant_recommendation": "Reject a definitive $130,000 target unless candidate confirmation is adjudicated as sufficiently explicit; the amount is spoken by the interviewer. Preserve the distinction between $52/hour current pay and an $8,000 bonus received last year; do not silently label it a recurring annual bonus. Neither amount should be blindly converted or scaled. Abstaining from compensation follow-ups is appropriate.",
+      "human_review_status": "pending",
+      "field": "target_salary"
+    },
+    {
+      "root_id": "pilot-020",
+      "assembled_result_sha256": "3eab1979118dba4e78a606df6148aba64bb38ab21149da928470fde120e341a1",
+      "assistant_recommendation": "Prefer an ask about Quality Assurance Officer responsibilities: that role remains in the two-turn window and no suggestion history exists. The latest relocation response does not erase the preceding role. Abstain remains valid if no useful work/interest question remains, not merely because the final response is logistical.",
+      "human_review_status": "pending",
+      "field": "relocation"
+    },
+    {
+      "root_id": "pilot-021",
+      "assembled_result_sha256": "d580d63b69ae7fe9cd3c7150e10583327e5edef6a6cd8100abb9ea981cd12480",
+      "assistant_recommendation": "Reject the wording \u201cIn turn 7.\u201d Role-interest exploration can be useful, but this question should be reviewed for practical added value and overlap with earlier questions. The supplied history mentions a tracking-gate redesign absent from this interview; it cannot be treated as a reliable source of work facts. Rebuild history from a real earlier prefix.",
+      "human_review_status": "pending",
+      "field": "key_technologies"
+    },
+    {
+      "root_id": "pilot-024",
+      "assembled_result_sha256": "8c78d567a0cfcc8dc2ec10270e9585652ae1fdc1ce5fb032e4598905df9c77ef",
+      "assistant_recommendation": "Prefer the question about specific contributions to Project Vanguard: the candidate explicitly states team leadership and the project in the visible window. Compensation in the final response does not resolve contribution. The existing history mentions an instructional experiment not stated in this transcript; its grounding must be repaired before release.",
+      "human_review_status": "pending",
+      "field": "team_size"
+    },
+    {
+      "root_id": "pilot-027",
+      "assembled_result_sha256": "1f19da7a88c6463bd032bfeefde4aa0474c37979a79078768a4836230ba3c226",
+      "assistant_recommendation": "The 40% cycle-time result is stated as \u201cwe\u201d; it does not identify the candidate\u2019s engineering action. A personal-contribution clarification is useful despite compensation at the end. However, the previous suggestion already asks for a test-cycle optimization example and broader value: review semantic repetition before approving a second question. Do not force an ask just to balance the corpus. Preserve salary ranges and conditions.",
+      "human_review_status": "pending",
+      "field": "target_salary"
+    },
+    {
+      "root_id": "pilot-030",
+      "assembled_result_sha256": "354d4387007b8c6441f475f8687fd39e085278da7c0c86969b3228648e9b7e45",
+      "assistant_recommendation": "The proposed question assumes geopolitical-region/threat work in the current job, although strategic forecasting is explicitly a future interest. Prefer abstention when the recent transfer-of-experience question covers this topic, or a genuinely distinct neutral interest question. Do not invent current projects from the desired career direction.",
+      "human_review_status": "pending",
+      "field": "area_of_interest"
+    },
+    {
+      "root_id": "pilot-033",
+      "assembled_result_sha256": "f719aa8a1a81c727d918fbed1ccf9a06059bc86ca548dfe174779aebc96ad284",
+      "assistant_recommendation": "The prior suggestion already asks about personal contribution and team value from the Aegis upgrade. The new question repeats part of that information need and adds trade-offs. Prefer abstention unless a distinct unresolved consequential trade-off is actually established. Preserve current/former role boundaries; Navy Aegis work is not automatically the current civilian program.",
+      "human_review_status": "pending",
+      "field": "current_program"
+    }
+  ],
+  "corpus_wide_blocks": [
+    "entity_concentration",
+    "question_category_collapse",
+    "generator_conditioned_output_imbalance",
+    "unresolved_semantic_disputes",
+    "unvalidated_semantic_story_independence",
+    "production_minimums_not_met"
+  ]
+}

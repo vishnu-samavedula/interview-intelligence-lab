@@ -1,0 +1,4218 @@
+{
+  "modelId": "lfm2.5-2.6b-no-think",
+  "recordedAt": "2026-10-22T07:10:50.137Z",
+  "runs": [
+    {
+      "repeat": 1,
+      "mode": "single",
+      "steps": [
+        {
+          "chunk": 1,
+          "result": {
+            "analysisPerformed": true,
+            "completedResponseCount": 5,
+            "checklistSnapshot": [
+              {
+                "fieldId": "full_name",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "location",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "bachelors_degree",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "bachelors_year",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "masters_degree",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "masters_year",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "military_service",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "security_clearance",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_employer",
+                "status": "provided",
+                "value": "Raytheon (RTX)",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I transitioned to the defense contracting side. My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_title",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "tenure",
+                "status": "provided",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "team_size",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_program",
+                "status": "provided",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "key_technologies",
+                "status": "provided",
+                "value": "Monte Carlo simulation",
+                "evidence": [
+                  {
+                    "turnId": 3,
+                    "quote": "I owned the analysis effort to characterize that under stress conditions. We built a Monte Carlo simulation environment to run thousands of engagement scenarios and quantify the correlation error rate.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "area_of_interest",
+                "status": "provided",
+                "value": "defense contracting",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I transitioned to the defense contracting side. My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "reason_for_leaving",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_salary",
+                "status": "provided",
+                "value": "178 base with a bonus that runs 10 to 15 percent",
+                "evidence": [
+                  {
+                    "turnId": 4,
+                    "quote": "My current total comp is around 178 base with a bonus that runs 10 to 15 percent.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "target_salary",
+                "status": "provided",
+                "value": "205 to 215 range",
+                "evidence": [
+                  {
+                    "turnId": 4,
+                    "quote": "For a move I'd be looking at a base in the 205 to 215 range, but I'm flexible if there's a strong bonus or equity story.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "availability",
+                "status": "provided",
+                "value": "three weeks notice, mid to late August",
+                "evidence": [
+                  {
+                    "turnId": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal. On timing, I'd give three weeks notice, so call it mid to late August.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "relocation",
+                "status": "provided",
+                "value": "not looking to relocate",
+                "evidence": [
+                  {
+                    "turnId": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              }
+            ],
+            "checklistChanges": [
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_employer",
+                "status": "provided",
+                "value": "Raytheon (RTX)",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I transitioned to the defense contracting side. My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "tenure",
+                "status": "provided",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_program",
+                "status": "provided",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "key_technologies",
+                "status": "provided",
+                "value": "Monte Carlo simulation",
+                "evidence": [
+                  {
+                    "turnId": 3,
+                    "quote": "I owned the analysis effort to characterize that under stress conditions. We built a Monte Carlo simulation environment to run thousands of engagement scenarios and quantify the correlation error rate.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "area_of_interest",
+                "status": "provided",
+                "value": "defense contracting",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I transitioned to the defense contracting side. My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_salary",
+                "status": "provided",
+                "value": "178 base with a bonus that runs 10 to 15 percent",
+                "evidence": [
+                  {
+                    "turnId": 4,
+                    "quote": "My current total comp is around 178 base with a bonus that runs 10 to 15 percent.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "target_salary",
+                "status": "provided",
+                "value": "205 to 215 range",
+                "evidence": [
+                  {
+                    "turnId": 4,
+                    "quote": "For a move I'd be looking at a base in the 205 to 215 range, but I'm flexible if there's a strong bonus or equity story.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "availability",
+                "status": "provided",
+                "value": "three weeks notice, mid to late August",
+                "evidence": [
+                  {
+                    "turnId": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal. On timing, I'd give three weeks notice, so call it mid to late August.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "relocation",
+                "status": "provided",
+                "value": "not looking to relocate",
+                "evidence": [
+                  {
+                    "turnId": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              }
+            ],
+            "rawExtractionPayload": {
+              "full_name": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "operation": "set",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com."
+                  }
+                ]
+              },
+              "email": {
+                "operation": "set",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com."
+                  }
+                ]
+              },
+              "bachelors_degree": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "operation": "set",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "What's the best phone number and email to reach you after this? ... I still have my .mil address from the Army."
+                  }
+                ]
+              },
+              "security_clearance": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "operation": "set",
+                "value": "Raytheon (RTX)",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "I transitioned to the defense contracting side. My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "current_title": {
+                "operation": "set",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. ... Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer."
+                  }
+                ]
+              },
+              "tenure": {
+                "operation": "set",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer."
+                  }
+                ]
+              },
+              "team_size": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "operation": "set",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "key_technologies": {
+                "operation": "set",
+                "value": "Monte Carlo simulation",
+                "evidence": [
+                  {
+                    "turn_id": 3,
+                    "quote": "I owned the analysis effort to characterize that under stress conditions. We built a Monte Carlo simulation environment to run thousands of engagement scenarios and quantify the correlation error rate."
+                  }
+                ]
+              },
+              "area_of_interest": {
+                "operation": "set",
+                "value": "defense contracting",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "I transitioned to the defense contracting side. My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "reason_for_leaving": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "operation": "set",
+                "value": "178 base with a bonus that runs 10 to 15 percent",
+                "evidence": [
+                  {
+                    "turn_id": 4,
+                    "quote": "My current total comp is around 178 base with a bonus that runs 10 to 15 percent."
+                  }
+                ]
+              },
+              "target_salary": {
+                "operation": "set",
+                "value": "205 to 215 range",
+                "evidence": [
+                  {
+                    "turn_id": 4,
+                    "quote": "For a move I'd be looking at a base in the 205 to 215 range, but I'm flexible if there's a strong bonus or equity story."
+                  }
+                ]
+              },
+              "availability": {
+                "operation": "set",
+                "value": "three weeks notice, mid to late August",
+                "evidence": [
+                  {
+                    "turn_id": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal. On timing, I'd give three weeks notice, so call it mid to late August."
+                  }
+                ]
+              },
+              "relocation": {
+                "operation": "set",
+                "value": "not looking to relocate",
+                "evidence": [
+                  {
+                    "turn_id": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal."
+                  }
+                ]
+              }
+            },
+            "rawExtractionUpdates": [
+              {
+                "fieldId": "full_name",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "location",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "phone",
+                "operation": "set",
+                "value": "(256) 555-0173"
+              },
+              {
+                "fieldId": "email",
+                "operation": "set",
+                "value": "firstlast.eng@example.com"
+              },
+              {
+                "fieldId": "bachelors_degree",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "bachelors_year",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "masters_degree",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "masters_year",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "military_service",
+                "operation": "set",
+                "value": "Army"
+              },
+              {
+                "fieldId": "security_clearance",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_employer",
+                "operation": "set",
+                "value": "Raytheon (RTX)"
+              },
+              {
+                "fieldId": "current_title",
+                "operation": "set",
+                "value": "lead systems engineer"
+              },
+              {
+                "fieldId": "tenure",
+                "operation": "set",
+                "value": "three years"
+              },
+              {
+                "fieldId": "team_size",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_program",
+                "operation": "set",
+                "value": "Patriot modernization"
+              },
+              {
+                "fieldId": "key_technologies",
+                "operation": "set",
+                "value": "Monte Carlo simulation"
+              },
+              {
+                "fieldId": "area_of_interest",
+                "operation": "set",
+                "value": "defense contracting"
+              },
+              {
+                "fieldId": "reason_for_leaving",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_salary",
+                "operation": "set",
+                "value": "178 base with a bonus that runs 10 to 15 percent"
+              },
+              {
+                "fieldId": "target_salary",
+                "operation": "set",
+                "value": "205 to 215 range"
+              },
+              {
+                "fieldId": "availability",
+                "operation": "set",
+                "value": "three weeks notice, mid to late August"
+              },
+              {
+                "fieldId": "relocation",
+                "operation": "set",
+                "value": "not looking to relocate"
+              }
+            ],
+            "acceptedExtractionUpdates": [
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_employer",
+                "status": "provided",
+                "value": "Raytheon (RTX)",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I transitioned to the defense contracting side. My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "tenure",
+                "status": "provided",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_program",
+                "status": "provided",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "key_technologies",
+                "status": "provided",
+                "value": "Monte Carlo simulation",
+                "evidence": [
+                  {
+                    "turnId": 3,
+                    "quote": "I owned the analysis effort to characterize that under stress conditions. We built a Monte Carlo simulation environment to run thousands of engagement scenarios and quantify the correlation error rate.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "area_of_interest",
+                "status": "provided",
+                "value": "defense contracting",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I transitioned to the defense contracting side. My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_salary",
+                "status": "provided",
+                "value": "178 base with a bonus that runs 10 to 15 percent",
+                "evidence": [
+                  {
+                    "turnId": 4,
+                    "quote": "My current total comp is around 178 base with a bonus that runs 10 to 15 percent.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "target_salary",
+                "status": "provided",
+                "value": "205 to 215 range",
+                "evidence": [
+                  {
+                    "turnId": 4,
+                    "quote": "For a move I'd be looking at a base in the 205 to 215 range, but I'm flexible if there's a strong bonus or equity story.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "availability",
+                "status": "provided",
+                "value": "three weeks notice, mid to late August",
+                "evidence": [
+                  {
+                    "turnId": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal. On timing, I'd give three weeks notice, so call it mid to late August.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "relocation",
+                "status": "provided",
+                "value": "not looking to relocate",
+                "evidence": [
+                  {
+                    "turnId": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              }
+            ],
+            "rejectedExtractionUpdates": [
+              {
+                "update": {
+                  "fieldId": "military_service",
+                  "operation": "set",
+                  "value": "Army"
+                },
+                "rejectionReason": "No matching complete candidate evidence"
+              },
+              {
+                "update": {
+                  "fieldId": "current_title",
+                  "operation": "set",
+                  "value": "lead systems engineer"
+                },
+                "rejectionReason": "No matching complete candidate evidence"
+              }
+            ],
+            "followUpQuestions": [
+              {
+                "question": "Can you specify the exact number of sensor types or data sources that were fused in your correlation analysis, and how many Monte Carlo scenarios were run to quantify the error rate?"
+              }
+            ],
+            "rawFollowUpQuestions": [
+              {
+                "question": "Can you specify the exact number of sensor types or data sources that were fused in your correlation analysis, and how many Monte Carlo scenarios were run to quantify the error rate?"
+              }
+            ],
+            "rejectedFollowUpQuestions": [],
+            "metrics": {
+              "totalMs": 9332,
+              "ttftMs": 791,
+              "decodeTokensPerSecond": 175.92,
+              "inputTokens": 4076,
+              "outputTokens": 1463,
+              "processRamMb": 247,
+              "gpuMemoryMb": null,
+              "extractionMs": 8794,
+              "questionMs": 538,
+              "modelStorageMb": 1596.9,
+              "modelId": "lfm2.5-2.6b-no-think",
+              "modelLabel": "LFM2.5 2.6B \u00b7 no thinking"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "mode": "multi",
+      "steps": [
+        {
+          "chunk": 1,
+          "result": {
+            "analysisPerformed": false,
+            "completedResponseCount": 0
+          }
+        },
+        {
+          "chunk": 2,
+          "result": {
+            "analysisPerformed": true,
+            "completedResponseCount": 1,
+            "checklistSnapshot": [
+              {
+                "fieldId": "full_name",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "location",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "bachelors_degree",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "bachelors_year",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "masters_degree",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "masters_year",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "military_service",
+                "status": "provided",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "I still have my .mil address from the Army.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "security_clearance",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_employer",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_title",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "tenure",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "team_size",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_program",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "key_technologies",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "area_of_interest",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "reason_for_leaving",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_salary",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "target_salary",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "availability",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "relocation",
+                "status": "not_provided",
+                "value": null
+              }
+            ],
+            "checklistChanges": [
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "military_service",
+                "status": "provided",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "I still have my .mil address from the Army.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              }
+            ],
+            "rawExtractionPayload": {
+              "full_name": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "operation": "set",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com."
+                  }
+                ]
+              },
+              "email": {
+                "operation": "set",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com."
+                  }
+                ]
+              },
+              "bachelors_degree": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "operation": "set",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I still have my .mil address from the Army."
+                  }
+                ]
+              },
+              "security_clearance": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_title": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "tenure": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "team_size": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "key_technologies": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "area_of_interest": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "operation": "set",
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              }
+            },
+            "rawExtractionUpdates": [
+              {
+                "fieldId": "full_name",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "location",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "phone",
+                "operation": "set",
+                "value": "(256) 555-0173"
+              },
+              {
+                "fieldId": "email",
+                "operation": "set",
+                "value": "firstlast.eng@example.com"
+              },
+              {
+                "fieldId": "bachelors_degree",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "bachelors_year",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "masters_degree",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "masters_year",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "military_service",
+                "operation": "set",
+                "value": "Army"
+              },
+              {
+                "fieldId": "security_clearance",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_employer",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_title",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "tenure",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "team_size",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_program",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "key_technologies",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "area_of_interest",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "reason_for_leaving",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_salary",
+                "operation": "set",
+                "value": null
+              },
+              {
+                "fieldId": "target_salary",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "availability",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "relocation",
+                "operation": "unchanged",
+                "value": null
+              }
+            ],
+            "acceptedExtractionUpdates": [
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "military_service",
+                "status": "provided",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "I still have my .mil address from the Army.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              }
+            ],
+            "rejectedExtractionUpdates": [
+              {
+                "update": {
+                  "fieldId": "current_salary",
+                  "operation": "set",
+                  "value": null
+                },
+                "rejectionReason": "Value does not match extraction operation"
+              }
+            ],
+            "followUpQuestions": [
+              {
+                "question": "Can you specify the exact number of direct reports or team members you led during your current role?"
+              }
+            ],
+            "rawFollowUpQuestions": [
+              {
+                "question": "Can you specify the exact number of direct reports or team members you led during your current role?"
+              }
+            ],
+            "rejectedFollowUpQuestions": [],
+            "metrics": {
+              "totalMs": 5340,
+              "ttftMs": 344,
+              "decodeTokensPerSecond": 173.75,
+              "inputTokens": 3502,
+              "outputTokens": 828,
+              "processRamMb": 309,
+              "gpuMemoryMb": null,
+              "extractionMs": 4884,
+              "questionMs": 456,
+              "modelStorageMb": 1596.9,
+              "modelId": "lfm2.5-2.6b-no-think",
+              "modelLabel": "LFM2.5 2.6B \u00b7 no thinking"
+            }
+          }
+        },
+        {
+          "chunk": 3,
+          "result": {
+            "analysisPerformed": false,
+            "completedResponseCount": 1
+          }
+        },
+        {
+          "chunk": 4,
+          "result": {
+            "analysisPerformed": true,
+            "completedResponseCount": 2,
+            "checklistSnapshot": [
+              {
+                "fieldId": "full_name",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "location",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "bachelors_degree",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "bachelors_year",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "masters_degree",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "masters_year",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "military_service",
+                "status": "provided",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "I still have my .mil address from the Army.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "security_clearance",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_employer",
+                "status": "provided",
+                "value": "RTX (formerly Raytheon)",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I transitioned to the defense contracting side. My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_title",
+                "status": "provided",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. I did about four years there. Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "tenure",
+                "status": "provided",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "team_size",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_program",
+                "status": "provided",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "key_technologies",
+                "status": "provided",
+                "value": "Patriot",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "area_of_interest",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "reason_for_leaving",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_salary",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "target_salary",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "availability",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "relocation",
+                "status": "not_provided",
+                "value": null
+              }
+            ],
+            "checklistChanges": [
+              {
+                "fieldId": "current_employer",
+                "status": "provided",
+                "value": "RTX (formerly Raytheon)",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I transitioned to the defense contracting side. My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_title",
+                "status": "provided",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. I did about four years there. Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "tenure",
+                "status": "provided",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_program",
+                "status": "provided",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "key_technologies",
+                "status": "provided",
+                "value": "Patriot",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              }
+            ],
+            "rawExtractionPayload": {
+              "full_name": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "operation": "set",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com."
+                  }
+                ]
+              },
+              "email": {
+                "operation": "set",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com."
+                  }
+                ]
+              },
+              "bachelors_degree": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "operation": "set",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I still have my .mil address from the Army."
+                  }
+                ]
+              },
+              "security_clearance": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "operation": "set",
+                "value": "RTX (formerly Raytheon)",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "I transitioned to the defense contracting side. My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "current_title": {
+                "operation": "set",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. I did about four years there. Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer."
+                  }
+                ]
+              },
+              "tenure": {
+                "operation": "set",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer."
+                  }
+                ]
+              },
+              "team_size": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "operation": "set",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "key_technologies": {
+                "operation": "set",
+                "value": "Patriot",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "area_of_interest": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "operation": "set",
+                "value": "firstlast.eng@example.com",
+                "evidence": []
+              },
+              "target_salary": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              }
+            },
+            "rawExtractionUpdates": [
+              {
+                "fieldId": "full_name",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "location",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "phone",
+                "operation": "set",
+                "value": "(256) 555-0173"
+              },
+              {
+                "fieldId": "email",
+                "operation": "set",
+                "value": "firstlast.eng@example.com"
+              },
+              {
+                "fieldId": "bachelors_degree",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "bachelors_year",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "masters_degree",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "masters_year",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "military_service",
+                "operation": "set",
+                "value": "Army"
+              },
+              {
+                "fieldId": "security_clearance",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_employer",
+                "operation": "set",
+                "value": "RTX (formerly Raytheon)"
+              },
+              {
+                "fieldId": "current_title",
+                "operation": "set",
+                "value": "lead systems engineer"
+              },
+              {
+                "fieldId": "tenure",
+                "operation": "set",
+                "value": "three years"
+              },
+              {
+                "fieldId": "team_size",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_program",
+                "operation": "set",
+                "value": "Patriot modernization"
+              },
+              {
+                "fieldId": "key_technologies",
+                "operation": "set",
+                "value": "Patriot"
+              },
+              {
+                "fieldId": "area_of_interest",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "reason_for_leaving",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_salary",
+                "operation": "set",
+                "value": "firstlast.eng@example.com"
+              },
+              {
+                "fieldId": "target_salary",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "availability",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "relocation",
+                "operation": "unchanged",
+                "value": null
+              }
+            ],
+            "acceptedExtractionUpdates": [
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "military_service",
+                "status": "provided",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "I still have my .mil address from the Army.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_employer",
+                "status": "provided",
+                "value": "RTX (formerly Raytheon)",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I transitioned to the defense contracting side. My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_title",
+                "status": "provided",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. I did about four years there. Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "tenure",
+                "status": "provided",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_program",
+                "status": "provided",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "key_technologies",
+                "status": "provided",
+                "value": "Patriot",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              }
+            ],
+            "rejectedExtractionUpdates": [
+              {
+                "update": {
+                  "fieldId": "current_salary",
+                  "operation": "set",
+                  "value": "firstlast.eng@example.com"
+                },
+                "rejectionReason": "Set requires candidate evidence"
+              }
+            ],
+            "followUpQuestions": [
+              {
+                "question": "Can you specify the exact number of direct reports or team members you led during your current role at Torch Technologies?"
+              }
+            ],
+            "rawFollowUpQuestions": [
+              {
+                "question": "Can you specify the exact number of direct reports or team members you led during your current role at Torch Technologies?"
+              }
+            ],
+            "rejectedFollowUpQuestions": [],
+            "metrics": {
+              "totalMs": 7489,
+              "ttftMs": 534,
+              "decodeTokensPerSecond": 172.65,
+              "inputTokens": 4346,
+              "outputTokens": 1155,
+              "processRamMb": 415,
+              "gpuMemoryMb": null,
+              "extractionMs": 6973,
+              "questionMs": 516,
+              "modelStorageMb": 1596.9,
+              "modelId": "lfm2.5-2.6b-no-think",
+              "modelLabel": "LFM2.5 2.6B \u00b7 no thinking"
+            }
+          }
+        },
+        {
+          "chunk": 5,
+          "result": {
+            "analysisPerformed": false,
+            "completedResponseCount": 2
+          }
+        },
+        {
+          "chunk": 6,
+          "result": {
+            "analysisPerformed": true,
+            "completedResponseCount": 3,
+            "checklistSnapshot": [
+              {
+                "fieldId": "full_name",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "location",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "bachelors_degree",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "bachelors_year",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "masters_degree",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "masters_year",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "military_service",
+                "status": "provided",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "I still have my .mil address from the Army.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "security_clearance",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_employer",
+                "status": "provided",
+                "value": "RTX (formerly Raytheon)",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_title",
+                "status": "provided",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. I did about four years there. Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "tenure",
+                "status": "provided",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "team_size",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_program",
+                "status": "provided",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "key_technologies",
+                "status": "provided",
+                "value": "Patriot",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "area_of_interest",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "reason_for_leaving",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_salary",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "target_salary",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "availability",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "relocation",
+                "status": "not_provided",
+                "value": null
+              }
+            ],
+            "checklistChanges": [],
+            "rawExtractionPayload": {
+              "full_name": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "operation": "set",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com."
+                  }
+                ]
+              },
+              "email": {
+                "operation": "set",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com."
+                  }
+                ]
+              },
+              "bachelors_degree": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "operation": "set",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I still have my .mil address from the Army."
+                  }
+                ]
+              },
+              "security_clearance": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "operation": "set",
+                "value": "RTX (formerly Raytheon)",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "current_title": {
+                "operation": "set",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. I did about four years there. Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer."
+                  }
+                ]
+              },
+              "tenure": {
+                "operation": "set",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer."
+                  }
+                ]
+              },
+              "team_size": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "operation": "set",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "key_technologies": {
+                "operation": "set",
+                "value": "Patriot",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "area_of_interest": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              }
+            },
+            "rawExtractionUpdates": [
+              {
+                "fieldId": "full_name",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "location",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "phone",
+                "operation": "set",
+                "value": "(256) 555-0173"
+              },
+              {
+                "fieldId": "email",
+                "operation": "set",
+                "value": "firstlast.eng@example.com"
+              },
+              {
+                "fieldId": "bachelors_degree",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "bachelors_year",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "masters_degree",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "masters_year",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "military_service",
+                "operation": "set",
+                "value": "Army"
+              },
+              {
+                "fieldId": "security_clearance",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_employer",
+                "operation": "set",
+                "value": "RTX (formerly Raytheon)"
+              },
+              {
+                "fieldId": "current_title",
+                "operation": "set",
+                "value": "lead systems engineer"
+              },
+              {
+                "fieldId": "tenure",
+                "operation": "set",
+                "value": "three years"
+              },
+              {
+                "fieldId": "team_size",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_program",
+                "operation": "set",
+                "value": "Patriot modernization"
+              },
+              {
+                "fieldId": "key_technologies",
+                "operation": "set",
+                "value": "Patriot"
+              },
+              {
+                "fieldId": "area_of_interest",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "reason_for_leaving",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_salary",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "target_salary",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "availability",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "relocation",
+                "operation": "unchanged",
+                "value": null
+              }
+            ],
+            "acceptedExtractionUpdates": [
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "military_service",
+                "status": "provided",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "I still have my .mil address from the Army.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_employer",
+                "status": "provided",
+                "value": "RTX (formerly Raytheon)",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_title",
+                "status": "provided",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. I did about four years there. Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "tenure",
+                "status": "provided",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_program",
+                "status": "provided",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "key_technologies",
+                "status": "provided",
+                "value": "Patriot",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              }
+            ],
+            "rejectedExtractionUpdates": [],
+            "followUpQuestions": [],
+            "rawFollowUpQuestions": [
+              {
+                "question": "Can you specify the exact number of direct reports or team members you led during your current role at Torch Technologies?"
+              }
+            ],
+            "rejectedFollowUpQuestions": [
+              {
+                "question": {
+                  "question": "Can you specify the exact number of direct reports or team members you led during your current role at Torch Technologies?"
+                },
+                "rejectionReason": "Previously suggested question"
+              }
+            ],
+            "metrics": {
+              "totalMs": 7732,
+              "ttftMs": 749,
+              "decodeTokensPerSecond": 170.99,
+              "inputTokens": 5346,
+              "outputTokens": 1141,
+              "processRamMb": 440,
+              "gpuMemoryMb": null,
+              "extractionMs": 7168,
+              "questionMs": 564,
+              "modelStorageMb": 1596.9,
+              "modelId": "lfm2.5-2.6b-no-think",
+              "modelLabel": "LFM2.5 2.6B \u00b7 no thinking"
+            }
+          }
+        },
+        {
+          "chunk": 7,
+          "result": {
+            "analysisPerformed": true,
+            "completedResponseCount": 4,
+            "checklistSnapshot": [
+              {
+                "fieldId": "full_name",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "location",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "bachelors_degree",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "bachelors_year",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "masters_degree",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "masters_year",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "military_service",
+                "status": "provided",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "I still have my .mil address from the Army.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "security_clearance",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_employer",
+                "status": "provided",
+                "value": "RTX (formerly Raytheon)",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_title",
+                "status": "provided",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. I did about four years there. Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "tenure",
+                "status": "provided",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "team_size",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_program",
+                "status": "provided",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "key_technologies",
+                "status": "provided",
+                "value": "Patriot",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "area_of_interest",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "reason_for_leaving",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_salary",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "target_salary",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "availability",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "relocation",
+                "status": "not_provided",
+                "value": null
+              }
+            ],
+            "checklistChanges": [],
+            "rawExtractionPayload": {
+              "full_name": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "operation": "set",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com."
+                  }
+                ]
+              },
+              "email": {
+                "operation": "set",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com."
+                  }
+                ]
+              },
+              "bachelors_degree": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "operation": "set",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I still have my .mil address from the Army."
+                  }
+                ]
+              },
+              "security_clearance": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "operation": "set",
+                "value": "RTX (formerly Raytheon)",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "current_title": {
+                "operation": "set",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. I did about four years there. Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer."
+                  }
+                ]
+              },
+              "tenure": {
+                "operation": "set",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer."
+                  }
+                ]
+              },
+              "team_size": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "operation": "set",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "key_technologies": {
+                "operation": "set",
+                "value": "Patriot",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "area_of_interest": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "relocation": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              }
+            },
+            "rawExtractionUpdates": [
+              {
+                "fieldId": "full_name",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "location",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "phone",
+                "operation": "set",
+                "value": "(256) 555-0173"
+              },
+              {
+                "fieldId": "email",
+                "operation": "set",
+                "value": "firstlast.eng@example.com"
+              },
+              {
+                "fieldId": "bachelors_degree",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "bachelors_year",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "masters_degree",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "masters_year",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "military_service",
+                "operation": "set",
+                "value": "Army"
+              },
+              {
+                "fieldId": "security_clearance",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_employer",
+                "operation": "set",
+                "value": "RTX (formerly Raytheon)"
+              },
+              {
+                "fieldId": "current_title",
+                "operation": "set",
+                "value": "lead systems engineer"
+              },
+              {
+                "fieldId": "tenure",
+                "operation": "set",
+                "value": "three years"
+              },
+              {
+                "fieldId": "team_size",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_program",
+                "operation": "set",
+                "value": "Patriot modernization"
+              },
+              {
+                "fieldId": "key_technologies",
+                "operation": "set",
+                "value": "Patriot"
+              },
+              {
+                "fieldId": "area_of_interest",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "reason_for_leaving",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_salary",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "target_salary",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "availability",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "relocation",
+                "operation": "unchanged",
+                "value": null
+              }
+            ],
+            "acceptedExtractionUpdates": [
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "military_service",
+                "status": "provided",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "I still have my .mil address from the Army.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_employer",
+                "status": "provided",
+                "value": "RTX (formerly Raytheon)",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_title",
+                "status": "provided",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. I did about four years there. Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "tenure",
+                "status": "provided",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_program",
+                "status": "provided",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "key_technologies",
+                "status": "provided",
+                "value": "Patriot",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              }
+            ],
+            "rejectedExtractionUpdates": [],
+            "followUpQuestions": [
+              {
+                "question": "What specific metrics or performance indicators did you use to quantify the reduction in track duplication error rate from the Monte Carlo simulation? For example, what percentage improvement was observed under stress conditions?"
+              }
+            ],
+            "rawFollowUpQuestions": [
+              {
+                "question": "What specific metrics or performance indicators did you use to quantify the reduction in track duplication error rate from the Monte Carlo simulation? For example, what percentage improvement was observed under stress conditions?"
+              }
+            ],
+            "rejectedFollowUpQuestions": [],
+            "metrics": {
+              "totalMs": 7854,
+              "ttftMs": 760,
+              "decodeTokensPerSecond": 169.95,
+              "inputTokens": 5495,
+              "outputTokens": 1154,
+              "processRamMb": 561,
+              "gpuMemoryMb": null,
+              "extractionMs": 7206,
+              "questionMs": 648,
+              "modelStorageMb": 1596.9,
+              "modelId": "lfm2.5-2.6b-no-think",
+              "modelLabel": "LFM2.5 2.6B \u00b7 no thinking"
+            }
+          }
+        },
+        {
+          "chunk": 8,
+          "result": {
+            "analysisPerformed": true,
+            "completedResponseCount": 5,
+            "checklistSnapshot": [
+              {
+                "fieldId": "full_name",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "location",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "bachelors_degree",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "bachelors_year",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "masters_degree",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "masters_year",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "military_service",
+                "status": "provided",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "I still have my .mil address from the Army.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "security_clearance",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_employer",
+                "status": "provided",
+                "value": "RTX (formerly Raytheon)",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_title",
+                "status": "provided",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. I did about four years there. Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "tenure",
+                "status": "provided",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "team_size",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_program",
+                "status": "provided",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "key_technologies",
+                "status": "provided",
+                "value": "Patriot",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "area_of_interest",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "reason_for_leaving",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "current_salary",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "target_salary",
+                "status": "not_provided",
+                "value": null
+              },
+              {
+                "fieldId": "availability",
+                "status": "provided",
+                "value": "three weeks notice, so call it mid to late August",
+                "evidence": [
+                  {
+                    "turnId": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal. On timing, I'd give three weeks notice, so call it mid to late August.",
+                    "chunkIds": [
+                      "static-original-document-chunk-07",
+                      "static-original-document-chunk-08"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "relocation",
+                "status": "provided",
+                "value": "not looking to relocate",
+                "evidence": [
+                  {
+                    "turnId": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal.",
+                    "chunkIds": [
+                      "static-original-document-chunk-07",
+                      "static-original-document-chunk-08"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              }
+            ],
+            "checklistChanges": [
+              {
+                "fieldId": "availability",
+                "status": "provided",
+                "value": "three weeks notice, so call it mid to late August",
+                "evidence": [
+                  {
+                    "turnId": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal. On timing, I'd give three weeks notice, so call it mid to late August.",
+                    "chunkIds": [
+                      "static-original-document-chunk-07",
+                      "static-original-document-chunk-08"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "relocation",
+                "status": "provided",
+                "value": "not looking to relocate",
+                "evidence": [
+                  {
+                    "turnId": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal.",
+                    "chunkIds": [
+                      "static-original-document-chunk-07",
+                      "static-original-document-chunk-08"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              }
+            ],
+            "rawExtractionPayload": {
+              "full_name": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "location": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "phone": {
+                "operation": "set",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com."
+                  }
+                ]
+              },
+              "email": {
+                "operation": "set",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com."
+                  }
+                ]
+              },
+              "bachelors_degree": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "bachelors_year": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "masters_degree": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "masters_year": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "military_service": {
+                "operation": "set",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turn_id": 1,
+                    "quote": "I still have my .mil address from the Army."
+                  }
+                ]
+              },
+              "security_clearance": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_employer": {
+                "operation": "set",
+                "value": "RTX (formerly Raytheon)",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "current_title": {
+                "operation": "set",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. I did about four years there. Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer."
+                  }
+                ]
+              },
+              "tenure": {
+                "operation": "set",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer."
+                  }
+                ]
+              },
+              "team_size": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_program": {
+                "operation": "set",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "key_technologies": {
+                "operation": "set",
+                "value": "Patriot",
+                "evidence": [
+                  {
+                    "turn_id": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization."
+                  }
+                ]
+              },
+              "area_of_interest": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "reason_for_leaving": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "current_salary": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "target_salary": {
+                "operation": "unchanged",
+                "value": null,
+                "evidence": []
+              },
+              "availability": {
+                "operation": "set",
+                "value": "three weeks notice, so call it mid to late August",
+                "evidence": [
+                  {
+                    "turn_id": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal. On timing, I'd give three weeks notice, so call it mid to late August."
+                  }
+                ]
+              },
+              "relocation": {
+                "operation": "set",
+                "value": "not looking to relocate",
+                "evidence": [
+                  {
+                    "turn_id": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal."
+                  }
+                ]
+              }
+            },
+            "rawExtractionUpdates": [
+              {
+                "fieldId": "full_name",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "location",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "phone",
+                "operation": "set",
+                "value": "(256) 555-0173"
+              },
+              {
+                "fieldId": "email",
+                "operation": "set",
+                "value": "firstlast.eng@example.com"
+              },
+              {
+                "fieldId": "bachelors_degree",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "bachelors_year",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "masters_degree",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "masters_year",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "military_service",
+                "operation": "set",
+                "value": "Army"
+              },
+              {
+                "fieldId": "security_clearance",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_employer",
+                "operation": "set",
+                "value": "RTX (formerly Raytheon)"
+              },
+              {
+                "fieldId": "current_title",
+                "operation": "set",
+                "value": "lead systems engineer"
+              },
+              {
+                "fieldId": "tenure",
+                "operation": "set",
+                "value": "three years"
+              },
+              {
+                "fieldId": "team_size",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_program",
+                "operation": "set",
+                "value": "Patriot modernization"
+              },
+              {
+                "fieldId": "key_technologies",
+                "operation": "set",
+                "value": "Patriot"
+              },
+              {
+                "fieldId": "area_of_interest",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "reason_for_leaving",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "current_salary",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "target_salary",
+                "operation": "unchanged",
+                "value": null
+              },
+              {
+                "fieldId": "availability",
+                "operation": "set",
+                "value": "three weeks notice, so call it mid to late August"
+              },
+              {
+                "fieldId": "relocation",
+                "operation": "set",
+                "value": "not looking to relocate"
+              }
+            ],
+            "acceptedExtractionUpdates": [
+              {
+                "fieldId": "phone",
+                "status": "provided",
+                "value": "(256) 555-0173",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "email",
+                "status": "provided",
+                "value": "firstlast.eng@example.com",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "Cell is (256) 555-0173, and email is first.last@example.mil \u2013 actually, let me correct that, use my personal one, firstlast.eng@example.com.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "military_service",
+                "status": "provided",
+                "value": "Army",
+                "evidence": [
+                  {
+                    "turnId": 1,
+                    "quote": "I still have my .mil address from the Army.",
+                    "chunkIds": [
+                      "static-original-document-chunk-01",
+                      "static-original-document-chunk-02"
+                    ],
+                    "timestamp": "2026-10-21T10:00:30.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_employer",
+                "status": "provided",
+                "value": "RTX (formerly Raytheon)",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_title",
+                "status": "provided",
+                "value": "lead systems engineer",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization. I did about four years there. Then I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "tenure",
+                "status": "provided",
+                "value": "three years",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "I moved to a smaller shop, a company called Torch Technologies here in Huntsville, where I've been for the last three years as a lead systems engineer.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "current_program",
+                "status": "provided",
+                "value": "Patriot modernization",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "key_technologies",
+                "status": "provided",
+                "value": "Patriot",
+                "evidence": [
+                  {
+                    "turnId": 2,
+                    "quote": "My first role out was at Raytheon \u2013 well, it's RTX now after the merger \u2013 as a systems engineer supporting Patriot modernization.",
+                    "chunkIds": [
+                      "static-original-document-chunk-02",
+                      "static-original-document-chunk-03",
+                      "static-original-document-chunk-04"
+                    ],
+                    "timestamp": "2026-10-21T10:01:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "availability",
+                "status": "provided",
+                "value": "three weeks notice, so call it mid to late August",
+                "evidence": [
+                  {
+                    "turnId": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal. On timing, I'd give three weeks notice, so call it mid to late August.",
+                    "chunkIds": [
+                      "static-original-document-chunk-07",
+                      "static-original-document-chunk-08"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              },
+              {
+                "fieldId": "relocation",
+                "status": "provided",
+                "value": "not looking to relocate",
+                "evidence": [
+                  {
+                    "turnId": 5,
+                    "quote": "I'm not looking to relocate \u2013 I've got two kids in school here and my spouse has a job at the arsenal.",
+                    "chunkIds": [
+                      "static-original-document-chunk-07",
+                      "static-original-document-chunk-08"
+                    ],
+                    "timestamp": "2026-10-21T10:02:00.000Z"
+                  }
+                ]
+              }
+            ],
+            "rejectedExtractionUpdates": [],
+            "followUpQuestions": [],
+            "rawFollowUpQuestions": [
+              {
+                "question": "Can you specify the exact number of direct reports or team members you led during your current role at Torch Technologies?"
+              }
+            ],
+            "rejectedFollowUpQuestions": [
+              {
+                "question": {
+                  "question": "Can you specify the exact number of direct reports or team members you led during your current role at Torch Technologies?"
+                },
+                "rejectionReason": "Previously suggested question"
+              }
+            ],
+            "metrics": {
+              "totalMs": 8546,
+              "ttftMs": 804,
+              "decodeTokensPerSecond": 169.56,
+              "inputTokens": 5601,
+              "outputTokens": 1265,
+              "processRamMb": 681,
+              "gpuMemoryMb": null,
+              "extractionMs": 8015,
+              "questionMs": 531,
+              "modelStorageMb": 1596.9,
+              "modelId": "lfm2.5-2.6b-no-think",
+              "modelLabel": "LFM2.5 2.6B \u00b7 no thinking"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "purpose": "one_original_preset_smoke_only_not_promotion_evaluation",
+  "contract": "interview-fields-v1/live-operations-v1",
+  "source_sha256": {
+    "runtime/llama-adapter.mjs": "8022e76eeefd9d58a368da145858d08097e43cd59878c04688366d96c2fd4b55",
+    "runtime/live-extraction.mjs": "856d143c9c02a7013a95f19cf9d2f4ea5a79d2066fa1184e460d0dc3ef17f822",
+    "runtime/field-contract.mjs": "bf087512f45df16e779bf4864a18499bbd53427afdd3bfac2e85dacb89c9fe34",
+    "runtime/transcript-json.mjs": "7ce39b282394d7b0889fab6f2d5667fd86c1fd4baa6a5240294d8ae5999c8ae2"
+  }
+}

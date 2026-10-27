@@ -37,7 +37,7 @@ p { margin: 0; }
 .stat-tile { display: flex; flex-direction: column; gap: .2rem; border: 1px solid var(--border); border-radius: 4px; background: rgb(255 255 255 / 3%); padding: .7rem; }
 .stat-tile span { color: #71717a; font-family: var(--font-label); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
 .stat-tile strong { font-size: .9rem; }
-.transcript-row { display: grid; grid-template-columns: 86px minmax(0, 1fr) 64px; gap: 1rem; padding: 1rem 0; }
+.transcript-row { display: grid; grid-template-columns: 86px minmax(0, 1fr) 90px; gap: 1rem; padding: 1rem 0; }
 .transcript-row + .transcript-row { border-top: 1px solid var(--border); }
 .transcript-row span { color: #ac8dff; font-family: var(--font-label); font-size: 12px; font-weight: 500; }
 .transcript-row.candidate span { color: #d4c0ff; }

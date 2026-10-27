@@ -1,0 +1,121 @@
+{
+  "run_id": "20261022T164456Z-f8b40980",
+  "actual_training_source_sha256": "5ab777ba033baec1bd8a219c7e5ef145f932fb2602c868656ce085b2e146e9f5",
+  "fixture_sha256": "129d212d0d6e283680db917bbf85626917db3fe88d0ba47e56543780e1bd21b3",
+  "local_template_parity": {
+    "model": "LiquidAI/LFM2.5-2.6B",
+    "revision": "654f9463ce32b05d0429d76fe1f580b27d4c1ac0",
+    "records": [
+      {
+        "id": "smoke-extraction-0",
+        "task": "extraction",
+        "prompt_tokens": 1716,
+        "target_tokens": 391,
+        "same_prefix_text_and_ids": true,
+        "same_full_token_sequence": true,
+        "stable_boundary": true,
+        "completion_mask_only": true,
+        "total_tokens": 2107,
+        "generation_prefix_tail": "eration schema.<|im_end|>\n<|im_start|>assistant\n<think>",
+        "passed": true
+      },
+      {
+        "id": "smoke-extraction-1",
+        "task": "extraction",
+        "prompt_tokens": 1716,
+        "target_tokens": 392,
+        "same_prefix_text_and_ids": true,
+        "same_full_token_sequence": true,
+        "stable_boundary": true,
+        "completion_mask_only": true,
+        "total_tokens": 2108,
+        "generation_prefix_tail": "eration schema.<|im_end|>\n<|im_start|>assistant\n<think>",
+        "passed": true
+      },
+      {
+        "id": "smoke-extraction-2",
+        "task": "extraction",
+        "prompt_tokens": 1719,
+        "target_tokens": 284,
+        "same_prefix_text_and_ids": true,
+        "same_full_token_sequence": true,
+        "stable_boundary": true,
+        "completion_mask_only": true,
+        "total_tokens": 2003,
+        "generation_prefix_tail": " missing facts.<|im_end|>\n<|im_start|>assistant\n<think>",
+        "passed": true
+      },
+      {
+        "id": "smoke-extraction-3",
+        "task": "extraction",
+        "prompt_tokens": 1720,
+        "target_tokens": 303,
+        "same_prefix_text_and_ids": true,
+        "same_full_token_sequence": true,
+        "stable_boundary": true,
+        "completion_mask_only": true,
+        "total_tokens": 2023,
+        "generation_prefix_tail": " missing facts.<|im_end|>\n<|im_start|>assistant\n<think>",
+        "passed": true
+      },
+      {
+        "id": "smoke-questions-0",
+        "task": "questions",
+        "prompt_tokens": 1370,
+        "target_tokens": 19,
+        "same_prefix_text_and_ids": true,
+        "same_full_token_sequence": true,
+        "stable_boundary": true,
+        "completion_mask_only": true,
+        "total_tokens": 1389,
+        "generation_prefix_tail": "uestions\": []\n}<|im_end|>\n<|im_start|>assistant\n<think>",
+        "passed": true
+      },
+      {
+        "id": "smoke-questions-1",
+        "task": "questions",
+        "prompt_tokens": 1371,
+        "target_tokens": 16,
+        "same_prefix_text_and_ids": true,
+        "same_full_token_sequence": true,
+        "stable_boundary": true,
+        "completion_mask_only": true,
+        "total_tokens": 1387,
+        "generation_prefix_tail": "uestions\": []\n}<|im_end|>\n<|im_start|>assistant\n<think>",
+        "passed": true
+      },
+      {
+        "id": "smoke-questions-2",
+        "task": "questions",
+        "prompt_tokens": 1373,
+        "target_tokens": 6,
+        "same_prefix_text_and_ids": true,
+        "same_full_token_sequence": true,
+        "stable_boundary": true,
+        "completion_mask_only": true,
+        "total_tokens": 1379,
+        "generation_prefix_tail": "uestions\": []\n}<|im_end|>\n<|im_start|>assistant\n<think>",
+        "passed": true
+      },
+      {
+        "id": "smoke-questions-3",
+        "task": "questions",
+        "prompt_tokens": 1370,
+        "target_tokens": 6,
+        "same_prefix_text_and_ids": true,
+        "same_full_token_sequence": true,
+        "stable_boundary": true,
+        "completion_mask_only": true,
+        "total_tokens": 1376,
+        "generation_prefix_tail": "uestions\": []\n}<|im_end|>\n<|im_start|>assistant\n<think>",
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "chat_template_hash": "ea663864491de7ade391839479860ca95541f892f72665c73251fbd4643b1bef",
+    "transformers_version": "4.57.1",
+    "native_weights_downloaded": false,
+    "tokenizer_loader": "PreTrainedTokenizerFast (native tokenizer.json; exact token IDs verified against llama.cpp)"
+  },
+  "full_quality_training": false
+}

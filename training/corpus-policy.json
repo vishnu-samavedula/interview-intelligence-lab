@@ -1,0 +1,252 @@
+{
+  "version": "0.6.0",
+  "status": "proposed",
+  "enforcement_status": "offline_structural_and_numeric_auditor_implemented_release_blocked_pending_external_and_trainer_gates",
+  "split_unit": "scenario_family_group",
+  "partition_before_rendering": true,
+  "integer_quota_allocation": "largest_remainder_with_fixed_tie_break_seed",
+  "splits": {
+    "calibration": {
+      "minimum_roots": 20,
+      "use_for_training_or_locked_test": false
+    },
+    "train": {
+      "examples_per_task": 1000,
+      "minimum_roots_per_task": 400
+    },
+    "dev": {
+      "examples_per_task": 200,
+      "minimum_roots_per_task": 80
+    },
+    "locked_test": {
+      "examples_per_task": 200,
+      "minimum_roots_per_task": 80
+    },
+    "challenge": {
+      "examples_per_task": 100,
+      "minimum_roots_per_task": 50
+    }
+  },
+  "training_generator_shares": {
+    "anthropic/claude-haiku-4.5": 0.5,
+    "google/gemini-3.5-flash-lite": 0.5
+  },
+  "generator_share_tolerance_pp": 5,
+  "training_generator_input_and_target_token_share_bounds": [
+    0.4,
+    0.6
+  ],
+  "training_extraction_mode_shares": {
+    "live": 0.75,
+    "final": 0.25
+  },
+  "extraction_primary_risk_shares": {
+    "direct_facts": 0.1,
+    "missing_information": 0.1,
+    "corrections_and_retractions": 0.1,
+    "current_vs_historical": 0.1,
+    "negation_and_conditions": 0.1,
+    "numbers_units_and_ranges": 0.1,
+    "multiple_entities_and_speakers": 0.1,
+    "evidence_and_ambiguity": 0.1,
+    "response_continues_across_chunks": 0.1,
+    "frozen_field_assignment": 0.1
+  },
+  "question_primary_outcome_shares": {
+    "ask_quantify_impact": 0.125,
+    "ask_clarify_ownership": 0.075,
+    "ask_clarify_claim": 0.075,
+    "ask_clarify_value_or_tradeoff": 0.125,
+    "ask_explore_role_or_interest": 0.1,
+    "abstain_already_complete": 0.15,
+    "abstain_contact_or_logistics": 0.15,
+    "abstain_answered_in_context": 0.1,
+    "abstain_previously_suggested": 0.1
+  },
+  "primary_bucket_tolerance_pp": 3,
+  "difficulty_tier_shares": {
+    "easy": 0.3,
+    "medium": 0.4,
+    "hard": 0.3
+  },
+  "mode_density_and_token_band_tolerance_pp": 3,
+  "extraction_answer_density_shares": {
+    "sparse_0_to_25_percent": 0.35,
+    "medium_over_25_to_60_percent": 0.4,
+    "dense_over_60_percent": 0.25
+  },
+  "supported_field_opportunity_share_bounds": [
+    0.35,
+    0.5
+  ],
+  "maximum_live_prefix_position_band_share": 0.5,
+  "maximum_question_window_size_share": 0.6,
+  "per_default_field_training_minimums": {
+    "supported_distinct_roots": 50,
+    "unsupported_distinct_roots": 50
+  },
+  "total_serialized_token_band_shares": {
+    "extraction": {
+      "up_to_1024": 0,
+      "1025_to_2048": 0.2,
+      "2049_to_4096": 0.55,
+      "4097_to_8192": 0.25
+    },
+    "questions": {
+      "up_to_1024": 0,
+      "1025_to_2048": 0.6,
+      "2049_to_4096": 0.4
+    }
+  },
+  "concentration_limits_per_task": {
+    "applies_to_split": "train",
+    "minimum_scenario_family_groups": 200,
+    "maximum_roots_per_scenario_family_group": 4,
+    "maximum_examples_per_scenario_family_group": 8,
+    "maximum_scenario_family_group_input_token_share": 0.02,
+    "maximum_scenario_family_group_effective_loss_share": 0.02,
+    "maximum_examples_per_root": 4,
+    "maximum_live_extraction_examples_per_root": 3,
+    "maximum_final_extraction_examples_per_root": 1,
+    "maximum_root_input_token_share": 0.01,
+    "maximum_root_effective_loss_share": 0.01,
+    "minimum_template_families": 20,
+    "maximum_template_root_share": 0.05,
+    "maximum_template_row_share": 0.05,
+    "maximum_template_input_token_share": 0.1,
+    "maximum_template_effective_loss_share": 0.1,
+    "minimum_effective_template_families": 20,
+    "maximum_person_name_root_share": 0.02,
+    "maximum_employer_name_root_share": 0.02,
+    "maximum_location_root_share": 0.05,
+    "minimum_training_roots_per_generator_primary_bucket_cell": 25,
+    "generator_share_bounds_within_primary_bucket": [
+      0.4,
+      0.6
+    ],
+    "minimum_role_families": 8,
+    "maximum_role_family_row_share": 0.2,
+    "minimum_effective_role_families": 6
+  },
+  "evaluation_concentration_limits_per_task": {
+    "applies_to_splits": [
+      "dev",
+      "locked_test",
+      "challenge"
+    ],
+    "maximum_examples_per_root": 4,
+    "maximum_template_root_and_row_share": 0.1,
+    "maximum_template_input_token_share": 0.15,
+    "maximum_scenario_family_group_row_share": 0.05,
+    "maximum_generator_row_share": 0.6
+  },
+  "joint_concentration": {
+    "slices": [
+      "generator_by_primary_bucket",
+      "generator_by_question_decision",
+      "generator_by_difficulty",
+      "primary_bucket_by_difficulty",
+      "primary_bucket_by_length",
+      "extraction_mode_by_density",
+      "role_family_by_field_support",
+      "label_by_wording_pattern"
+    ],
+    "minimum_cell_examples_for_cap": 20,
+    "maximum_template_share_in_material_cell": 0.25,
+    "sparse_cell_action": "list_review_and_mark_coverage_unvalidated"
+  },
+  "training_exposure": {
+    "packing": false,
+    "loss": "assistant_only_mean_per_example_then_weighted_batch_mean",
+    "question_ask_effective_loss_share_bounds": [
+      0.45,
+      0.55
+    ],
+    "generator_effective_loss_share_bounds": [
+      0.45,
+      0.55
+    ],
+    "maximum_root_effective_loss_share_per_epoch": 0.01,
+    "maximum_repetition_multiplier": 2,
+    "rolling_window_examples": 100,
+    "rolling_window_drift_review_trigger_pp": 15,
+    "allow_silent_truncation": false
+  },
+  "training_label_audit": {
+    "minimum_human_reviewed_root_fraction": 0.2,
+    "include_all_disputed_and_critical_cases": true,
+    "maximum_reviewed_cell_error_fraction_before_full_review": 0.02,
+    "on_failure": "quarantine_cell_and_review_all_rows"
+  },
+  "hard_integrity_gates": {
+    "cross_split_group_overlap": 0,
+    "cross_split_exact_duplicates": 0,
+    "cross_split_unresolved_semantic_duplicate_clusters": 0,
+    "unresolved_annotation_disagreements_in_released_rows": 0,
+    "missing_required_provenance_rows": 0,
+    "invalid_schema_rows": 0,
+    "future_information_leaks": 0,
+    "gold_test_rows_with_user_or_qualified_reviewer_adjudication_fraction": 1.0
+  },
+  "near_duplicate_review": {
+    "normalized_word_5gram_jaccard_flag_at": 0.8,
+    "normalized_embeddings_cosine_flag_at": 0.95,
+    "action": "review_and_group_or_quarantine_not_automatic_truth_judgment"
+  },
+  "required_reports": [
+    "integrity_and_leakage",
+    "root_and_row_balance",
+    "input_and_output_tokens",
+    "effective_loss_exposure_per_epoch",
+    "conditional_generator_and_label_balance",
+    "template_entity_role_and_field_support_concentration",
+    "human_and_cross_model_annotation_agreement",
+    "deduplication_clusters_and_disposition",
+    "rejections_repairs_and_sampling_history"
+  ],
+  "field_contract": "interview-fields-v1",
+  "field_contract_frozen": true,
+  "token_band_basis": "Local native-template probe on 8 separate smoke fixtures: extraction prompts 1684-1688 tokens, questions 1297-1300; no <=1024 examples feasible under current serialization. Reconfirm remaining quotas during calibration generation. This measurement predates the veteran-domain prompt refinement; rerun the parity/token probe before release.",
+  "domain_scope": "us_veteran_civilian_job_interviews_v1",
+  "domain_definition": "Recruiter/interviewer conversations with US veterans or transitioning service members about civilian or defense-contractor employment. Ground candidate facts only in visible candidate speech; domain membership never supplies a missing field.",
+  "allowed_role_families": [
+    "systems_engineering",
+    "software_cyber",
+    "maintenance_avionics",
+    "logistics_operations",
+    "program_project_management",
+    "technical_training",
+    "intelligence_analysis",
+    "quality_test"
+  ],
+  "scope_controls": {
+    "fields": "interview-fields-v1",
+    "single_and_manual_multi_presets_only": true,
+    "question_window_complete_exchanges": 3,
+    "maximum_questions_per_invocation": 1,
+    "empty_question_list_valid": true,
+    "missing_field_alone_is_question_trigger": false,
+    "generic_interview_or_career_coaching": false,
+    "timed_streaming_required": false,
+    "quantified_result_alone_requires_abstention": false,
+    "practical_value_and_consequential_tradeoff_questions_allowed": true,
+    "stated_current_or_former_role_interest_exploration_allowed": true
+  },
+  "intent_generalization": {
+    "require_counterfactual_and_minimal_contrast_review": true,
+    "contrast_variants_share_scenario_group_and_split": true,
+    "hold_out_blueprints_not_only_names": true,
+    "allow_rank_to_degree_or_clearance_inference": false,
+    "evaluate_current_vs_former_polarity_ownership_and_outcomes_separately": true,
+    "vary_vocabulary_and_dialogue_structure_within_domain": true,
+    "held_out_real_transcripts_required_for_real_world_claims": true
+  },
+  "question_rubric_version": "veteran-followups-v3-role-and-interest-exploration",
+  "extraction_review_rules": {
+    "concise_supported_service_values_correct": true,
+    "concise_explicit_relocation_refusal_correct": true,
+    "correctness_and_optional_detail_coverage_scored_separately": true,
+    "us_salary_shorthand_from_context_allowed": true,
+    "blanket_numeric_scaling_by_harness_allowed": false
+  }
+}

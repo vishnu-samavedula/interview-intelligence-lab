@@ -1,0 +1,6 @@
+{
+  "run_directory": "/Users/vishnu.samavedula/intelligent_transcribe_assistant/training/pilot/runs/pilot-50-review-v5",
+  "status": "pilot_pending_human_semantic_review",
+  "generated_roots": 50,
+  "requested_roots": 50
+}

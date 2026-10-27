@@ -1,0 +1,709 @@
+{
+  "status": "assistant_semantic_reviewed_not_human_gold",
+  "sources": [
+    "anthropic/claude-haiku-4.5",
+    "google/gemini-3.5-flash-lite"
+  ],
+  "review": "Removed polarity-changing relocation forms, take-home pay implication, ambiguous tenure, double degree/type insertion and doubled direct-report placeholders. Manually supplied semantically safe degree/reason/availability alternatives. Wording pools are disjoint between train/dev/test. Challenge deliberately reuses held-out-only forms.",
+  "fields": {
+    "full_name": {
+      "train": [
+        "My name is {value}.",
+        "I go by {value}.",
+        "You can call me {value}.",
+        "I'm {value}.",
+        "The name's {value}.",
+        "People know me as {value}.",
+        "My full name is {value}.",
+        "Call me {value}.",
+        "That's {value} for the record.",
+        "My full legal name is {value}.",
+        "I am known by the name {value}.",
+        "People refer to me as {value}.",
+        "My name happens to be {value}."
+      ],
+      "dev": [
+        "I go by the name {value}.",
+        "Please note my name is {value}.",
+        "The name I use is {value}."
+      ],
+      "locked_test": [
+        "I introduce myself as {value}.",
+        "For your records, I am {value}.",
+        "My actual name is {value}."
+      ],
+      "challenge": [
+        "I introduce myself as {value}.",
+        "For your records, I am {value}.",
+        "My actual name is {value}."
+      ]
+    },
+    "location": {
+      "train": [
+        "I'm based in {value}.",
+        "I currently live in {value}.",
+        "Right now I'm in {value}.",
+        "My home is in {value}.",
+        "I'm located in {value}.",
+        "I reside in {value}.",
+        "I call {value} home.",
+        "I'm working out of {value}.",
+        "I'm situated in {value}.",
+        "My current location is {value}.",
+        "I've set up in {value}.",
+        "I'm staying in {value}."
+      ],
+      "dev": [
+        "I am currently residing in {value}.",
+        "I live right now in {value}.",
+        "Presently, I am located in {value}.",
+        "My city of residence is {value}."
+      ],
+      "locked_test": [
+        "I am currently based out of {value}.",
+        "Right now, I am living in {value}.",
+        "My current home is in {value}.",
+        "As of now, I reside in {value}."
+      ],
+      "challenge": [
+        "I am currently based out of {value}.",
+        "Right now, I am living in {value}.",
+        "My current home is in {value}.",
+        "As of now, I reside in {value}."
+      ]
+    },
+    "phone": {
+      "train": [
+        "You can reach me at {value}.",
+        "My phone number is {value}.",
+        "Feel free to call me at {value}.",
+        "The best number to reach me is {value}.",
+        "My contact number is {value}.",
+        "Dial {value} to get me.",
+        "My line is {value}.",
+        "Ring me at {value}.",
+        "I answer at {value}.",
+        "Reach out to me at {value}.",
+        "My telephone number is {value}.",
+        "You can reach me by phone at {value}.",
+        "My preferred contact number is {value}.",
+        "Call me directly at {value}."
+      ],
+      "dev": [
+        "My mobile number is {value}.",
+        "I can be reached at {value}.",
+        "My direct phone line is {value}.",
+        "Please call my number, {value}."
+      ],
+      "locked_test": [
+        "The best phone number for me is {value}.",
+        "My cell phone is {value}.",
+        "You can call my primary line at {value}.",
+        "My phone contact is {value}."
+      ],
+      "challenge": [
+        "The best phone number for me is {value}.",
+        "My cell phone is {value}.",
+        "You can call my primary line at {value}.",
+        "My phone contact is {value}."
+      ]
+    },
+    "email": {
+      "train": [
+        "My email is {value}.",
+        "You can email me at {value}.",
+        "I check {value} regularly.",
+        "Send me a message at {value}.",
+        "My email address is {value}.",
+        "I'm reachable via {value}.",
+        "Drop me a line at {value}.",
+        "Contact me at {value}.",
+        "I monitor {value}.",
+        "My inbox is {value}.",
+        "Reach me at {value}.",
+        "I use {value} for email.",
+        "My primary inbox is {value}.",
+        "Send electronic mail to {value}."
+      ],
+      "dev": [
+        "My preferred email is {value}.",
+        "I receive emails at {value}.",
+        "My online contact address is {value}.",
+        "Reach out to my email, {value}."
+      ],
+      "locked_test": [
+        "My digital mailbox is {value}.",
+        "Please message me at {value}.",
+        "The best email for me is {value}.",
+        "My correspondence email is {value}."
+      ],
+      "challenge": [
+        "My digital mailbox is {value}.",
+        "Please message me at {value}.",
+        "The best email for me is {value}.",
+        "My correspondence email is {value}."
+      ]
+    },
+    "bachelors_degree": {
+      "train": [
+        "I hold {value}.",
+        "My undergraduate qualification is {value}.",
+        "My first university degree was {value}.",
+        "I completed {value}.",
+        "I graduated with {value}.",
+        "My undergraduate degree is {value}.",
+        "Academically, I earned {value}.",
+        "My degree at undergraduate level is {value}."
+      ],
+      "dev": [
+        "I received {value}.",
+        "The degree on my undergraduate diploma is {value}."
+      ],
+      "locked_test": [
+        "I completed a degree, specifically {value}.",
+        "My university qualification at bachelor level is {value}."
+      ],
+      "challenge": [
+        "I completed a degree, specifically {value}.",
+        "My university qualification at bachelor level is {value}."
+      ]
+    },
+    "bachelors_year": {
+      "train": [
+        "I finished my bachelor's in {value}.",
+        "My bachelor's graduation was {value}.",
+        "I completed my bachelor's degree in {value}.",
+        "I graduated with my bachelor's in {value}.",
+        "I earned my bachelor's in {value}.",
+        "My bachelor's year was {value}.",
+        "I got my bachelor's diploma in {value}.",
+        "I finished undergrad in {value}.",
+        "I received my bachelor's in {value}.",
+        "I completed undergrad in {value}.",
+        "My bachelor's was awarded in {value}.",
+        "I finished my bachelor's degree in {value}.",
+        "My undergraduate graduation year was {value}.",
+        "I received my bachelor's diploma in {value}.",
+        "The year I graduated with my bachelor's was {value}."
+      ],
+      "dev": [
+        "My bachelor's graduation took place in {value}.",
+        "I completed my undergraduate degree in {value}.",
+        "In the year {value}, I got my bachelor's.",
+        "My bachelor's class year was {value}."
+      ],
+      "locked_test": [
+        "I earned my bachelor's degree back in {value}.",
+        "My undergraduate studies concluded in {value}.",
+        "The date of my bachelor's graduation is {value}.",
+        "I obtained my bachelor's degree in {value}."
+      ],
+      "challenge": [
+        "I earned my bachelor's degree back in {value}.",
+        "My undergraduate studies concluded in {value}.",
+        "The date of my bachelor's graduation is {value}.",
+        "I obtained my bachelor's degree in {value}."
+      ]
+    },
+    "masters_degree": {
+      "train": [
+        "My graduate qualification is {value}.",
+        "I also hold {value}.",
+        "I completed {value} at graduate level.",
+        "My postgraduate degree is {value}.",
+        "I went on to earn {value}.",
+        "My advanced degree is {value}.",
+        "I graduated with {value} from my graduate program.",
+        "My graduate studies resulted in {value}."
+      ],
+      "dev": [
+        "I earned {value} after my undergraduate studies.",
+        "My degree at master level is {value}."
+      ],
+      "locked_test": [
+        "I completed the graduate degree {value}.",
+        "The qualification from my graduate program is {value}."
+      ],
+      "challenge": [
+        "I completed the graduate degree {value}.",
+        "The qualification from my graduate program is {value}."
+      ]
+    },
+    "masters_year": {
+      "train": [
+        "I finished my master's in {value}.",
+        "My master's graduation was {value}.",
+        "I completed my master's degree in {value}.",
+        "I graduated with my master's in {value}.",
+        "I earned my master's in {value}.",
+        "My master's year was {value}.",
+        "I got my master's diploma in {value}.",
+        "I finished grad school in {value}.",
+        "I received my master's in {value}.",
+        "I completed my master's in {value}.",
+        "My master's was awarded in {value}.",
+        "I finished my master's degree in {value}.",
+        "My graduate graduation year was {value}.",
+        "I received my master's diploma in {value}.",
+        "The year I graduated with my master's was {value}."
+      ],
+      "dev": [
+        "My master's graduation took place in {value}.",
+        "I completed my graduate degree in {value}.",
+        "In the year {value}, I got my master's.",
+        "My master's class year was {value}."
+      ],
+      "locked_test": [
+        "I earned my master's degree back in {value}.",
+        "My graduate studies concluded in {value}.",
+        "The date of my master's graduation is {value}.",
+        "I obtained my master's degree in {value}."
+      ],
+      "challenge": [
+        "I earned my master's degree back in {value}.",
+        "My graduate studies concluded in {value}.",
+        "The date of my master's graduation is {value}.",
+        "I obtained my master's degree in {value}."
+      ]
+    },
+    "military_service": {
+      "train": [
+        "I served in the {value}.",
+        "My military background is {value}.",
+        "I was in the {value}.",
+        "I spent time in the {value}.",
+        "My service was with the {value}.",
+        "I'm a veteran of the {value}.",
+        "My military experience includes {value}.",
+        "I completed service in the {value}.",
+        "My military service background includes {value}."
+      ],
+      "dev": [
+        "My military history consists of {value}.",
+        "I served our country with {value}.",
+        "I previously served with the {value}."
+      ],
+      "locked_test": [
+        "The branch I served in was the {value}.",
+        "I left the {value} before moving to civilian work.",
+        "My armed forces branch was the {value}."
+      ],
+      "challenge": [
+        "The branch I served in was the {value}.",
+        "I left the {value} before moving to civilian work.",
+        "My armed forces branch was the {value}."
+      ]
+    },
+    "security_clearance": {
+      "train": [
+        "My security clearance is {value}.",
+        "I maintain a {value} clearance.",
+        "My current clearance is {value}.",
+        "Presently, my security clearance is {value}.",
+        "My clearance level at present is {value}.",
+        "Currently, I carry a {value} clearance.",
+        "My currently held clearance is {value}.",
+        "I presently hold {value} clearance.",
+        "My clearance at the moment is {value}.",
+        "As of today my security clearance is {value}."
+      ],
+      "dev": [
+        "I currently possess {value} clearance.",
+        "I still maintain {value} security clearance."
+      ],
+      "locked_test": [
+        "The clearance I hold right now is {value}.",
+        "My security clearance remains {value}."
+      ],
+      "challenge": [
+        "The clearance I hold right now is {value}.",
+        "My security clearance remains {value}."
+      ]
+    },
+    "current_employer": {
+      "train": [
+        "I currently work for {value}.",
+        "I'm employed by {value}.",
+        "I work at {value} right now.",
+        "My current employer is {value}.",
+        "I'm on the payroll at {value}.",
+        "I'm with {value} at the moment.",
+        "I'm employed at {value}.",
+        "My present employer is {value}.",
+        "I'm working for {value} these days.",
+        "I'm currently on staff at {value}.",
+        "I'm part of the team at {value}.",
+        "I'm based at {value} for work.",
+        "I am currently employed by {value}.",
+        "My current company is {value}.",
+        "Right now I work for {value}."
+      ],
+      "dev": [
+        "I draw a paycheck currently from {value}.",
+        "I am working right now at {value}.",
+        "At present, my organization is {value}.",
+        "I hold a job currently with {value}."
+      ],
+      "locked_test": [
+        "My current corporate employer is {value}.",
+        "I am on the payroll at {value}.",
+        "Presently, I am working for {value}.",
+        "My current place of employment is {value}."
+      ],
+      "challenge": [
+        "My current corporate employer is {value}.",
+        "I am on the payroll at {value}.",
+        "Presently, I am working for {value}.",
+        "My current place of employment is {value}."
+      ]
+    },
+    "current_title": {
+      "train": [
+        "My current title is {value}.",
+        "I work as a {value}.",
+        "I'm a {value} right now.",
+        "My role is {value}.",
+        "I'm currently a {value}.",
+        "I hold the position of {value}.",
+        "My job title is {value}.",
+        "I'm serving as a {value}.",
+        "I function as a {value}.",
+        "My current role is {value}.",
+        "I'm employed as a {value}.",
+        "I'm working in the capacity of {value}.",
+        "My current job title is {value}.",
+        "Right now, my role is {value}.",
+        "I currently work as a {value}.",
+        "My present job designation is {value}."
+      ],
+      "dev": [
+        "At this time, my title is {value}.",
+        "I hold the current position of {value}.",
+        "My official title right now is {value}.",
+        "Currently, I serve as {value}."
+      ],
+      "locked_test": [
+        "My present job role is {value}.",
+        "I am currently working under the title {value}.",
+        "My current professional title is {value}.",
+        "Presently, my role is designated as {value}."
+      ],
+      "challenge": [
+        "My present job role is {value}.",
+        "I am currently working under the title {value}.",
+        "My current professional title is {value}.",
+        "Presently, my role is designated as {value}."
+      ]
+    },
+    "tenure": {
+      "train": [
+        "I've been in this role for {value}.",
+        "I've been with my current employer for {value}.",
+        "I've worked here for {value}.",
+        "I've been in this position {value}.",
+        "I've been at my current job for {value}.",
+        "I've spent {value} in this role.",
+        "I've been employed here for {value}.",
+        "My time with the company is {value}.",
+        "I've been in this job {value}.",
+        "My current tenure is {value}.",
+        "I have been in my present role for {value}.",
+        "My current job duration is {value}."
+      ],
+      "dev": [
+        "I have worked at my current job for {value}.",
+        "I have accumulated {value} in my current position.",
+        "My tenure at this company is {value}.",
+        "I have spent {value} in my current role."
+      ],
+      "locked_test": [
+        "My duration with my present employer is {value}.",
+        "I have been employed here for {value}.",
+        "My present tenure length is {value}.",
+        "I have held this current title for {value}."
+      ],
+      "challenge": [
+        "My duration with my present employer is {value}.",
+        "I have been employed here for {value}.",
+        "My present tenure length is {value}.",
+        "I have held this current title for {value}."
+      ]
+    },
+    "team_size": {
+      "train": [
+        "I manage a team of {value}.",
+        "My team consists of {value}.",
+        "I have {value} on my team.",
+        "My direct reports number {value}.",
+        "I supervise {value}.",
+        "My current team size is {value}.",
+        "The size of my current team is {value}.",
+        "My present group consists of {value}.",
+        "I lead a current team of {value}.",
+        "The number of people on my team is {value}."
+      ],
+      "dev": [
+        "My current reporting structure has {value}.",
+        "My immediate team size right now is {value}."
+      ],
+      "locked_test": [
+        "Currently, my team counts {value}.",
+        "The total size of my current crew is {value}."
+      ],
+      "challenge": [
+        "Currently, my team counts {value}.",
+        "The total size of my current crew is {value}."
+      ]
+    },
+    "current_program": {
+      "train": [
+        "I work on the {value} program.",
+        "My current project is {value}.",
+        "I'm part of the {value} effort.",
+        "My current assignment is {value}.",
+        "I'm supporting the {value} initiative.",
+        "My present program initiative is {value}."
+      ],
+      "dev": [
+        "The current effort I am assigned to is {value}.",
+        "The program I currently support is {value}."
+      ],
+      "locked_test": [
+        "Right now my main program is {value}.",
+        "I am working presently on the {value} program."
+      ],
+      "challenge": [
+        "Right now my main program is {value}.",
+        "I am working presently on the {value} program."
+      ]
+    },
+    "key_technologies": {
+      "train": [
+        "I work with {value}.",
+        "I'm proficient in {value}.",
+        "I use {value} regularly.",
+        "My toolkit includes {value}.",
+        "I'm skilled in {value}.",
+        "I have hands-on experience with {value}.",
+        "I specialize in {value}.",
+        "I'm experienced with {value}.",
+        "I work extensively with {value}.",
+        "I'm well-versed in {value}.",
+        "I leverage {value} in my work.",
+        "I'm competent with {value}.",
+        "The key technologies I use include {value}.",
+        "My daily tech stack features {value}.",
+        "I currently work with technologies like {value}.",
+        "The technical tools I rely on are {value}."
+      ],
+      "dev": [
+        "My primary technologies involve {value}.",
+        "I use {value} in my technical work.",
+        "The software and methods I use are {value}.",
+        "My technical toolkit contains {value}."
+      ],
+      "locked_test": [
+        "I utilize {value} for my technical tasks.",
+        "The core technologies in my work are {value}.",
+        "My current technical stack is {value}.",
+        "I work hands-on with {value}."
+      ],
+      "challenge": [
+        "I utilize {value} for my technical tasks.",
+        "The core technologies in my work are {value}.",
+        "My current technical stack is {value}.",
+        "I work hands-on with {value}."
+      ]
+    },
+    "area_of_interest": {
+      "train": [
+        "I'm interested in pursuing {value}.",
+        "I'd like to move into {value}.",
+        "I want to work in {value} next.",
+        "I'm looking to transition to {value}.",
+        "My next career move would be {value}.",
+        "I'd love to focus on {value}.",
+        "I aspire to work in {value}.",
+        "I'm targeting {value} for my next role.",
+        "I want to develop expertise in {value}.",
+        "I'm excited about {value} as a next step.",
+        "The next work I want to pursue is {value}.",
+        "My desired future area of interest is {value}.",
+        "I am looking to pivot toward {value}.",
+        "The next career path I seek is {value}."
+      ],
+      "dev": [
+        "My future professional interest is {value}.",
+        "I want my next project to be in {value}.",
+        "The domain I hope to work in next is {value}.",
+        "I am eager to focus on {value} next."
+      ],
+      "locked_test": [
+        "My target functional area of interest is {value}.",
+        "I would love to explore {value} in my next role.",
+        "The upcoming field I want to work in is {value}.",
+        "My future career ambition is {value}."
+      ],
+      "challenge": [
+        "My target functional area of interest is {value}.",
+        "I would love to explore {value} in my next role.",
+        "The upcoming field I want to work in is {value}.",
+        "My future career ambition is {value}."
+      ]
+    },
+    "reason_for_leaving": {
+      "train": [
+        "I am leaving because {value}.",
+        "My reason for looking elsewhere is that {value}.",
+        "I want to move on because {value}.",
+        "I am looking for another job because {value}.",
+        "The reason I am leaving my current employer is that {value}.",
+        "I started my job search because {value}.",
+        "What prompted my search was this: {value}."
+      ],
+      "dev": [
+        "I decided to seek a new position because {value}.",
+        "The explanation for my planned departure is that {value}."
+      ],
+      "locked_test": [
+        "What is driving my move is that {value}.",
+        "I need to change jobs because {value}."
+      ],
+      "challenge": [
+        "What is driving my move is that {value}.",
+        "I need to change jobs because {value}."
+      ]
+    },
+    "current_salary": {
+      "train": [
+        "I currently earn {value}.",
+        "My present salary is {value}.",
+        "I'm making {value} right now.",
+        "I receive {value} in my current role.",
+        "My existing compensation is {value}.",
+        "I'm paid {value} at my current job.",
+        "I'm compensated at {value}.",
+        "My salary is currently {value}.",
+        "I'm drawing {value} in my present position.",
+        "My current package is {value}.",
+        "I'm getting {value} as my current compensation.",
+        "My current salary is {value}.",
+        "Right now I earn {value}.",
+        "My present compensation package is {value}.",
+        "I currently make {value}."
+      ],
+      "dev": [
+        "My existing pay rate is {value}.",
+        "At present, I receive {value}.",
+        "My current earnings are {value}.",
+        "I am currently paid {value}."
+      ],
+      "locked_test": [
+        "My present salary sits at {value}.",
+        "Right now, my compensation is {value}.",
+        "I currently pull in {value}.",
+        "My existing salary structure is {value}."
+      ],
+      "challenge": [
+        "My present salary sits at {value}.",
+        "Right now, my compensation is {value}.",
+        "I currently pull in {value}.",
+        "My existing salary structure is {value}."
+      ]
+    },
+    "target_salary": {
+      "train": [
+        "I'm targeting {value}.",
+        "I'm looking for {value}.",
+        "I expect {value} in my next role.",
+        "My target compensation is {value}.",
+        "I'm seeking {value}.",
+        "I'd like to earn {value}.",
+        "I'm aiming for {value}.",
+        "I want {value} for this move.",
+        "My desired salary is {value}.",
+        "I'm hoping for {value}.",
+        "I'm looking to make {value}.",
+        "I'd expect {value} in a new position.",
+        "My target salary is {value}.",
+        "I am seeking compensation of {value}.",
+        "For a move, I am targeting {value}.",
+        "My desired salary expectation is {value}."
+      ],
+      "dev": [
+        "I am looking to make {value} in my next role.",
+        "The compensation package I want is {value}.",
+        "I expect to earn {value} for this change.",
+        "My target pay rate is {value}."
+      ],
+      "locked_test": [
+        "I am seeking {value} in my next position.",
+        "My desired compensation is {value}.",
+        "For my next job, I am looking for {value}.",
+        "The salary target I have set is {value}."
+      ],
+      "challenge": [
+        "I am seeking {value} in my next position.",
+        "My desired compensation is {value}.",
+        "For my next job, I am looking for {value}.",
+        "The salary target I have set is {value}."
+      ]
+    },
+    "availability": {
+      "train": [
+        "My notice period is {value}.",
+        "My availability is {value}.",
+        "My start date availability is {value}.",
+        "I require {value} before starting.",
+        "My timeline for joining is {value}.",
+        "My transition period will take {value}.",
+        "My earliest availability is {value}.",
+        "I would need to give {value}.",
+        "Before joining, I must provide {value}.",
+        "I can move jobs after {value}.",
+        "I can begin once I have given {value}.",
+        "My present employer requires {value}.",
+        "The notice I must give is {value}."
+      ],
+      "dev": [
+        "To leave my current job I need {value}.",
+        "I would be free to start following {value}.",
+        "I need {value} to wrap up my current work."
+      ],
+      "locked_test": [
+        "I can join after completing {value}.",
+        "A start would require {value}.",
+        "My transition needs {value}."
+      ],
+      "challenge": [
+        "I can join after completing {value}.",
+        "A start would require {value}.",
+        "My transition needs {value}."
+      ]
+    },
+    "relocation": {
+      "train": [
+        "My relocation preference is {value}.",
+        "Regarding relocation, my stance is {value}.",
+        "My relocation status is {value}.",
+        "My position on relocation is {value}.",
+        "Regarding moving for a job, {value}.",
+        "My relocation flexibility is {value}.",
+        "On the topic of relocation, my answer is {value}.",
+        "My relocation constraint or preference is {value}."
+      ],
+      "dev": [
+        "My answer on relocation is: {value}.",
+        "For moving to a new location, my answer is {value}."
+      ],
+      "locked_test": [
+        "I would describe my relocation preference as {value}.",
+        "As far as relocation goes: {value}."
+      ],
+      "challenge": [
+        "I would describe my relocation preference as {value}.",
+        "As far as relocation goes: {value}."
+      ]
+    }
+  }
+}

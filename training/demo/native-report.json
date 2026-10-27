@@ -1,0 +1,109 @@
+{
+  "model": "LiquidAI/LFM2.5-2.6B",
+  "revision": "654f9463ce32b05d0429d76fe1f580b27d4c1ac0",
+  "purpose": "focused_experimental_demo_not_production",
+  "train_roots": 63,
+  "tasks": {
+    "extraction": {
+      "epochs": [
+        {
+          "epoch": 1,
+          "train_loss": 0.02306638434669049,
+          "dev_loss": 0.008933227196394
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.004611726319732649,
+          "dev_loss": 0.006528180588247778
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.0028374822429921348,
+          "dev_loss": 0.006882528639228743
+        }
+      ],
+      "base_dev_loss": 0.14129580510780215,
+      "best_dev_loss": 0.006528180588247778,
+      "best_epoch": 2,
+      "reload_dev_loss": 0.006528180588247778,
+      "train_rows": 252,
+      "dev_rows": 48,
+      "trainable_parameters": 1703936,
+      "base_frozen": true
+    },
+    "questions": {
+      "epochs": [
+        {
+          "epoch": 1,
+          "train_loss": 1.6673248247465207,
+          "dev_loss": 1.3100123181939125
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.1886919728879417,
+          "dev_loss": 1.15961485914886
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.0204251979252263,
+          "dev_loss": 1.1244878342452769
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.8701291820477872,
+          "dev_loss": 1.1553990173367008
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.7270287506860711,
+          "dev_loss": 1.2439579959464027
+        }
+      ],
+      "base_dev_loss": 2.7107017040252686,
+      "best_dev_loss": 1.1244878342452769,
+      "best_epoch": 3,
+      "reload_dev_loss": 1.1244878342452769,
+      "train_rows": 126,
+      "dev_rows": 24,
+      "trainable_parameters": 1703936,
+      "base_frozen": true
+    }
+  },
+  "loss": "mean assistant token loss per example, equal coefficient across effective batch",
+  "target_modules": [
+    "model.layers.2.self_attn.q_proj",
+    "model.layers.2.self_attn.k_proj",
+    "model.layers.2.self_attn.v_proj",
+    "model.layers.2.self_attn.out_proj",
+    "model.layers.5.self_attn.q_proj",
+    "model.layers.5.self_attn.k_proj",
+    "model.layers.5.self_attn.v_proj",
+    "model.layers.5.self_attn.out_proj",
+    "model.layers.9.self_attn.q_proj",
+    "model.layers.9.self_attn.k_proj",
+    "model.layers.9.self_attn.v_proj",
+    "model.layers.9.self_attn.out_proj",
+    "model.layers.13.self_attn.q_proj",
+    "model.layers.13.self_attn.k_proj",
+    "model.layers.13.self_attn.v_proj",
+    "model.layers.13.self_attn.out_proj",
+    "model.layers.17.self_attn.q_proj",
+    "model.layers.17.self_attn.k_proj",
+    "model.layers.17.self_attn.v_proj",
+    "model.layers.17.self_attn.out_proj",
+    "model.layers.21.self_attn.q_proj",
+    "model.layers.21.self_attn.k_proj",
+    "model.layers.21.self_attn.v_proj",
+    "model.layers.21.self_attn.out_proj",
+    "model.layers.24.self_attn.q_proj",
+    "model.layers.24.self_attn.k_proj",
+    "model.layers.24.self_attn.v_proj",
+    "model.layers.24.self_attn.out_proj",
+    "model.layers.27.self_attn.q_proj",
+    "model.layers.27.self_attn.k_proj",
+    "model.layers.27.self_attn.v_proj",
+    "model.layers.27.self_attn.out_proj"
+  ],
+  "passed": true,
+  "peak_cuda_gib": 17.48135805130005
+}

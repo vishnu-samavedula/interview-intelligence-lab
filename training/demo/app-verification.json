@@ -1,0 +1,10 @@
+{
+  "frontend_status": 200,
+  "api_status": 200,
+  "trained_model_status": 200,
+  "trained_profile_available": true,
+  "comparison_rendered": true,
+  "baseline_default_preserved": true,
+  "end_to_end_api_replays": "original-base.json and original-trained.json",
+  "end_of_call_api": "original-final-trained.json"
+}

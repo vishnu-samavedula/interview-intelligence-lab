@@ -1,0 +1,11 @@
+{
+  "interviews": 32,
+  "families": 16,
+  "baseExtractionF1": 0.7067901234567902,
+  "trainedExtractionF1": 0.9128919860627178,
+  "questionTrainedVotes": 85,
+  "questionTotalVotes": 128,
+  "questionPairs": 64,
+  "label": "Unseen synthetic evaluation; question ratings are subjective",
+  "limitation": "The original preset still exposes chronology, evidence and repeated-question errors."
+}

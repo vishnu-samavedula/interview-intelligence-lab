@@ -15,6 +15,67 @@ const turn = (question: string, answer: string): TranscriptTurn[] => [{ speaker:
 
 const cases: StaticCase[] = [
   {
+    id: "static-location-direct", title: "Location · Explicit Huntsville", role: "Systems engineer · Navy veteran",
+    turns: [
+      turn("Tell me about yourself and where you live.", "I'm Leila Morgan. I served in the Navy, and I currently live in Huntsville."),
+      turn("What are you doing now?", "I'm a systems engineer at Alder Defense, where I've worked for three years."),
+      turn("What have you contributed to the team?", "I automated our bench checks in Python. Setup time dropped from forty minutes to fifteen, which let the technicians finish an extra test run each shift."),
+    ],
+    expectations: [e("full_name", 1, "Leila Morgan"), e("military_service", 1, "Navy"), e("location", 1, "Huntsville"), e("current_employer", 2, "Alder Defense"), e("current_title", 2, "systems engineer"), e("tenure", 2, "three years"), e("key_technologies", 3, "Python")],
+    questionExpectation: q(1, 0, 3),
+  },
+  {
+    id: "static-location-indirect", title: "Location · Here in Huntsville", role: "Systems engineer · Navy veteran",
+    turns: [
+      turn("Tell me about your background.", "I'm Leila Morgan. I served in the Navy before moving into civilian engineering."),
+      turn("What are you doing now?", "I'm a systems engineer at Alder Defense here in Huntsville, where I've worked for three years."),
+      turn("What have you contributed to the team?", "I automated our bench checks in Python. Setup time dropped from forty minutes to fifteen, which let the technicians finish an extra test run each shift."),
+    ],
+    expectations: [e("full_name", 1, "Leila Morgan"), e("military_service", 1, "Navy"), e("location", 2, "Huntsville"), e("current_employer", 2, "Alder Defense"), e("current_title", 2, "systems engineer"), e("tenure", 2, "three years"), e("key_technologies", 3, "Python")],
+    questionExpectation: q(1, 0, 3),
+  },
+  {
+    id: "static-location-current-former", title: "Location · Norfolk before, Raleigh now", role: "Maintenance planner · Coast Guard veteran",
+    turns: [
+      turn("Where has your career taken you?", "I'm Owen Blake. I served in the Coast Guard and used to live in Norfolk. I moved to Raleigh two years ago and still live there."),
+      turn("What is your current job?", "I work as a maintenance planner at Cedar Fleet Services. My earlier depot job was in Norfolk, but this job is in Raleigh."),
+      turn("Tell me about a planning improvement you owned.", "I changed how we sequence parts orders before scheduled maintenance. The mechanics spent less time waiting for missing parts, although we haven't put a reliable number on that improvement yet."),
+    ],
+    expectations: [e("full_name", 1, "Owen Blake"), e("military_service", 1, "Coast Guard"), e("location", 1, "Raleigh"), e("current_employer", 2, "Cedar Fleet Services"), e("current_title", 2, "maintenance planner")],
+    questionExpectation: q(1, 0, 3),
+  },
+  {
+    id: "static-location-correction", title: "Location · Austin corrected to Reno", role: "Technical trainer · Army veteran",
+    turns: [
+      turn("Please introduce yourself and confirm your location.", "I'm Nina Alvarez, an Army veteran. I'm based in Austin."),
+      turn("What is your current role?", "I'm a technical trainer at Mesa Learning Systems, and I've been there for eighteen months."),
+      turn("Is Austin still the right city for our records?", "Actually, that's my old address. I moved to Reno, Nevada last month and live there now. Please use Reno, Nevada as my current location."),
+      turn("What kind of work would you like next?", "I want to design hands-on training for maintenance teams, with more responsibility for checking whether people can apply the material on the job."),
+    ],
+    expectations: [e("full_name", 1, "Nina Alvarez"), e("military_service", 1, "Army"), e("location", 1, "Austin"), e("current_employer", 2, "Mesa Learning Systems"), e("current_title", 2, "technical trainer"), e("tenure", 2, "eighteen months"), e("location", 3, "Reno, Nevada"), e("area_of_interest", 4, "design hands-on training for maintenance teams")],
+    questionExpectation: q(1, 0, 3),
+  },
+  {
+    id: "static-location-remote", title: "Location · Madison home, Denver HQ", role: "Cybersecurity analyst · Air Force veteran",
+    turns: [
+      turn("Tell me about yourself and your work arrangement.", "I'm Farah Bennett, an Air Force veteran. I live in Madison, Wisconsin and work remotely for Birch Security. The company's headquarters is in Denver."),
+      turn("What do you do there?", "I'm a cybersecurity analyst. I review access changes and investigate accounts that still have permissions after a project ends."),
+      turn("Does the work involve travel?", "I visit a client site in Austin once a quarter, but Madison, Wisconsin is my home and the place I work from the rest of the time."),
+    ],
+    expectations: [e("full_name", 1, "Farah Bennett"), e("military_service", 1, "Air Force"), e("location", 1, "Madison, Wisconsin"), e("current_employer", 1, "Birch Security"), e("current_title", 2, "cybersecurity analyst")],
+    questionExpectation: q(1, 0, 3),
+  },
+  {
+    id: "static-location-destination-only", title: "Location · Denver is a future move", role: "Program analyst · Marine Corps veteran",
+    turns: [
+      turn("Tell me about your background and current work.", "I'm Gabriel Ortiz. I served in the Marine Corps and now work as a program analyst at Summit Program Services."),
+      turn("Would you consider moving for the right role?", "Yes, I would consider relocating to Denver for the right opportunity."),
+      turn("Where do you currently live?", "I'd prefer not to provide my current city in this interview. Denver is somewhere I'm considering moving to, not where I live now."),
+    ],
+    expectations: [e("full_name", 1, "Gabriel Ortiz"), e("military_service", 1, "Marine Corps"), e("current_employer", 1, "Summit Program Services"), e("current_title", 1, "program analyst"), e("relocation", 2, "would consider relocating to Denver")],
+    questionExpectation: q(1, 0, 3),
+  },
+  {
     id: "static-vague-launch-15s", title: "Vague product launch -15s", role: "Product manager",
     turns: [
       turn("What impact did your latest launch have?", "I led the launch of our new onboarding flow. It was a big cross-functional effort, and the launch went really well. Customers responded positively, and it made a meaningful difference to the business."),
@@ -57,13 +118,13 @@ const cases: StaticCase[] = [
   {
     id: "static-clear-systems", title: "Static · Clear systems engineer", role: "Systems engineer",
     turns: [
-      turn("Please introduce yourself and tell me where you are based.", "I'm Elena Ramirez, based in Tucson, Arizona."),
+      turn("Please introduce yourself and tell me where you are based.", "I'm Elena Ramirez, based in Tucson, Arizona. I served in the Army before moving into civilian systems engineering."),
       turn("What is your current role?", "I'm a senior systems engineer at Copper Ridge Defense, and I have been there for four years."),
       turn("Describe your current work.", "I support the Horizon radar modernization program using MATLAB, Python, and Monte Carlo simulation."),
       turn("What did you personally accomplish?", "I redesigned the tracking filter and reduced false tracks from 6.2 percent to 1.4 percent over eight months."),
       turn("What are your logistics for a move?", "I'm targeting a $190K base, can start after three weeks, and prefer to remain in Tucson."),
     ],
-    expectations: [e("full_name", 1, "Elena Ramirez"), e("location", 1, "Tucson, Arizona"), e("current_title", 2, "senior systems engineer"), e("current_employer", 2, "Copper Ridge Defense"), e("tenure", 2, "four years"), e("current_program", 3, "Horizon radar modernization program"), e("key_technologies", 3, "MATLAB, Python, and Monte Carlo simulation"), e("target_salary", 5, "$190K base"), e("availability", 5, "three weeks"), e("relocation", 5, "prefer to remain in Tucson")],
+    expectations: [e("military_service", 1, "Army"), e("full_name", 1, "Elena Ramirez"), e("location", 1, "Tucson, Arizona"), e("current_title", 2, "senior systems engineer"), e("current_employer", 2, "Copper Ridge Defense"), e("tenure", 2, "four years"), e("current_program", 3, "Horizon radar modernization program"), e("key_technologies", 3, "MATLAB, Python, and Monte Carlo simulation"), e("target_salary", 5, "$190K base"), e("availability", 5, "three weeks"), e("relocation", 5, "prefer to remain in Tucson")],
     questionExpectation: q(1, 0, 0),
   },
   {
@@ -81,13 +142,13 @@ const cases: StaticCase[] = [
   {
     id: "static-security", title: "Static · Security architect", role: "Security architect",
     turns: [
-      turn("Walk me through your recent employers.", "I previously worked at Harbor Bank. I now work at Mesa Cloud as a principal security architect."),
+      turn("Walk me through your recent employers.", "I served in the Air Force, then previously worked at Harbor Bank. I now work at Mesa Cloud as a principal security architect."),
       turn("What environment do you support?", "I support the Atlas zero-trust program and hold an active TS/SCI clearance."),
       turn("What technologies do you use?", "My core tools are OPA, Terraform, Kubernetes, and AWS Organizations."),
       turn("What was the outcome?", "I reduced critical policy violations by 73 percent across 180 cloud accounts in two quarters."),
       turn("How large is the organization you lead?", "I directly lead eight engineers and coordinate with twenty-four application teams."),
     ],
-    expectations: [e("current_employer", 1, "Mesa Cloud"), e("current_title", 1, "principal security architect"), e("current_program", 2, "Atlas zero-trust program"), e("security_clearance", 2, "active TS/SCI clearance"), e("key_technologies", 3, "OPA, Terraform, Kubernetes, and AWS Organizations"), e("team_size", 5, "eight engineers")],
+    expectations: [e("military_service", 1, "Air Force"), e("current_employer", 1, "Mesa Cloud"), e("current_title", 1, "principal security architect"), e("current_program", 2, "Atlas zero-trust program"), e("security_clearance", 2, "active TS/SCI clearance"), e("key_technologies", 3, "OPA, Terraform, Kubernetes, and AWS Organizations"), e("team_size", 5, "eight engineers")],
     questionExpectation: q(1, 0, 0),
   },
   {
@@ -161,13 +222,58 @@ const cases: StaticCase[] = [
       e("availability", 1, "3 weeks' notice – mid-to-late August"),
       e("relocation", 1, "Not willing to relocate; Huntsville only"),
     ],
-    questionExpectation: q(1, 2, 3, ["clarify_vague_claim", "quantify_impact", "surface_gap"]),
+    questionExpectation: q(1, 1, 1, ["quantify_impact"]),
   },
 ];
 
 function toScenario(item: StaticCase): Scenario {
-  const segments: TranscriptSegment[] = [{ id: `${item.id}-transcript`, startSeconds: 0, endSeconds: 15, turns: item.turns.flat() }];
+  const turns = item.turns.flatMap((exchange, index) => exchange.map((utterance) => ({ ...utterance, turnId: index + 1, ...(utterance.speaker === "Candidate" ? { responseComplete: true } : {}) })));
+  const endSeconds = Math.ceil(turns.reduce((sum, utterance) => sum + utterance.text.split(/\s+/).length, 0) / 35) * 15;
+  const receivedAt = new Date(Date.UTC(2026, 9, 21, 10, 0, endSeconds));
+  const segments: TranscriptSegment[] = [{ id: `${item.id}-chunk-01`, date: receivedAt.toISOString().slice(0, 10), timestamp: receivedAt.toISOString().slice(11), startSeconds: 0, endSeconds, turns }];
   return { id: item.id, title: item.title, role: item.role, segments, expectations: item.expectations.map((event) => ({ ...event, fromSegment: 1 })), questionExpectations: [item.questionExpectation] };
 }
 
 export const staticCases = cases.map(toScenario);
+
+/** Fixed 15-second windows at 140 words/minute, including partial exchanges. */
+function toMultiChunkScenario(item: StaticCase): Scenario {
+  const segments: TranscriptSegment[] = [];
+  const exchangeEnd = new Map<number, number>();
+  let wordsInChunk = 0;
+  for (const [exchangeIndex, exchange] of item.turns.entries()) {
+    for (const utterance of exchange) {
+      const words = utterance.text.split(/\s+/);
+      for (let offset = 0; offset < words.length;) {
+        if (!segments.length || wordsInChunk === 35) {
+          const startSeconds = segments.length * 15;
+          const receivedAt = new Date(Date.UTC(2026, 9, 21, 10, 0, startSeconds + 15));
+          segments.push({ id: `${item.id}-chunk-${String(segments.length + 1).padStart(2, "0")}`, date: receivedAt.toISOString().slice(0, 10), timestamp: receivedAt.toISOString().slice(11), startSeconds, endSeconds: startSeconds + 15, turns: [] });
+          wordsInChunk = 0;
+        }
+        const count = Math.min(35 - wordsInChunk, words.length - offset);
+        segments.at(-1)!.turns.push({ ...utterance, turnId: exchangeIndex + 1, text: words.slice(offset, offset + count).join(" "), ...(utterance.speaker === "Candidate" ? { responseComplete: offset + count === words.length } : {}) });
+        wordsInChunk += count;
+        offset += count;
+      }
+    }
+    exchangeEnd.set(exchangeIndex + 1, segments.length);
+  }
+  return {
+    id: item.id, title: item.title, role: item.role, segments,
+    expectations: item.expectations.map((event) => ({ ...event, fromSegment: exchangeEnd.get(event.fromSegment) ?? segments.length })),
+    // Whole-preset question counts are not valid expectations for partial chunks.
+    questionExpectations: [],
+  };
+}
+
+export const multiChunkCases = cases.filter((item) => item.turns.length > 1).map(toMultiChunkScenario);
+
+/** User-facing demo stays within veteran job interviews; other fixtures remain regression-only. */
+const demoOrder = [
+  "static-original-document", "static-clear-systems", "static-security",
+  "static-location-direct", "static-location-indirect", "static-location-current-former",
+  "static-location-correction", "static-location-remote", "static-location-destination-only",
+];
+export const demoCases = demoOrder.map((id) => staticCases.find((item) => item.id === id)!);
+export const demoMultiChunkCases = demoOrder.map((id) => multiChunkCases.find((item) => item.id === id)!);

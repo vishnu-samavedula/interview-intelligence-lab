@@ -1,0 +1,25 @@
+{
+  "paired_batches": 64,
+  "ratings": 128,
+  "preferences": {
+    "trained": 85,
+    "base": 43
+  },
+  "subjective_machine_review_not_human_gold": true,
+  "scores": {
+    "base": {
+      "grounding": 3.3203125,
+      "relevance": 3.2421875,
+      "distinctness": 2.984375,
+      "already_answered_count": 0.9140625,
+      "invented_premise_count": 0.25
+    },
+    "trained": {
+      "grounding": 3.953125,
+      "relevance": 3.828125,
+      "distinctness": 3.8125,
+      "already_answered_count": 0.34375,
+      "invented_premise_count": 0.1875
+    }
+  }
+}
